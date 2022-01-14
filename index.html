@@ -22,7 +22,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body>
-	<div class="preloader" id="preloader" style="display: none;">
+	<div class="preloader" id="preloader">
 		<div class="preloader-inner">
 			<div class="cube-wrapper">
 				<div class="cube-folding">
@@ -31,7 +31,7 @@
 					<span class="leaf3"></span>
 					<span class="leaf4"></span>
 				</div>
-				<span class="loading" data-name="Loading">Loading</span>
+				<span class="loading" data-name="Loading">DOCIFY</span>
 			</div>
 		</div>
 	</div>
@@ -198,6 +198,13 @@
 	<script type="text/javascript" src="assets/js/slick.js"></script>
 	<script>
 		$(document).ready(function(){
+
+			$(window).on("load", function () {
+				setTimeout(function () {
+					$("#preloader").fadeOut("slow", function () {});
+				}, 1000);
+			});
+
 			$('.sender-images').slick({
 				autoplay: true,
 				autoplaySpeed: 5000,
