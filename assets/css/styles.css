@@ -524,8 +524,12 @@ img {
 		font-size: var(--dc-font-size-title-md);
 		letter-spacing: 1px;
 	}
-	
+
 	.title-sm {
 		font-size: var(--dc-font-size-text);
+	}
+	.sender-images:before {
+		width: 500px;
+		height: 500px;
 	}
 }
