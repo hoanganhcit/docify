@@ -518,3 +518,14 @@ img {
     padding: 90px 15px 30px;
     color: #fff;
 }
+
+@media screen and (max-width: 1366px) {
+	.title-large {
+		font-size: var(--dc-font-size-title-md);
+		letter-spacing: 1px;
+	}
+	
+	.title-sm {
+		font-size: var(--dc-font-size-text);
+	}
+}
