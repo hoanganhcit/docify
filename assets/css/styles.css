@@ -19,12 +19,16 @@ body {
 	color: var( --dc-text-body-color );
 	line-height: 1.6;
 	font-weight: var( --dc-font-weight-body );
-	background-image: linear-gradient(180deg, #052131 0%, #1B4D6A 100%);
+	background-image: linear-gradient(180deg, #052131 35.6%, #083A56 76.11%);
 	-webkit-text-size-adjust: 100%;
 	-webkit-tap-highlight-color: transparent;
 	background-repeat: no-repeat;
 	position: relative;
 	min-height: 100vh;
+}
+.body-login {
+	background-image: none;
+	background-color: #F5F6FB;
 }
 img {
 	width: 100%;
@@ -216,6 +220,11 @@ img {
 	font-weight: 500;
 	outline: none;
 	transition: .5s;
+	border-radius: 10px;
+	height: 55px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 }
 .navbar-dark .navbar-nav .nav-link.button-primary {
 	text-transform: uppercase;
@@ -257,7 +266,7 @@ img {
 	right: 0;
 	bottom: 0;
 	background-blend-mode: multiply;
-	background-color: #0b2d40;
+	background-color: #052131;
 	opacity: 0.5;
 }
 
@@ -411,16 +420,16 @@ img {
 	position: relative;
 }
 .sender-images:before {
-    content: "";
-    position: absolute;
-    top: -100px;
-    border-radius: 100%;
-    width: 588px;
-    height: 588px;
-    background: #22506B;
-    mix-blend-mode: normal;
-    opacity: 0.24;
-    box-shadow: 0px 4px 149px #5F8BA4;
+	content: "";
+	position: absolute;
+	top: -100px;
+	border-radius: 100%;
+	width: 588px;
+	height: 588px;
+	background: #22506B;
+	mix-blend-mode: normal;
+	opacity: 0.24;
+	box-shadow: 0px 4px 149px #5F8BA4;
 }
 .before-img-2:before {
 	content: "";
@@ -477,48 +486,243 @@ img {
 	z-index: 2;
 }
 .footer-info-area {
-    position: relative;
-    padding: 70px 15px;
+	position: relative;
+	padding: 70px 15px;
 }
 
 .footer-top-area {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    padding: 50px;
-    background: linear-gradient(180deg, #1A6A99 26.56%, #154D6D 100%);
-    border-radius: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	padding: 50px;
+	background: linear-gradient(180deg, #1A6A99 26.56%, #154D6D 100%);
+	border-radius: 50px;
 }
 
 .guarantee {
-    width: 186px;
-    height: 186px;
-    display: block;
-    margin: 0 2rem;
+	width: 186px;
+	height: 186px;
+	display: block;
+	margin: 0 2rem;
 }
 
 .footer-top-content {
-    text-align: center;
-    color: #fff;
+	text-align: center;
+	color: #fff;
 }
 
 .footer-top-content h3 {
-    font-size: 30px;
-    margin-bottom: 1.5rem;
+	font-size: 30px;
+	margin-bottom: 1.5rem;
 }
 
 .footer-top-content p {
-    font-weight: 300;
-    max-width: 600px;
-    display: block;
-    margin: 0 auto;
+	font-weight: 300;
+	max-width: 600px;
+	display: block;
+	margin: 0 auto;
 }
 .footer-area {
-    text-align: center;
-    padding: 90px 15px 30px;
-    color: #fff;
+	text-align: center;
+	padding: 90px 15px 30px;
+	color: #fff;
 }
 
+
+/*SIGN UP*/
+
+.wrapper {
+	position: relative;
+}
+
+.sender-wrap {
+	position: relative;
+}
+
+.sender-signup {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	flex-direction: column;
+	min-height: 100vh;
+	padding: 130px 15px 50px;
+}
+
+.headeing-center {
+	position: relative;
+}
+
+.title--heading {
+	color: #fff;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 36px;
+	line-height: 44px;
+	text-align: center;
+	letter-spacing: 0.03em;
+	margin-bottom: 15px;
+}
+
+.headeing-center p {
+	color: #fff;
+	font-style: normal;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 20px;
+	text-align: center;
+	letter-spacing: 0.03em;
+}
+
+.headeing-center p a {
+	color: #fff;
+}
+
+.sender-form {
+	width: 100%;
+	max-width: 400px;
+	position: relative;
+}
+
+.form-group {
+	margin-bottom: 15px;
+	display: block;
+}
+
+.dc-input {
+	background: #0B3F5C;
+	border-radius: 10px;
+	border: 0;
+	height: 50px;
+	width: 100%;
+	padding: 0 15px;
+	outline: none;
+	color: #fff;
+}
+
+.dc-input::placeholder {
+	color: rgb(255 255 255 / 80%);
+}
+.sender-form .button-primary {
+	width: 100%;
+}
+
+#wrapper {
+	position: relative;
+	display: flex;
+}
+
+.sidebar {
+	width: 275px;
+	min-height: 100vh;
+}
+
+.bg-gradient-primary {
+	background: linear-gradient(180deg, #062537 0%, #073956 95.17%);
+}
+.justify-between {
+    justify-content: space-between;
+}
+
+.sidebar-brand {
+    padding: 25px;
+    text-decoration: none;
+    color: #fff !important;
+}
+
+.sidebar-brand-text {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+/* identical to box height */
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.sidebar-brand-icon {
+    font-size: 22px;
+}
+.sidebar .nav-item {
+    position: relative;
+}
+
+.sidebar .nav-item .nav-link {
+    padding: 15px 25px;
+    color: #fff;
+    font-weight: 300;
+    position: relative;
+}
+.sidebar .nav-item.active .nav-link {
+    color: #FCA905;
+}
+.sidebar .nav-item .nav-link i {
+    margin-right: 15px;
+    font-size: 18px;
+}
+.sidebar .button-primary {
+    width: 100%;
+    text-transform: capitalize;
+}
+
+.sidebar .button-primary i {
+    margin-right: 15px;
+    font-size: 20px;
+}
+#wrapper #content-wrapper {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+#wrapper #content-wrapper #content {
+    flex: 1 0 auto;
+}
+.navbar-header {
+    padding: 25px 40px;
+}
+
+.breadcrumb {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.breadcrumb-item a {
+    color: #fca905;
+    text-decoration: none;
+}
+
+.breadcrumb-item.active {
+    color: #C4C4C4;
+}
+.breadcrumb-item+.breadcrumb-item::before {
+    content: "\f054";
+    font-family: "Font Awesome 5 Pro";
+    font-size: 12px;
+    color: #c4c4c4;
+}
+.personl {
+    position: relative;
+}
+
+.btn-secondary {
+    background-color: #fca905;
+    border-color: #fca905;
+}
+
+.btn-secondary:hover {
+    background-color: #063652;
+    border-color: #063652;
+}
+.container-fluid {
+    padding: 0 40px;
+}
+
+.text-black-5 {
+    color: #2c2c2d;
+}
 @media screen and (max-width: 1366px) {
 	.title-large {
 		font-size: var(--dc-font-size-title-md);
