@@ -66,8 +66,8 @@
 				<div class="navbar-header d-flex align-items-center justify-between">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="#">Home</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Library</li>
+							<li class="breadcrumb-item"><a href="#">Docify</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Submit Document</li>
 						</ol>
 					</nav>
 					<div class="personl">
@@ -83,18 +83,49 @@
 				</div>
 				<div class="container-fluid">
 					<div class="d-sm-flex  mb-4">
-						<h1 class="title--heading text-black-5">Recents</h1>
+						<h1 class="title--heading text-black-5">Submit Document</h1>
 					</div>
 					<div class="card bg-white">
 						<div class="card-body">
-							<div class="content-empty">
-								<a href="submit-document.html" class="btn btn-primary-column">
-									<i class="fas fa-plus-circle"></i>
-									<span>Add another file...</span>
-								</a>
-								<div class="empty-center">
-									<p>Nothing yet. Recently opened documents will appear here once they are opened. Click <a href="#"><i class="fas fa-plus-circle"></i></a> to add document(s)</p>
+							<div class="panel-content">
+								<p>Select a document type for your document(s)</p>
+								<div class="panel-form">
+									<div class="form-group">
+										<label>Document type</label>
+										<select class="form-control">
+											<option value="">Bank Statement</option>
+											<option value="">Document type 2</option>
+											<option value="">Document type 3</option>
+											<option value="">Document type 4</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label>Upload File(s)</label>
+										<div class="file-uploads">
+											<div class="file-upload-wrapper" data-text="Select Your File">
+												<input name="file-upload-field" type="file" class="file-upload-field" value="">
+											</div>
+										</div>
+										<div class="mt-3 text-right">
+											<a href="javascript:;" class="add-another-file">Add another file... <i class="fas fa-plus-circle"></i> </a>
+										</div>
+									</div>
+									<div class="form-group">
+										<label>Add to Folder</label>
+										<select class="form-control">
+											<option value="">Folder 1</option>
+											<option value="">Folder 2</option>
+											<option value="">Folder 3</option>
+											<option value="">Folder 4</option>
+										</select>
+									</div>
 								</div>
+							</div>
+							<div class="panel-footer mt-5">
+								<a href="submit-document-3.html" class="btn button-primary">
+									<span>Coutinue</span>
+									<i class="fal fa-arrow-right"></i>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -105,6 +136,16 @@
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/slick.js"></script>
+	<script>
+		$(document).on("change", ".file-upload-field", function(){ 
+			$(this).parent(".file-upload-wrapper").attr("data-text",$(this).val().replace(/.*(\/|\\)/, '') );
+		});
 
+		$(document).ready(function(){
+			$('.add-another-file').click(function(){
+				$('.file-uploads').append('<div class="file-upload-wrapper mt-3" data-text="Select Your File"><input name="file-upload-field" type="file" class="file-upload-field" value=""></div>');
+			});
+		});
+	</script>
 </body>
 </html>
