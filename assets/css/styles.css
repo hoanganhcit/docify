@@ -33,6 +33,14 @@ body {
 img {
 	width: 100%;
 }
+a, a:hover, a:focus {
+	text-decoration: none;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin:0;
+}
 /*------------------------- Preloader Css ---------------------------*/
 
 .preloader-inner {
@@ -575,6 +583,7 @@ img {
 	line-height: 20px;
 	text-align: center;
 	letter-spacing: 0.03em;
+	max-width: 600px;
 }
 
 .headeing-center p a {
@@ -605,6 +614,11 @@ img {
 
 .dc-input::placeholder {
 	color: rgb(255 255 255 / 80%);
+}
+textarea.dc-input {
+    min-height: 150px;
+    resize: none;
+    padding: 15px;
 }
 .sender-form .button-primary {
 	width: 100%;
@@ -730,7 +744,21 @@ img {
 .card {
 	border: 0;
 	border-radius: 20px;
-	padding: 40px;
+	padding: 0;
+	min-height: 75vh;
+}
+.card-body {
+    padding: 0;
+}
+
+.folder-wrap, 
+.panel-footer {
+    padding: 0 50px 50px;
+}
+.header-card, 
+.content-empty, 
+.panel-content  {
+    padding: 50px;
 }
 .btn-primary-column {
 	display: inline-flex;
@@ -780,8 +808,9 @@ img {
 	margin-bottom: 10px;
 }
 .panel-footer {
-	position: relative;
-	text-align: right;
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
 }
 
 
@@ -855,6 +884,7 @@ img {
 .document-files {
 	width: calc(100% - 250px);
 	position: relative;
+	min-height: 75vh;
 }
 
 .th-title {
@@ -1025,7 +1055,100 @@ img {
     right: 5%;
     width: auto;
 }
+.search-box {
+    position: relative;
+}
 
+.search-box .form-control {
+    border: 1px solid #ccc;
+}
+
+.search-box i {
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    font-size: 20px;
+    color: #777;
+}
+
+.add-folder i {
+    margin-left: 0;
+    margin-right: 15px;
+    font-size: 20px;
+}
+.folder-wrap-item {
+    position: relative;
+    padding: 2rem 1rem;
+    transition: .5s;
+    border-radius: 10px;
+}
+
+.folder-wrap-item a {
+    display: block;
+    text-align: center;
+}
+
+.folder-icon {
+    display: block;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.folder-icon img {
+    width: 75px;
+}
+
+.folder-name {
+    position: relative;
+}
+
+.folder-name h3 {
+    font-size: 16px;
+    color: #000;
+}
+
+.folder-wrap-item:hover {
+    box-shadow: 0 0 50px rgb(0 0 0 / 5%);
+}
+.view-wrap a {
+    color: #777;
+    margin-left: 10px;
+    font-size: 20px;
+}
+.view-wrap a.active {
+    color: #fca905;
+}
+
+.view-wrap span {
+    margin-right: 20px;
+}
+.document-listview {
+    padding: 0;
+}
+
+.table-document thead {
+    background: #f4f4f4;
+    color: #7E7E7E;
+}
+
+.table-document thead th, .table-document td {
+    font-size: 16px;
+    font-weight: 400;
+    padding: 15px 50px;
+    color: #7e7e7e;
+}
+
+.document-name {
+    position: relative;
+}
+.document-name a {
+    color: #7e7e7e;
+}
+.document-name i {
+    margin-right: 10px;
+    font-size: 20px;
+    color: #fca905;
+}
 @media screen and (max-width: 1366px) {
 	.title-large {
 		font-size: var(--dc-font-size-title-md);

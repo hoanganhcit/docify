@@ -22,7 +22,6 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body class="body-login">
-
 	<div id="wrapper">
 		<ul class="navbar-nav bg-gradient-primary sidebar accordion">
 			<a class="sidebar-brand d-flex align-items-center justify-between" href="profile-recents.html">
@@ -37,13 +36,13 @@
 					<span>Upload File</span>
 				</button>
 			</li>
-			<li class="nav-item active">
+			<li class="nav-item ">
 				<a class="nav-link" href="profile-recents.html">
 					<i class="fal fa-undo"></i>
 					<span>Recents</span>
 				</a>
 			</li>
-			<li class="nav-item ">
+			<li class="nav-item active">
 				<a class="nav-link" href="folders.html">
 					<i class="fal fa-folder-open"></i>
 					<span>Folders</span>
@@ -68,7 +67,7 @@
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="#">Docify</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Submit Document</li>
+							<li class="breadcrumb-item active" aria-current="page">Folders</li>
 						</ol>
 					</nav>
 					<div class="personl">
@@ -84,71 +83,114 @@
 				</div>
 				<div class="container-fluid">
 					<div class="d-sm-flex  mb-4">
-						<h1 class="title--heading text-black-5">Submit Document</h1>
+						<h1 class="title--heading text-black-5">Folders</h1>
 					</div>
 					<div class="card bg-white">
 						<div class="card-body">
-							<div class="panel-content py-0 px-0">
-								<div class="d-flex  flex-start preview-file">
-									<div class="document-type">
-										<div class="th-title">Document Type</div>
-										<ul class="document-type-list">
-											<li class="document-type-item">
-												<i class="fal fa-file-alt"></i>
-												<span>Bank statement</span>
-											</li>
-										</ul>
-										<div class="add-document-type mt-3">
-											<a href="submit-document.html" class="">
-												<i class="fas fa-plus-circle"></i>
-												<span>Add another<br> Document Type</span>
+							<div class=" header-card "> 
+								<div class="row justify-between align-items-center">
+									<div class="col-md-4 col-xs-12">
+										<div class="search-box">
+											<input type="text" class="form-control" placeholder="Search in Folders" name="">
+											<i class="fal fa-search"></i>
+										</div>
+									</div>
+									<div class="col-md-4 col-xs-12">
+										<div class="d-flex flex-start align-items-center view-wrap">
+											<span>View</span>
+											<a href="folders-list-view.html"><i class="fas fa-bars"></i></a>
+											<a href="folders.html" class="active"><i class="fas fa-th-large"></i></a>
+										</div>
+									</div>
+									<div class="col-md-4 col-xs-12">
+										<div class="d-flex flex-end">
+											<button class="add-folder btn button-primary">
+												<i class="fal fa-plus-circle"></i>
+												<span>Add new folder</span>
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="folder-wrap">
+								<div class="row ">
+									<div class="col-md-3 col-xs-12 mb-4">
+										<div class="folder-wrap-item">
+											<a href="folder-detail.html">
+												<div class="folder-icon">
+													<img src="assets/images/folder.png">
+												</div>
+												<div class="folder-name">
+													<h3>Folder name 1</h3>
+												</div>
 											</a>
 										</div>
 									</div>
-									<div class="document-files">
-										<div class="th-title">File</div>
-										<div class="document-file-list">
-											<div class="col-md-3 col-xs-12">
-												<div class="file-item">
-													<div class="icon-file">
-														<img src="assets/images/file.png">
-														<span class="bagde pdf-type">PDF</span>
-													</div>
-													<p class="file-name">budget estimate 12 - 01 - 2022 </p>
+									<div class="col-md-3 col-xs-12 mb-4">
+										<div class="folder-wrap-item">
+											<a href="folder-detail.html">
+												<div class="folder-icon">
+													<img src="assets/images/folder.png">
 												</div>
-											</div>
-											<div class="col-md-3 col-xs-12">
-												<div class="file-item">
-													<div class="icon-file">
-														<img src="assets/images/file.png">
-														<span class="bagde doc-type">DOC</span>
-													</div>
-													<p class="file-name">budget estimate 12 - 01 - 2022 </p>
+												<div class="folder-name">
+													<h3>Folder name 2</h3>
 												</div>
-											</div>
-											<div class="col-md-3 col-xs-12">
-												<div class="file-item">
-													<div class="icon-file">
-														<img src="assets/images/file.png">
-														<span class="bagde xls-type">XLS</span>
-													</div>
-													<p class="file-name">budget estimate 12 - 01 - 2022 </p>
-												</div>
-											</div>
-											<div class="col-md-3 col-xs-12">
-												<a href="submit-document-2.html" class="button-block">
-													<i class="fas fa-plus-circle"></i>
-													<span>Add another file...</span>
-												</a>
-											</div>
-										</div>
-										<div class="panel-footer mt-5 px-4 py-4">
-											<a href="verify.html" class="btn button-primary">
-												<span>Verify</span>
-												<i class="fal fa-arrow-right"></i>
 											</a>
 										</div>
 									</div>
+									<div class="col-md-3 col-xs-12 mb-4">
+										<div class="folder-wrap-item">
+											<a href="folder-detail.html">
+												<div class="folder-icon">
+													<img src="assets/images/folder.png">
+												</div>
+												<div class="folder-name">
+													<h3>Folder name 3</h3>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-3 col-xs-12 mb-4">
+										<div class="folder-wrap-item">
+											<a href="folder-detail.html">
+												<div class="folder-icon">
+													<img src="assets/images/folder.png">
+												</div>
+												<div class="folder-name">
+													<h3>Folder name 4</h3>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-3 col-xs-12 mb-4">
+										<div class="folder-wrap-item">
+											<a href="folder-detail.html">
+												<div class="folder-icon">
+													<img src="assets/images/folder.png">
+												</div>
+												<div class="folder-name">
+													<h3>Folder name 5</h3>
+												</div>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-3 col-xs-12 mb-4">
+										<div class="folder-wrap-item">
+											<a href="folder-detail.html">
+												<div class="folder-icon">
+													<img src="assets/images/folder.png">
+												</div>
+												<div class="folder-name">
+													<h3>Folder name 6</h3>
+												</div>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="content-empty" style="display: none;">
+								<div class="empty-center">
+									<p>Nothing yet. Recently opened documents will appear here once they are opened. Click <a href="#"><i class="fas fa-plus-circle"></i></a> to add document(s)</p>
 								</div>
 							</div>
 						</div>
@@ -160,16 +202,6 @@
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/slick.js"></script>
-	<script>
-		$(document).on("change", ".file-upload-field", function(){ 
-			$(this).parent(".file-upload-wrapper").attr("data-text",$(this).val().replace(/.*(\/|\\)/, '') );
-		});
 
-		$(document).ready(function(){
-			$('.add-another-file').click(function(){
-				$('.file-uploads').append('<div class="file-upload-wrapper mt-3" data-text="Select Your File"><input name="file-upload-field" type="file" class="file-upload-field" value=""></div>');
-			});
-		});
-	</script>
 </body>
 </html>

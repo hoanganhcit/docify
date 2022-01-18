@@ -36,19 +36,19 @@
 					<span>Upload File</span>
 				</button>
 			</li>
-			<li class="nav-item active">
+			<li class="nav-item ">
 				<a class="nav-link" href="profile-recents.html">
 					<i class="fal fa-undo"></i>
 					<span>Recents</span>
 				</a>
 			</li>
-			<li class="nav-item ">
+			<li class="nav-item">
 				<a class="nav-link" href="folders.html">
 					<i class="fal fa-folder-open"></i>
 					<span>Folders</span>
 				</a>
 			</li>
-			<li class="nav-item">
+			<li class="nav-item active">
 				<a class="nav-link" href="documents.html">
 					<i class="fal fa-file-alt"></i>
 					<span>Documents</span>
@@ -67,7 +67,7 @@
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="#">Docify</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Submit Document</li>
+							<li class="breadcrumb-item active" aria-current="page">Documents</li>
 						</ol>
 					</nav>
 					<div class="personl">
@@ -83,29 +83,88 @@
 				</div>
 				<div class="container-fluid">
 					<div class="d-sm-flex  mb-4">
-						<h1 class="title--heading text-black-5">Submit Document</h1>
+						<h1 class="title--heading text-black-5">Documents</h1>
 					</div>
 					<div class="card bg-white">
 						<div class="card-body">
-							<div class="panel-content">
-								<p>Select a document type for your document(s)</p>
-								<div class="panel-form">
-									<div class="form-group">
-										<label>Document type</label>
-										<select class="form-control">
-											<option value="">Bank Statement</option>
-											<option value="">Document type 2</option>
-											<option value="">Document type 3</option>
-											<option value="">Document type 4</option>
-										</select>
+							<div class=" header-card "> 
+								<div class="row flex-start align-items-center">
+									<div class="col-md-4 col-xs-12">
+										<div class="search-box">
+											<input type="text" class="form-control" placeholder="Search in Documents" name="">
+											<i class="fal fa-search"></i>
+										</div>
+									</div>
+									<div class="col-md-4 col-xs-12">
+										<div class="d-flex flex-start align-items-center view-wrap">
+											<span>View</span>
+											<a href="document-list-view.html"><i class="fas fa-bars"></i></a>
+											<a href="documents.html" class="active"><i class="fas fa-th-large"></i></a>
+										</div>
+									</div>
+									<div class="col-md-4 col-xs-12">
+										<div class="d-flex flex-end">
+											<button class="add-folder btn button-primary">
+												<i class="fal fa-plus-circle"></i>
+												<span>Add new document</span>
+											</button>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="panel-footer mt-5">
-								<a href="submit-document-2.html" class="btn button-primary">
-									<span>Coutinue</span>
-									<i class="fal fa-arrow-right"></i>
-								</a>
+							<div class="folder-wrap">
+								<div class="row ">
+									<div class="col-md-3 col-xs-12 mb-4">
+										<div class="file-item">
+											<div class="icon-file">
+												<img src="assets/images/file.png">
+												<span class="bagde pdf-type">PDF</span>
+											</div>
+											<p class="file-name">budget estimate 12 - 01 - 2022 </p>
+										</div>
+									</div>
+									<div class="col-md-3 col-xs-12 mb-4">
+										<div class="file-item">
+											<div class="icon-file">
+												<img src="assets/images/file.png">
+												<span class="bagde doc-type">DOC</span>
+											</div>
+											<p class="file-name">budget estimate 12 - 01 - 2022 </p>
+										</div>
+									</div>
+									<div class="col-md-3 col-xs-12 mb-4">
+										<div class="file-item">
+											<div class="icon-file">
+												<img src="assets/images/file.png">
+												<span class="bagde xls-type">XLS</span>
+											</div>
+											<p class="file-name">budget estimate 12 - 01 - 2022 </p>
+										</div>
+									</div>
+									<div class="col-md-3 col-xs-12 mb-4">
+										<div class="file-item">
+											<div class="icon-file">
+												<img src="assets/images/file.png">
+												<span class="bagde pdf-type">PDF</span>
+											</div>
+											<p class="file-name">budget estimate 12 - 01 - 2022 </p>
+										</div>
+									</div>
+									<div class="col-md-3 col-xs-12 mb-4">
+										<div class="file-item">
+											<div class="icon-file">
+												<img src="assets/images/file.png">
+												<span class="bagde xls-type">XLS</span>
+											</div>
+											<p class="file-name">budget estimate 12 - 01 - 2022 </p>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="content-empty" style="display: none;">
+								<div class="empty-center">
+									<p>Nothing yet. Recently opened documents will appear here once they are opened. Click <a href="#"><i class="fas fa-plus-circle"></i></a> to add document(s)</p>
+								</div>
 							</div>
 						</div>
 					</div>

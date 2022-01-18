@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet" type="text/css">  
+	<title>DOCIFY</title>
+	<meta name="generator" content="WooCommerce 6.0.0" />
+	<link rel="canonical" href="#" />
+	<link rel='shortlink' href='#' />
+	<link rel="alternate" type="application/json+oembed" href="#" />
+	<link rel="alternate" type="text/xml+oembed" href="#" /> 
+	<link rel="icon" href="#" sizes="32x32" />  
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+</head>
+<body>
+	<div class="preloader" id="preloader" style="display: none;">
+		<div class="preloader-inner">
+			<div class="cube-wrapper">
+				<div class="cube-folding">
+					<span class="leaf1"></span>
+					<span class="leaf2"></span>
+					<span class="leaf3"></span>
+					<span class="leaf4"></span>
+				</div>
+				<span class="loading" data-name="Loading">DOCIFY</span>
+			</div>
+		</div>
+	</div>
+	<header class="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 p-0">
+					<nav class="navbar navbar-expand-lg navbar-dark">
+						<a class="navbar-brand" href="index.html">
+							<span class="logo-text">DOCIFY</span>
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse flex-end" id="mainmenu" style="display: none !important;">
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item active">
+									<a class="nav-link btn button-primary" href="#" >Sign In</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Sign Up</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header> 
+	<div class="wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="verifying">
+						<div class="verifying-content d-flex align-items-center justify-center flex-column">
+							<i class="fal fa-check-circle font-large mb-4"></i>
+							<span class="title-process">Invitation sent!</span> 
+						</div>
+					</div>
+				</div>
+				<div class="button-bottom-right">
+					<a href="profile-recents.html" class="btn button-primary">
+						<span>RETURN TO PROFILE</span>
+						<i class="fal fa-arrow-right"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/slick.js"></script>
+	<script>
+		$(document).ready(function(){
+
+			$(window).on("load", function () {
+				setTimeout(function () {
+					$("#preloader").fadeOut("slow", function () {});
+				}, 1000);
+			});
+
+			$('.sender-images').slick({
+				autoplay: true,
+				autoplaySpeed: 5000,
+				dots: true,
+				arrows:false,
+				infinite: true,
+				fade: true,
+				cssEase: 'linear'
+			});
+			$('.receiver-images').slick({
+				autoplay: false,
+				autoplaySpeed: 5000,
+				dots: true,
+				arrows:false,
+				infinite: true,
+				fade: true,
+				cssEase: 'linear'
+			});
+		});
+	</script>
+</body>
+</html>

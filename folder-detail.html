@@ -36,13 +36,13 @@
 					<span>Upload File</span>
 				</button>
 			</li>
-			<li class="nav-item active">
+			<li class="nav-item ">
 				<a class="nav-link" href="profile-recents.html">
 					<i class="fal fa-undo"></i>
 					<span>Recents</span>
 				</a>
 			</li>
-			<li class="nav-item ">
+			<li class="nav-item active">
 				<a class="nav-link" href="folders.html">
 					<i class="fal fa-folder-open"></i>
 					<span>Folders</span>
@@ -67,7 +67,7 @@
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="#">Docify</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Submit Document</li>
+							<li class="breadcrumb-item active" aria-current="page">Folders</li>
 						</ol>
 					</nav>
 					<div class="personl">
@@ -83,29 +83,115 @@
 				</div>
 				<div class="container-fluid">
 					<div class="d-sm-flex  mb-4">
-						<h1 class="title--heading text-black-5">Submit Document</h1>
+						<h1 class="title--heading text-black-5">Folders</h1>
 					</div>
 					<div class="card bg-white">
 						<div class="card-body">
-							<div class="panel-content">
-								<p>Select a document type for your document(s)</p>
-								<div class="panel-form">
-									<div class="form-group">
-										<label>Document type</label>
-										<select class="form-control">
-											<option value="">Bank Statement</option>
-											<option value="">Document type 2</option>
-											<option value="">Document type 3</option>
-											<option value="">Document type 4</option>
-										</select>
+							<div class=" header-card "> 
+								<div class="row justify-between align-items-center">
+									<div class="col-md-4 col-xs-12">
+										<div class="search-box">
+											<input type="text" class="form-control" placeholder="Search in Folders" name="">
+											<i class="fal fa-search"></i>
+										</div>
+									</div>
+									<div class="col-md-4 col-xs-12">
+										<div class="d-flex flex-start align-items-center view-wrap">
+											<span>View</span>
+											<a href="document-list-view.html" class="active"><i class="fas fa-bars"></i></a>
+											<a href="documents.html"><i class="fas fa-th-large"></i></a>
+										</div>
+									</div>
+									<div class="col-md-4 col-xs-12">
+										<div class="d-flex flex-end">
+											<button class="add-folder btn button-primary">
+												<i class="fal fa-plus-circle"></i>
+												<span>Add new document</span>
+											</button>
+										</div>
 									</div>
 								</div>
 							</div>
-							<div class="panel-footer mt-5">
-								<a href="submit-document-2.html" class="btn button-primary">
-									<span>Coutinue</span>
-									<i class="fal fa-arrow-right"></i>
-								</a>
+							<div class="folder-wrap document-listview">
+								<table class="table table-document">
+									<thead>
+										<th>NAME</th>
+										<th>DATE VERIFY</th>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="document-name">
+													<i class="fal fa-file-alt"></i>
+													<span>budget estimate 12 - 01 - 2022 </span>
+												</div>
+											</td>
+											<td>
+												<span>12-01-2022</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="document-name">
+													<i class="fal fa-file-alt"></i>
+													<span>budget estimate 12 - 01 - 2022 </span>
+												</div>
+											</td>
+											<td>
+												<span>12-01-2022</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="document-name">
+													<i class="fal fa-file-alt"></i>
+													<span>budget estimate 12 - 01 - 2022 </span>
+												</div>
+											</td>
+											<td>
+												<span>12-01-2022</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="document-name">
+													<i class="fal fa-file-alt"></i>
+													<span>budget estimate 12 - 01 - 2022 </span>
+												</div>
+											</td>
+											<td>
+												<span>12-01-2022</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="document-name">
+													<i class="fal fa-file-alt"></i>
+													<span>budget estimate 12 - 01 - 2022 </span>
+												</div>
+											</td>
+											<td>
+												<span>12-01-2022</span>
+											</td>
+										</tr>
+										<tr>
+											<td>
+												<div class="document-name">
+													<i class="fal fa-file-alt"></i>
+													<span>budget estimate 12 - 01 - 2022 </span>
+												</div>
+											</td>
+											<td>
+												<span>12-01-2022</span>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="content-empty" style="display: none;">
+								<div class="empty-center">
+									<p>Nothing yet. Recently opened documents will appear here once they are opened. Click <a href="#"><i class="fas fa-plus-circle"></i></a> to add document(s)</p>
+								</div>
 							</div>
 						</div>
 					</div>
