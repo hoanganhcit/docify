@@ -263,10 +263,7 @@ ul {
 .banner-area {
 	position: relative;
 	background: transparent;
-}
-section {
-    overflow: hidden;
-}
+} 
 .overlay-background {
 	background-image: url(../images/overlay-bg.jpg);
 	background-position: center center;
