@@ -264,7 +264,9 @@ ul {
 	position: relative;
 	background: transparent;
 }
-
+section {
+    overflow: hidden;
+}
 .overlay-background {
 	background-image: url(../images/overlay-bg.jpg);
 	background-position: center center;
@@ -488,6 +490,7 @@ ul {
 }
 .section-receiver {
 	padding: 90px 15px;
+	position: relative;
 }
 
 .receiver-image-item.slick-active:before {content: "";position: absolute;top: 10px;left: 10px;right: 10px;bottom: -10px;background: #092D42;border-radius: 20px;z-index: 1;}

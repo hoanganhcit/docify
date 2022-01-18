@@ -17,7 +17,6 @@
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,500;1,600;1,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-icons.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
@@ -73,7 +72,7 @@
 							</h1>
 
 							<p class="title-sm">
-								Receive documents with confident of knowing they are real not fake or modification from the orginal. 
+								How do you know what your working with is real? When accuracy and authenticity matters verify with Docify.
 							</p>
 							<div class="links">
 								<a href="sender-signup.html" class="btn button-primary"><span>I'm a Sender</span> </a>
@@ -97,12 +96,12 @@
 		<div class="container"> 
 			<div class="row section-2-content">
 				<div class="col-lg-6">
-					<div class="info">
-						<h1 class="title-large">Build your professional relationships & trust the process</h1>
+					<div class="info wow fadeInLeft" data-wow-delay="0.5s">
+						<h1 class="title-sm">Our powerful Ai compares millions of data sets to determine a authenticity score regarding the likelyhood a document is fraudulent. For documents deemed risky we verify directly with the issuer.  </h1>
 					</div>
 				</div>
 				<div class="col-lg-6 d-flex align-self-center">
-					<div class="about-img  before-img-2">
+					<div class="about-img  before-img-2 wow fadeInRight" data-wow-delay="0.5s">
 						<img src="assets/images/image-2.jpg" alt="" class="image-2">
 					</div>
 				</div>
@@ -113,7 +112,7 @@
 		<div class="container"> 
 			<div class="row section-sender-content">
 				<div class="col-lg-7">
-					<div class="about-img sender-images">
+					<div class="about-img sender-images wow fadeInLeft" data-wow-delay="0.5s">
 						<div class="sender-image-item"> 
 							<img src="assets/images/sender.png" alt="" class="img-around">
 						</div>
@@ -127,9 +126,9 @@
 				</div>
 				<div class="col-lg-5">
 					<div class="info pl-5">
-						<h1 class="title-large text-capitalize">As a document sender</h1>
-						<p class="dc-text">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown</p>
-						<p class="mt-5">
+						<h1 class="title-large text-capitalize wow fadeInUp" data-wow-delay="0.5s">As a document sender</h1>
+						<p class="dc-text wow fadeInUp" data-wow-delay="0.6s">Use a digital seal to protect yourself from fraudsters. Your seal is unique to you, like a fingerprint it identifies whether a document true it came from you.</p>
+						<p class="mt-5 wow fadeInUp" data-wow-delay="0.7s">
 							<a href="#" class="btn button-primary">Get Started</a>
 						</p>
 					</div>
@@ -142,15 +141,15 @@
 			<div class="row section-receiver-content">
 				<div class="col-lg-5">
 					<div class="info pr-5">
-						<h1 class="title-large text-capitalize">As a document sender</h1>
-						<p class="dc-text">Lorem ipsum, or lipsum as it is sometimes known, is dummy text used in laying out print, graphic or web designs. The passage is attributed to an unknown</p>
-						<p class="mt-5">
+						<h1 class="title-large text-capitalize wow fadeInUp" data-wow-delay="0.5s">As a document sender</h1>
+						<p class="dc-text wow fadeInUp" data-wow-delay="0.6s">Keep all your important documents stored securely and get notified when your seal is being used.</p>
+						<p class="mt-5 wow fadeInUp" data-wow-delay="0.7s">
 							<a href="#" class="btn button-primary">Get Started</a>
 						</p>
 					</div>
 				</div>
 				<div class="col-lg-7">
-					<div class="about-img receiver-images">
+					<div class="about-img receiver-images wow fadeInRight" data-wow-delay="0.5s">
 						<div class="receiver-image-item"> 
 							<img src="assets/images/sender.png" alt="" class="img-around">
 						</div>
@@ -195,10 +194,11 @@
 	</footer>
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/wow.min.js"></script>
 	<script type="text/javascript" src="assets/js/slick.js"></script>
 	<script>
 		$(document).ready(function(){
-
+			new WOW().init();
 			$(window).on("load", function () {
 				setTimeout(function () {
 					$("#preloader").fadeOut("slow", function () {});
