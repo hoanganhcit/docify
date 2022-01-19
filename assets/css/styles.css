@@ -635,7 +635,7 @@ textarea.dc-input {
 }
 
 .bg-gradient-primary {
-	background: linear-gradient(180deg, #062537 0%, #073956 95.17%);
+	background: linear-gradient(180deg, #052131 35.6%, #083A56 76.11%);
 }
 .justify-between {
 	justify-content: space-between;
@@ -1127,17 +1127,22 @@ textarea.dc-input {
 }
 
 .table-document thead {
-    background: #f4f4f4;
+    background: #f5f6fb;
     color: #7E7E7E;
 }
-
+.table-document tbody {
+    border-top: 0 !important;
+}
 .table-document thead th, .table-document td {
     font-size: 16px;
     font-weight: 400;
     padding: 15px 50px;
     color: #7e7e7e;
 }
-
+.verify-wrap {
+    position: relative;
+    padding: 100px 15px 250px;
+}
 .document-name {
     position: relative;
 }
@@ -1148,6 +1153,43 @@ textarea.dc-input {
     margin-right: 10px;
     font-size: 20px;
     color: #fca905;
+}
+.flex-start {
+    align-items: flex-start;
+}
+.text-left {
+	text-align: left !important;
+}
+.pt-10 {
+    padding-top: 55px;
+}
+.iframe-preview-verify {
+    width: 100%;
+}
+
+.iframe-preview-verify iframe {
+    width: 100%;
+    height: 700px;
+}
+.verify-error .accordion-button::after {
+    margin-left: 20px;
+}
+.accordion-header {
+    position: relative;
+}
+.process-per {
+    position: absolute;
+    right: 5px;
+    top: 12px;
+    font-weight: 600;
+    font-size: 26px;
+}
+.process-per.error {
+	color: red;
+}
+.process-per.done {
+	color: #3ADE00 !important;
+	z-index: 3;
 }
 @media screen and (max-width: 1366px) {
 	.title-large {
