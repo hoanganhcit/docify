@@ -263,7 +263,7 @@ ul {
 .banner-area {
 	position: relative;
 	background: transparent;
-} 
+}
 .overlay-background {
 	background-image: url(../images/overlay-bg.jpg);
 	background-position: center center;
@@ -384,7 +384,7 @@ ul {
 	right: 0;
 	top: 0;
 	line-height: 6px;
-	background: hsl(40deg 98% 50% / 40%);
+	background: hsla(40deg, 0.98, 0.5, 0.4);
 	transition: .5s;
 	animation: scan 7s linear infinite;
 }
@@ -480,7 +480,7 @@ ul {
 .sender-image-item.slick-active img {
 	position: relative;
 	z-index: 2;
-} 
+}
 .receiver-images .slick-list {
 	padding-left: 2.5rem;
 	padding-bottom: 2.5rem;
@@ -613,7 +613,7 @@ ul {
 }
 
 .dc-input::placeholder {
-	color: rgb(255 255 255 / 80%);
+	color: rgba(255, 255, 255, 0.8);
 }
 textarea.dc-input {
     min-height: 150px;
@@ -751,12 +751,12 @@ textarea.dc-input {
     padding: 0;
 }
 
-.folder-wrap, 
+.folder-wrap,
 .panel-footer {
     padding: 0 50px 50px;
 }
-.header-card, 
-.content-empty, 
+.header-card,
+.content-empty,
 .panel-content  {
     padding: 50px;
 }
@@ -1108,7 +1108,7 @@ textarea.dc-input {
 }
 
 .folder-wrap-item:hover {
-    box-shadow: 0 0 50px rgb(0 0 0 / 5%);
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
 }
 .view-wrap a {
     color: #777;
