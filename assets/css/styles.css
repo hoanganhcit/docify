@@ -41,6 +41,13 @@ ul {
 	padding: 0;
 	margin:0;
 }
+.alert {width: 100%;padding: 10px;}
+
+.alert-danger {
+    background: #ffe8bb;
+    color: #fca905;
+    border-color: #fca905;
+}
 /*------------------------- Preloader Css ---------------------------*/
 
 .preloader-inner {
@@ -384,7 +391,7 @@ ul {
 	right: 0;
 	top: 0;
 	line-height: 6px;
-	background: hsla(40deg, 0.98, 0.5, 0.4);
+	background: rgb(252, 169, 3, 0.4);
 	transition: .5s;
 	animation: scan 7s linear infinite;
 }
@@ -558,6 +565,8 @@ ul {
 	flex-direction: column;
 	min-height: 100vh;
 	padding: 130px 15px 50px;
+	max-width: 430px;
+	margin: 0 auto;
 }
 
 .headeing-center {
@@ -592,7 +601,6 @@ ul {
 
 .sender-form {
 	width: 100%;
-	max-width: 400px;
 	position: relative;
 }
 
