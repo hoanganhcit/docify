@@ -44,9 +44,9 @@ ul {
 .alert {width: 100%;padding: 10px;}
 
 .alert-danger {
-    background: #ffe8bb;
-    color: #fca905;
-    border-color: #fca905;
+	background: #ffe8bb;
+	color: #fca905;
+	border-color: #fca905;
 }
 /*------------------------- Preloader Css ---------------------------*/
 
@@ -624,9 +624,9 @@ ul {
 	color: rgba(255, 255, 255, 0.8);
 }
 textarea.dc-input {
-    min-height: 150px;
-    resize: none;
-    padding: 15px;
+	min-height: 150px;
+	resize: none;
+	padding: 15px;
 }
 .sender-form .button-primary {
 	width: 100%;
@@ -756,17 +756,17 @@ textarea.dc-input {
 	min-height: 75vh;
 }
 .card-body {
-    padding: 0;
+	padding: 0;
 }
 
 .folder-wrap,
 .panel-footer {
-    padding: 0 50px 50px;
+	padding: 0 50px 50px;
 }
 .header-card,
 .content-empty,
 .panel-content  {
-    padding: 50px;
+	padding: 50px;
 }
 .btn-primary-column {
 	display: inline-flex;
@@ -1058,139 +1058,139 @@ textarea.dc-input {
 	color: #fca905;
 }
 .button-bottom-right {
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    width: auto;
+	position: absolute;
+	bottom: 5%;
+	right: 5%;
+	width: auto;
 }
 .search-box {
-    position: relative;
+	position: relative;
 }
 
 .search-box .form-control {
-    border: 1px solid #ccc;
+	border: 1px solid #ccc;
 }
 
 .search-box i {
-    position: absolute;
-    right: 20px;
-    top: 16px;
-    font-size: 20px;
-    color: #777;
+	position: absolute;
+	right: 20px;
+	top: 16px;
+	font-size: 20px;
+	color: #777;
 }
 
 .add-folder i {
-    margin-left: 0;
-    margin-right: 15px;
-    font-size: 20px;
+	margin-left: 0;
+	margin-right: 15px;
+	font-size: 20px;
 }
 .folder-wrap-item {
-    position: relative;
-    padding: 2rem 1rem;
-    transition: .5s;
-    border-radius: 10px;
+	position: relative;
+	padding: 2rem 1rem;
+	transition: .5s;
+	border-radius: 10px;
 }
 
 .folder-wrap-item a {
-    display: block;
-    text-align: center;
+	display: block;
+	text-align: center;
 }
 
 .folder-icon {
-    display: block;
-    margin-bottom: 15px;
-    position: relative;
+	display: block;
+	margin-bottom: 15px;
+	position: relative;
 }
 
 .folder-icon img {
-    width: 75px;
+	width: 75px;
 }
 
 .folder-name {
-    position: relative;
+	position: relative;
 }
 
 .folder-name h3 {
-    font-size: 16px;
-    color: #000;
+	font-size: 16px;
+	color: #000;
 }
 
 .folder-wrap-item:hover {
-    box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.05);
 }
 .view-wrap a {
-    color: #777;
-    margin-left: 10px;
-    font-size: 20px;
+	color: #777;
+	margin-left: 10px;
+	font-size: 20px;
 }
 .view-wrap a.active {
-    color: #fca905;
+	color: #fca905;
 }
 
 .view-wrap span {
-    margin-right: 20px;
+	margin-right: 20px;
 }
 .document-listview {
-    padding: 0;
+	padding: 0;
 }
 
 .table-document thead {
-    background: #f5f6fb;
-    color: #7E7E7E;
+	background: #f5f6fb;
+	color: #7E7E7E;
 }
 .table-document tbody {
-    border-top: 0 !important;
+	border-top: 0 !important;
 }
 .table-document thead th, .table-document td {
-    font-size: 16px;
-    font-weight: 400;
-    padding: 15px 50px;
-    color: #7e7e7e;
+	font-size: 16px;
+	font-weight: 400;
+	padding: 15px 50px;
+	color: #7e7e7e;
 }
 .verify-wrap {
-    position: relative;
-    padding: 100px 15px 250px;
+	position: relative;
+	padding: 100px 15px 250px;
 }
 .document-name {
-    position: relative;
+	position: relative;
 }
 .document-name a {
-    color: #7e7e7e;
+	color: #7e7e7e;
 }
 .document-name i {
-    margin-right: 10px;
-    font-size: 20px;
-    color: #fca905;
+	margin-right: 10px;
+	font-size: 20px;
+	color: #fca905;
 }
 .flex-start {
-    align-items: flex-start;
+	align-items: flex-start;
 }
 .text-left {
 	text-align: left !important;
 }
 .pt-10 {
-    padding-top: 55px;
+	padding-top: 55px;
 }
 .iframe-preview-verify {
-    width: 100%;
+	width: 100%;
 }
 
 .iframe-preview-verify iframe {
-    width: 100%;
-    height: 700px;
+	width: 100%;
+	height: 700px;
 }
 .verify-error .accordion-button::after {
-    margin-left: 20px;
+	margin-left: 20px;
 }
 .accordion-header {
-    position: relative;
+	position: relative;
 }
 .process-per {
-    position: absolute;
-    right: 5px;
-    top: 12px;
-    font-weight: 600;
-    font-size: 26px;
+	position: absolute;
+	right: 5px;
+	top: 12px;
+	font-weight: 600;
+	font-size: 26px;
 }
 .process-per.error {
 	color: red;
@@ -1212,4 +1212,29 @@ textarea.dc-input {
 		width: 500px;
 		height: 500px;
 	}
+}
+
+.btn-google {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid #fff;
+	background: #fff;
+	border-radius: 4px;
+	height: 50px;
+	position: relative;
+	color: #000;
+	font-weight: 500;
+}
+
+.btn-google img {
+	width: auto;
+	margin-right: 1rem;
+}
+
+.btn-google:hover {
+	color: #0b3f5c;
+}
+.font-sm {
+    font-size: 14px;
 }
