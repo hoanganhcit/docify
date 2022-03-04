@@ -36,7 +36,7 @@
 					<span>Upload File</span>
 				</button>
 			</li>
-			<li class="nav-item active">
+			<li class="nav-item ">
 				<a class="nav-link" href="profile-recents.html">
 					<i class="fal fa-undo"></i>
 					<span>Recents</span>
@@ -60,8 +60,8 @@
 					<span>Invitations</span>
 				</a>
 			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="invitations.html">
+			<li class="nav-item active">
+				<a class="nav-link" href="copy-code.html">
 					<i class="fal fa-code"></i>
 					<span>Embed Code</span>
 				</a>
@@ -89,17 +89,15 @@
 				</div>
 				<div class="container-fluid">
 					<div class="d-sm-flex  mb-4">
-						<h1 class="title--heading text-black-5">Recents</h1>
+						<h1 class="title--heading text-black-5">Embed Code</h1>
 					</div>
 					<div class="card bg-white">
 						<div class="card-body">
 							<div class="content-empty">
-								<a href="submit-document.html" class="btn btn-primary-column">
-									<i class="fas fa-plus-circle"></i>
-									<span>Add another file...</span>
-								</a>
-								<div class="empty-center">
-									<p>Nothing yet. Recently opened documents will appear here once they are opened. Click <a href="#"><i class="fas fa-plus-circle"></i></a> to add document(s)</p>
+								<div class="copy__code">
+									<span class="code-snippet">Scripts</span>
+									<button class="btn bt-coppy"><i class="fal fa-copy"></i></button>
+									<pre><code><span>function Panel(element, canClose, closeHandler) {</span><br><span class="px-5">this.element = element;</span><br><span class="px-5">this.canClose = canClose;</span><br><span class="px-5">this.closeHandler = function () { if (closeHandler) closeHandler() };</span><br><span>}</span></code></pre>
 								</div>
 							</div>
 						</div>

@@ -1238,3 +1238,36 @@ textarea.dc-input {
 .font-sm {
     font-size: 14px;
 }
+.copy__code {
+    position: relative;
+    text-align: left;
+    width: 100%;
+    background: #083a56;
+    border-radius: 12px;
+    padding: 15px;
+    color: #fff;
+}
+.code-snippet {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 600;
+    color: #fca905;
+    padding: 5px 15px;
+    border-radius: 4px;
+    line-height: 25px;
+    display: inline-flex;
+    background: #034b72;
+    margin-bottom: 1rem;
+}
+pre {
+    white-space: pre-wrap;
+}
+.bt-coppy {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #fca905;
+    color: #fff !important;
+    font-size: 18px;
+    border-radius: 0 10px 0 10px;
+}
