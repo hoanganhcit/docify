@@ -22,6 +22,28 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body class="body-login">
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Create A Folder</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="__create_folder py-4 px-4">
+						<div class="form-group">
+							<label>Folder Name</label>
+							<input type="text" class="form-control" style="border: 1px solid #ccc;" name="">
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-secondary">Create</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div id="wrapper">
 		<ul class="navbar-nav bg-gradient-primary sidebar accordion">
 			<a class="sidebar-brand d-flex align-items-center justify-between" href="profile-recents.html">
@@ -104,7 +126,7 @@
 									</div>
 									<div class="col-md-4 col-xs-12">
 										<div class="d-flex flex-end">
-											<button class="add-folder btn button-primary">
+											<button class="add-folder btn button-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
 												<i class="fal fa-plus-circle"></i>
 												<span>Add new folder</span>
 											</button>
@@ -201,7 +223,5 @@
 	</div>
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/slick.js"></script>
-
 </body>
 </html>

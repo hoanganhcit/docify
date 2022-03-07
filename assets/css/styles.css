@@ -1236,38 +1236,67 @@ textarea.dc-input {
 	color: #0b3f5c;
 }
 .font-sm {
-    font-size: 14px;
+	font-size: 14px;
 }
 .copy__code {
-    position: relative;
-    text-align: left;
-    width: 100%;
-    background: #083a56;
-    border-radius: 12px;
-    padding: 15px;
-    color: #fff;
+	position: relative;
+	text-align: left;
+	width: 100%;
+	background: #083a56;
+	border-radius: 12px;
+	padding: 15px;
+	color: #fff;
 }
 .code-snippet {
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: 600;
-    color: #fca905;
-    padding: 5px 15px;
-    border-radius: 4px;
-    line-height: 25px;
-    display: inline-flex;
-    background: #034b72;
-    margin-bottom: 1rem;
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 600;
+	color: #fca905;
+	padding: 5px 15px;
+	border-radius: 4px;
+	line-height: 25px;
+	display: inline-flex;
+	background: #034b72;
+	margin-bottom: 1rem;
 }
 pre {
-    white-space: pre-wrap;
+	white-space: pre-wrap;
 }
 .bt-coppy {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #fca905;
-    color: #fff !important;
-    font-size: 18px;
-    border-radius: 0 10px 0 10px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background: #fca905;
+	color: #fff !important;
+	font-size: 18px;
+	border-radius: 0 10px 0 10px;
+}
+#dataTables_length {
+	padding: 0 15px;
+}
+
+div.dataTables_wrapper div.dataTables_length select {
+	background: #f8f8f8;
+	height: auto;
+	border-radius: 4px;
+}
+
+div.dataTables_wrapper div.dataTables_filter input {
+	border: 1px solid #ccc;
+	height: 40px;
+	border-radius: 4px;
+}
+
+div.dataTables_wrapper div.dataTables_filter {
+	padding: 0 15px;
+}
+
+div.dataTables_wrapper div.dataTables_info {
+	padding: 15px;
+	font-size: 14px;
+	color: #777;
+}
+
+div.dataTables_wrapper div.dataTables_paginate {
+	padding: 15px;
 }

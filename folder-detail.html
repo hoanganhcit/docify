@@ -19,6 +19,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-icons.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/dataTables.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body class="body-login">
@@ -113,7 +114,7 @@
 								</div>
 							</div>
 							<div class="folder-wrap document-listview">
-								<table class="table table-document">
+								<table class="table table-document" id="dataTables">
 									<thead>
 										<th>NAME</th>
 										<th>DATE VERIFY</th>
@@ -201,7 +202,13 @@
 	</div>
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/slick.js"></script>
+	<script type="text/javascript" src="assets/js/dataTables.min.js"></script>
+	<script type="text/javascript" src="assets/js/dataTables.bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#dataTables').DataTable();
+		});	
+	</script>
 
 </body>
 </html>
