@@ -104,6 +104,7 @@
 										<div class="file-uploads">
 											<div class="file-upload-wrapper" data-text="Select Your File">
 												<input name="file-upload-field" type="file" class="file-upload-field" value="">
+												<span class="fal fa-upload"></span>
 											</div>
 										</div>
 										<div class="mt-3 text-right">
@@ -143,7 +144,10 @@
 
 		$(document).ready(function(){
 			$('.add-another-file').click(function(){
-				$('.file-uploads').append('<div class="file-upload-wrapper mt-3" data-text="Select Your File"><input name="file-upload-field" type="file" class="file-upload-field" value=""></div>');
+				$('.file-uploads').append('<div class="file-upload-wrapper mt-3 d-flex justify-between" data-text="Select Your File"><input name="file-upload-field" type="file" class="file-upload-field" value=""><span class="fal fa-upload"></span><span class="fal fa-minus delete-append"></span></div>');
+			});
+			$(document).on("click",".delete-append", function () {
+				$(this).parent().remove();
 			});
 		});
 	</script>

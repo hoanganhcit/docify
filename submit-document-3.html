@@ -22,7 +22,36 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 </head>
 <body class="body-login">
-
+	<div class="modal fade" id="upload_another__file" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="exampleModalLabel">Create A Folder</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body bg-light-3">
+					<div class="__create_folder py-4 px-4">
+						<div class="form-group">
+							<label>Upload File(s)</label>
+							<div class="file-uploads">
+								<div class="file-upload-wrapper" data-text="Select Your File">
+									<input name="file-upload-field" type="file" class="file-upload-field" value="">
+									<span class="fal fa-upload"></span>
+								</div>
+							</div>
+							<div class="mt-3 text-right">
+								<a href="javascript:;" class="add-another-file">Add another file... <i class="fas fa-plus-circle"></i> </a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-secondary">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div id="wrapper">
 		<ul class="navbar-nav bg-gradient-primary sidebar accordion">
 			<a class="sidebar-brand d-flex align-items-center justify-between" href="profile-recents.html">
@@ -91,7 +120,7 @@
 							<div class="panel-content py-0 px-0">
 								<div class="d-flex  flex-start preview-file">
 									<div class="document-type">
-										<div class="th-title">Document Type</div>
+										<div class="th-title">Folder Name</div>
 										<ul class="document-type-list">
 											<li class="document-type-item">
 												<i class="fal fa-file-alt"></i>
@@ -136,20 +165,20 @@
 												</div>
 											</div>
 											<div class="col-md-3 col-xs-12">
-												<a href="submit-document-2.html" class="button-block">
+												<a href="#" class="button-block" data-bs-toggle="modal" data-bs-target="#upload_another__file">
 													<i class="fas fa-plus-circle"></i>
 													<span>Add another file...</span>
 												</a>
 											</div>
 										</div>
-										<div class="panel-footer mt-5 px-4 py-4">
-											<a href="verify.html" class="btn button-primary">
-												<span>Verify</span>
-												<i class="fal fa-arrow-right"></i>
-											</a>
-										</div>
 									</div>
 								</div>
+							</div>
+							<div class="panel-footer mt-5 px-4 py-4">
+								<a href="verify.html" class="btn button-primary">
+									<span>Verify</span>
+									<i class="fal fa-arrow-right"></i>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -167,7 +196,10 @@
 
 		$(document).ready(function(){
 			$('.add-another-file').click(function(){
-				$('.file-uploads').append('<div class="file-upload-wrapper mt-3" data-text="Select Your File"><input name="file-upload-field" type="file" class="file-upload-field" value=""></div>');
+				$('.file-uploads').append('<div class="file-upload-wrapper mt-3 d-flex justify-between" data-text="Select Your File"><input name="file-upload-field" type="file" class="file-upload-field" value=""><span class="fal fa-upload"></span><span class="fal fa-minus delete-append"></span></div>');
+			});
+			$(document).on("click",".delete-append", function () {
+				$(this).parent().remove();
 			});
 		});
 	</script>

@@ -798,6 +798,7 @@ textarea.dc-input {
 }
 .panel-content {
 	position: relative;
+	min-height: 70vh;
 }
 
 .panel-form {
@@ -811,14 +812,17 @@ textarea.dc-input {
 	height: 50px;
 	border: 0;
 	border-radius: 10px;
+	appearance: auto;
 }
 .form-group label {
 	margin-bottom: 10px;
 }
 .panel-footer {
-	position: absolute;
-	bottom: 15px;
-	right: 15px;
+	border-top: 1px solid #ccc;
+	position: relative;
+	text-align: right;
+	margin-top: 0 !important;
+	padding: 2rem !important;
 }
 
 
@@ -852,7 +856,7 @@ textarea.dc-input {
 	top: 0;
 	left: 0;
 	background: #fff;
-	padding: 0 15px;
+	padding: 0 50px 0 45px;
 	display: block;
 	width: 100%;
 	pointer-events: none;
@@ -862,6 +866,29 @@ textarea.dc-input {
 	color: #212529;
 	border-radius: 10px;
 	font-weight: 400;
+}
+.file-upload-wrapper span {
+    position: absolute;
+    left: 15px;
+    top: 17px;
+    z-index: 111;
+    color: #a5a5a5;
+    font-size: 16px;
+}
+.file-upload-wrapper span.delete-append {
+    left: auto;
+    top: 0;
+    right: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #ff685d;
+    border-radius: 0 10px 10px 0;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
 }
 .text-right {
 	text-align: right;
@@ -888,9 +915,10 @@ textarea.dc-input {
 .document-type {
 	width: 250px;
 	border-right: 1px solid #ccc;
+	min-height: 75vh;
 }
 .document-files {
-	width: calc(100% - 250px);
+	width: 100%;
 	position: relative;
 	min-height: 75vh;
 }
@@ -1299,4 +1327,7 @@ div.dataTables_wrapper div.dataTables_info {
 
 div.dataTables_wrapper div.dataTables_paginate {
 	padding: 15px;
+}
+.bg-light-3 {
+    background: #f1f1f1;
 }
