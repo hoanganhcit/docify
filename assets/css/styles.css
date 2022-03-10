@@ -978,6 +978,9 @@ textarea.dc-input {
 .file-item {
 	position: relative;
 	text-align: center;
+	border: 1px solid #ccc;
+	border-radius: 10px;
+	padding: 10px;
 }
 
 .icon-file {
@@ -1330,4 +1333,19 @@ div.dataTables_wrapper div.dataTables_paginate {
 }
 .bg-light-3 {
     background: #f1f1f1;
+}
+span.remove__file {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    width: 25px;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 25px;
+    background: #ffdbde;
+    color: #ff5969;
+    border-radius: 3px;
+    font-size: 18px;
+    cursor: pointer;
 }
