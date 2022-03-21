@@ -391,7 +391,7 @@ ul {
 	right: 0;
 	top: 0;
 	line-height: 6px;
-	background: rgb(252, 169, 3, 0.4);
+	background: rgba(252, 169, 3, 0.4);
 	transition: .5s;
 	animation: scan 7s linear infinite;
 }
