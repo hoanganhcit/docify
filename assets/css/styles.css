@@ -272,7 +272,7 @@ ul {
 	background: transparent;
 }
 .overlay-background {
-	background-image: url(../images/overlay-bg.jpg);
+	background-image: url(../images/overlay-bg.png);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -283,7 +283,7 @@ ul {
 	right: 0;
 	bottom: 0;
 	background-blend-mode: multiply;
-	background-color: #052131;
+	/* background-color: #052131; */
 	opacity: 0.5;
 }
 
@@ -343,7 +343,6 @@ ul {
 
 .right-img img {
 	width: 100%;
-	max-width: 400px;
 }
 
 .dc-image {
@@ -470,7 +469,6 @@ ul {
 .section-sender {
 	padding: 90px 15px;
 }
-
 .img-around {
 	width: 100%;
 	border-radius: 20px;
@@ -478,15 +476,48 @@ ul {
 .sender-images .slick-list {
 	padding-right: 2.5rem;
 }
-.sender-image-item.slick-active {
+.sender-image-item.slick-active, 
+.about-image-item {
 	position: relative;
 }
 
-.sender-image-item.slick-active:before {content: "";position: absolute;top: 10px;left: 10px;right: -10px;bottom: 10px;background: #1B4D6A;border-radius: 20px;z-index: 1;}
-.sender-image-item.slick-active:after {content: "";position: absolute;top: 20px;left: 20px;right: -20px;bottom: 20px;background: #1E3E51;border-radius: 20px;z-index: 0;}
-.sender-image-item.slick-active img {
+.sender-image-item.slick-active:before, 
+.about-image-item:before
+ {
+	content: "";
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	right: -10px;
+	bottom: 10px;
+	background: #1B4D6A;
+	border-radius: 20px;
+	z-index: 1;
+	}
+.sender-image-item.slick-active:after, 
+.about-image-item:after {
+	content: "";
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	right: -20px;
+	bottom: 20px;
+	background: #1E3E51;
+	border-radius: 20px;
+	z-index: 0;
+	}
+.sender-image-item.slick-active img, 
+.about-image-item img {
 	position: relative;
 	z-index: 2;
+}
+.about-image-item:before {
+	left: -10px;
+	right: 10px;
+}
+.about-image-item:after {
+	left: -20px;
+	right: 20px;
 }
 .receiver-images .slick-list {
 	padding-left: 2.5rem;
@@ -516,14 +547,6 @@ ul {
 	background: linear-gradient(180deg, #1A6A99 26.56%, #154D6D 100%);
 	border-radius: 50px;
 }
-
-.guarantee {
-	width: 186px;
-	height: 186px;
-	display: block;
-	margin: 0 2rem;
-}
-
 .footer-top-content {
 	text-align: center;
 	color: #fff;
@@ -1348,4 +1371,7 @@ span.remove__file {
     border-radius: 3px;
     font-size: 18px;
     cursor: pointer;
+}
+.pr-5 {
+    padding-right: 50px;
 }
