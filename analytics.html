@@ -37,7 +37,7 @@
 					<span>Upload File</span>
 				</button>
 			</li>
-			<li class="nav-item active">
+			<li class="nav-item ">
 				<a class="nav-link" href="profile-recents.html">
 					<i class="fal fa-undo"></i>
 					<span>Recents</span>
@@ -67,7 +67,7 @@
 					<span>Embed Code</span>
 				</a>
 			</li>
-			<li class="nav-item">
+			<li class="nav-item active">
 				<a class="nav-link" href="analytics.html">
 					<i class="fal fa-chart-area"></i>
 					<span>Analytics</span>
@@ -80,7 +80,7 @@
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="#">DOCIFY</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Recents</li>
+							<li class="breadcrumb-item active" aria-current="page">Analytics</li>
 						</ol>
 					</nav>
 					<div class="personl">
@@ -97,18 +97,13 @@
 				</div>
 				<div class="container-fluid">
 					<div class="d-sm-flex  mb-4">
-						<h1 class="title--heading text-black-5">Recents</h1>
+						<h1 class="title--heading text-black-5">Analytics</h1>
 					</div>
 					<div class="card bg-white">
-						<div class="card-body">
-							<div class="content-empty">
-								<a href="submit-document.html" class="btn btn-primary-column">
-									<i class="fas fa-plus-circle"></i>
-									<span>Add another file...</span>
-								</a>
-								<div class="empty-center">
-									<p>Nothing yet. Recently opened documents will appear here once they are opened. Click <a href="#"><i class="fas fa-plus-circle"></i></a> to add document(s)</p>
-								</div>
+						<div class="card-body px-4 py-4">
+							<h4 class="mb-4">Analytics</h4>
+							<div class="analytics__chart">
+								<div id="analytics__chart"></div>
 							</div>
 						</div>
 					</div>
@@ -118,12 +113,93 @@
 	</div>
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/slick.js"></script>
+	<script type="text/javascript" src="assets/js/apexcharts.min.js"></script>
 	<script>
 		$(document).ready(function(){
 			$('.toggle-Menu').click(function(){
 				$('.sidebar').toggleClass('open');
-			})
+			});
+
+
+			var options = {
+				series: [{
+					name: 'Download',
+					type: 'column',
+					data: [23, 11, 22, 27, 13, 22, 37, 21, 44, 22, 30]
+				}, {
+					name: 'Verify Successful',
+					type: 'area',
+					data: [44, 55, 41, 67, 22, 43, 21, 41, 56, 27, 43]
+				}, {
+					name: 'Verify Failed',
+					type: 'line',
+					data: [30, 25, 36, 30, 45, 35, 64, 52, 59, 36, 39]
+				}],
+				chart: {
+					height: 550,
+					type: 'line',
+					stacked: false,
+
+					zoom: {
+						enabled: false
+					},
+					toolbar: {
+						show: false
+					}
+				},
+				stroke: {
+					width: [0, 2, 5],
+					curve: 'smooth'
+				},
+				plotOptions: {
+					bar: {
+						columnWidth: '50%'
+					}
+				},
+
+				fill: {
+					opacity: [0.85, 0.25, 1],
+					gradient: {
+						inverseColors: false,
+						shade: 'light',
+						type: "vertical",
+						opacityFrom: 0.85,
+						opacityTo: 0.55,
+						stops: [0, 100, 100, 100]
+					}
+				},
+				labels: ['01/01/2022', '02/01/2022', '03/01/2022', '04/01/2022', '05/01/2022', '06/01/2022', '07/01/2022',
+				'08/01/2022', '09/01/2022', '10/01/2022', '11/01/2022'
+				],
+				markers: {
+					size: 0
+				},
+				xaxis: {
+					type: 'datetime'
+				},
+				yaxis: {
+					title: {
+						text: '',
+					},
+					min: 0
+				},
+				tooltip: {
+					shared: true,
+					intersect: false, 
+					y: {
+						formatter: function (y) {
+							if (typeof y !== "undefined") {
+								return y.toFixed(0) + " ";
+							}
+							return y;
+
+						}
+					}
+				}
+			};
+
+			var chart = new ApexCharts(document.querySelector("#analytics__chart"), options);
+			chart.render();
 		})
 	</script>
 </body>
