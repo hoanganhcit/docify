@@ -42,7 +42,7 @@
 					<span>Recents</span>
 				</a>
 			</li>
-			<li class="nav-item ">
+			<li class="nav-item">
 				<a class="nav-link" href="folders.html">
 					<i class="fal fa-folder-open"></i>
 					<span>Folders</span>
@@ -72,8 +72,8 @@
 				<div class="navbar-header d-flex align-items-center justify-between">
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="#">Docify</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Submit Document</li>
+							<li class="breadcrumb-item"><a href="#">DOCIFY</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Profile</li>
 						</ol>
 					</nav>
 					<div class="personl">
@@ -89,50 +89,55 @@
 				</div>
 				<div class="container-fluid">
 					<div class="d-sm-flex  mb-4">
-						<h1 class="title--heading text-black-5">Submit Document</h1>
+						<h1 class="title--heading text-black-5">Edit Profile</h1>
 					</div>
-					<div class="card bg-white">
-						<div class="card-body">
-							<div class="panel-content">
-								<p>Select a document type for your document(s)</p>
-								<div class="panel-form">
-									<div class="form-group">
-										<label>Document type</label>
-										<select class="form-control">
-											<option value="">Bank Statement</option>
-											<option value="">Document type 2</option>
-											<option value="">Document type 3</option>
-											<option value="">Document type 4</option>
-										</select>
-									</div>
-									<div class="form-group">
-										<label>Upload File(s)</label>
-										<div class="file-uploads">
-											<div class="file-upload-wrapper" data-text="Select Your File">
-												<input name="file-upload-field" type="file" class="file-upload-field" value="">
-												<span class="fal fa-upload"></span>
+					<div class="row">
+						<div class="col-md-7 col-xs-12"> 
+							<div class="card bg-white edit__profile" style="min-height: auto">
+								<div class="card-body">
+									<div class="content-empty">
+										<h4 class="mb-4 title-form">Edit Information</h4>
+										<form>
+											<div class="form-group">
+												<label>Bussiness Name</label>
+												<input type="text" class="form-control" name="">
 											</div>
-										</div>
-										<div class="mt-3 text-right">
-											<a href="javascript:;" class="add-another-file">Add another file... <i class="fas fa-plus-circle"></i> </a>
-										</div>
-									</div>
-									<div class="form-group">
-										<label>Add to Folder</label>
-										<select class="form-control">
-											<option value="">Folder 1</option>
-											<option value="">Folder 2</option>
-											<option value="">Folder 3</option>
-											<option value="">Folder 4</option>
-										</select>
+											<div class="form-group">
+												<label>Bussiness Website</label>
+												<input type="text" class="form-control" name="">
+											</div>
+											<div class="form-group">
+												<label>Bussiness Address</label>
+												<input type="text" class="form-control" name="">
+											</div>
+											<div class="form-group">
+												<button type="submit" class="btn button-primary">Save</button>
+											</div>
+										</form>
 									</div>
 								</div>
 							</div>
-							<div class="panel-footer mt-5">
-								<a href="submit-document-3.html" class="btn button-primary">
-									<span>Coutinue</span>
-									<i class="fal fa-arrow-right"></i>
-								</a>
+						</div>
+						<div class="col-md-5 col-xs-12"> 
+							<div class="card bg-white edit__profile" style="min-height: auto">
+								<div class="card-body">
+									<div class="content-empty">
+										<h4 class="mb-4 title-form">Change Password</h4>
+										<form>
+											<div class="form-group">
+												<label>New Password</label>
+												<input type="password" class="form-control" name="">
+											</div>
+											<div class="form-group">
+												<label>Confirm Password</label>
+												<input type="password" class="form-control" name="">
+											</div>
+											<div class="form-group">
+												<button type="submit" class="btn button-primary">Save</button>
+											</div>
+										</form>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -143,19 +148,6 @@
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/slick.js"></script>
-	<script>
-		$(document).on("change", ".file-upload-field", function(){ 
-			$(this).parent(".file-upload-wrapper").attr("data-text",$(this).val().replace(/.*(\/|\\)/, '') );
-		});
 
-		$(document).ready(function(){
-			$('.add-another-file').click(function(){
-				$('.file-uploads').append('<div class="file-upload-wrapper mt-3 d-flex justify-between" data-text="Select Your File"><input name="file-upload-field" type="file" class="file-upload-field" value=""><span class="fal fa-upload"></span><span class="fal fa-minus delete-append"></span></div>');
-			});
-			$(document).on("click",".delete-append", function () {
-				$(this).parent().remove();
-			});
-		});
-	</script>
 </body>
 </html>
