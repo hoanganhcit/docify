@@ -20,7 +20,6 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-icons.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/slick.css"> 
 	<link rel="stylesheet" type="text/css" href="assets/css/dataTables.min.css">
-	<link rel="stylesheet" type="text/css" href="assets/css/sweetalert.min.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<style>
 		.swal-text {
@@ -36,7 +35,9 @@
 	<div id="wrapper">
 		<ul class="navbar-nav bg-gradient-primary sidebar accordion">
 			<a class="sidebar-brand d-flex align-items-center justify-between" href="profile-recents.html">
-				<div class="sidebar-brand-text">DOCIFY</div>
+				<div class="sidebar-brand-text">
+					<img src="assets/images/logo.png" height="30">
+				</div>
 				<div class="sidebar-brand-icon">
 					<i class="fal fa-bars"></i>
 				</div>
@@ -178,6 +179,23 @@
 												<a href="#" class="btn btn-sm btn-danger"><i class="fal fa-trash"></i> Delete</a>
 											</td>
 										</tr>
+										<tr>
+											<td>
+												<div class="document-name">
+													<i class="fal fa-file-alt"></i>
+													<span>budget estimate 12 - 01 - 2022 </span>
+												</div>
+											</td>
+											<td>
+												<span>14 days</span>
+											</td>
+											<td>
+												<a href="#" class="text-danger bold status_verified_2">Failed</a>
+											</td>
+											<td>
+												<a href="#" class="btn btn-sm btn-danger"><i class="fal fa-trash"></i> Delete</a>
+											</td>
+										</tr>
 									</tbody>
 								</table>
 							</div>
@@ -195,7 +213,7 @@
 
 	<!-- Modal -->
 	<div class="modal fade bd-example-modal-lg" id="verify_failed" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg">
+		<div class="modal-dialog modal-lg" style="max-width: 1024px">
 			<div class="modal-content">
 				<div class="modal-body">
 					<div class="failed_content">
@@ -206,20 +224,58 @@
 							<p>Budget Estimate was unsuccessfully verified by Docify. Here are the differences from the original.</p>
 						</div>
 					</div>
-					<table class="table table-bordered">
-						<thead>
-							<tr>
-								<th>Original content</th>
-								<th>Content from unsuccessful Verified</th>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>The year of 202<span class="content_error">1</span></td>
-								<td>The year of 202<span class="content_error">2</span></td>
-							</tr>
-						</tbody>
-					</table>
+					<div class="row">
+						<div class="col-md-6 col-xs-12">
+							<div class="preview__content">
+								<h4>Original content</h4>
+								<iframe src="assets/file.pdf" height="500" style="width: 100%"></iframe>
+							</div>
+						</div>
+						<div class="col-md-6 col-xs-12">
+							<div class="preview__content">
+								<h4>Content from unsuccessful Verified</h4>
+								<iframe src="assets/file.pdf" height="500" style="width: 100%"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="verified" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="failed_content_error">
+						<div class="failed__error">
+							<img src="assets/images/verified.png" style="width: 150px">
+						</div>
+						<h3>Successfully!</h3>
+						<p>Budget Estimate has been verified and certified by Docify. </p>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="verify_failed_2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="failed_content_error">
+						<div class="failed__error">
+							<i class="fal fa-exclamation-circle"></i>
+							<p>ERROR</p>
+						</div>
+						<p>We are unable to verify Budget Estimate due to the fact that we don't have the original to compare with. Please ask the Document Issuer and their user to use Docify to certify their documents first before submitting to you.</p>
+					</div>
 				</div>
 				<div class="modal-footer">
 					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
@@ -229,21 +285,19 @@
 	</div>
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/sweetalert.min.js"></script>
 	<script type="text/javascript" src="assets/js/dataTables.min.js"></script>
 	<script type="text/javascript" src="assets/js/dataTables.bootstrap.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			$('#dataTables').DataTable();
-			$('.status_verified').click(function(){
-				swal({
-					title: "Successfully Verified!",
-					text: "Budget Estimate has been verified and certified by Docify.",
-					icon: "success",
-				});
-			});
+			$('#dataTables').DataTable(); 
 			$('.status_failed').click(function(){
 				$('#verify_failed').modal('show');
+			});
+			$('.status_verified').click(function(){
+				$('#verified').modal('show');
+			});
+			$('.status_verified_2').click(function(){
+				$('#verify_failed_2').modal('show');
 			});
 		});	
 
