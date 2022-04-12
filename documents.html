@@ -122,6 +122,7 @@
 								<div class="row ">
 									<div class="col-md-3 col-xs-12 mb-4">
 										<div class="file-item">
+											<a href="#" class="bagde-verified status_verified">Verified</a>
 											<div class="icon-file">
 												<img src="assets/images/file.png">
 												<span class="bagde pdf-type">PDF</span>
@@ -131,6 +132,7 @@
 									</div>
 									<div class="col-md-3 col-xs-12 mb-4">
 										<div class="file-item">
+											<a href="#" class="bagde-failed status_failed">Failed</a>
 											<div class="icon-file">
 												<img src="assets/images/file.png">
 												<span class="bagde doc-type">DOC</span>
@@ -140,6 +142,7 @@
 									</div>
 									<div class="col-md-3 col-xs-12 mb-4">
 										<div class="file-item">
+											<a href="#" class="bagde-failed status_verified_2">Failed</a>
 											<div class="icon-file">
 												<img src="assets/images/file.png">
 												<span class="bagde xls-type">XLS</span>
@@ -178,9 +181,99 @@
 			</div>
 		</div>
 	</div>
+		<!-- Modal -->
+	<div class="modal fade bd-example-modal-lg" id="verify_failed" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" style="max-width: 1024px">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="failed_content">
+						<div class="failed__icons">
+							<i class="fal fa-exclamation-triangle"></i>
+						</div>
+						<div class="failed__txt">
+							<p>Budget Estimate was unsuccessfully verified by Docify. Here are the differences from the original.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-xs-12">
+							<div class="preview__content">
+								<h4>Original content</h4>
+								<iframe src="assets/file.pdf" height="500" style="width: 100%"></iframe>
+							</div>
+						</div>
+						<div class="col-md-6 col-xs-12">
+							<div class="preview__content">
+								<h4>Content from unsuccessful Verified</h4>
+								<iframe src="assets/file.pdf" height="500" style="width: 100%"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="verified" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="failed_content_error">
+						<div class="failed__error">
+							<img src="assets/images/verified.png" style="width: 150px">
+						</div>
+						<h3>Successfully!</h3>
+						<p>Budget Estimate has been verified and certified by Docify. </p>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="verify_failed_2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="failed_content_error">
+						<div class="failed__error">
+							<i class="fal fa-exclamation-circle"></i>
+							<p>ERROR</p>
+						</div>
+						<p>We are unable to verify Budget Estimate due to the fact that we don't have the original to compare with. Please ask the Document Issuer and their user to use Docify to certify their documents first before submitting to you.</p>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-	<script type="text/javascript" src="assets/js/slick.js"></script>
+	<script type="text/javascript" src="assets/js/dataTables.min.js"></script>
+	<script type="text/javascript" src="assets/js/dataTables.bootstrap.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('#dataTables').DataTable(); 
+			$('.status_failed').click(function(){
+				$('#verify_failed').modal('show');
+			});
+			$('.status_verified').click(function(){
+				$('#verified').modal('show');
+			});
+			$('.status_verified_2').click(function(){
+				$('#verify_failed_2').modal('show');
+			});
+		});	
+
+		
+
+	</script>
 
 </body>
 </html>

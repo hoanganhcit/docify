@@ -1690,35 +1690,58 @@ span.content_error {
 	color: red;
 }
 .preview__content h4 {
-    font-size: 16px;
-    text-transform: capitalize;
+	font-size: 16px;
+	text-transform: capitalize;
 }
 .failed_content_error {
-    padding: 3rem 2rem;
-    text-align: center;
+	padding: 3rem 2rem;
+	text-align: center;
 }
 
 .failed__error {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    margin-bottom: 2rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin-bottom: 2rem;
 }
 
 .failed__error i {
-    font-size: 45px;
-    color: #ff5a4e;
-    margin-right: 1rem;
+	font-size: 45px;
+	color: #ff5a4e;
+	margin-right: 1rem;
 }
 
 .failed_content_error .failed__error p {
-    margin-bottom: 0;
-    font-size: 30px;
-    font-weight: 600;
-    color: #ff5a4e;
+	margin-bottom: 0;
+	font-size: 30px;
+	font-weight: 600;
+	color: #ff5a4e;
 }
 .failed_content_error p {
-    font-size: 14px;
-    color: #8f8f8f;
+	font-size: 14px;
+	color: #8f8f8f;
+}
+
+.bagde-verified, .bagde-failed {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	font-size: 13px;
+	color:#FFF !important;
+}
+.bagde-verified {
+	background: #36a13a;
+	color: #fff;
+	padding: 5px;
+	border-radius: 2px;
+	line-height: 14px;
+}
+
+.bagde-failed {
+	background: #F44336;
+	color: #fff;
+	padding: 5px;
+	border-radius: 2px;
+	line-height: 14px;
 }
