@@ -1745,3 +1745,97 @@ span.content_error {
 	border-radius: 2px;
 	line-height: 14px;
 }
+.section__pricing {
+    position: relative;
+    margin-bottom: 100px;
+}
+/* Table Default Style */
+.table-default {
+  background-color: #fff;
+  text-align: center;
+  padding: 24px 14px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.table {
+  /* Table Header */
+}
+.table__header--icon {
+  max-width: 100%;
+}
+.table__header--price {
+  position: relative;
+}
+.table__content {
+  padding: 20px 0;
+  /* Table List */
+}
+.table__content--list li {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px;
+}
+.table__content--list li.muted {
+  opacity: 0.35;
+}
+.table__footer {
+  margin-top: 20px;
+}
+
+.table6 {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.table6 .table__header--icon {
+  height: 80px;
+  width: auto;
+  margin-bottom: 15px;
+}
+.table6 .table__header--title {
+  font-size: 28px;
+  text-transform: uppercase;
+  margin: 10px 0 20px;
+}
+.table6 .table__header--price {
+  font-size: 34px;
+  font-weight: 700;
+}
+.table6 .table__header--price span {
+  position: relative;
+  right: -6px;
+  font-size: 0.7em;
+  font-weight: 400;
+}
+.table6 .table__content--list {
+  color: #8295ad;
+  padding: 20px 0;
+  border-top: 1px solid #e8f3ff;
+  border-bottom: 1px solid #e8f3ff;
+}
+.table6 .button {
+  background-color: #7460ee;
+  color: #fff;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  border-radius: 44px;
+}
+.table6 .button:hover {
+  background-color: #ff7381;
+}
+.table6.red .table__header--title {
+  color: #ff7381;
+}
+.table6.orange .table__header--title {
+  color: #fcb755;
+}
+.table6.green .table__header--title {
+  color: #2cca70;
+}
+
+@media only screen and (min-width: 992px) {
+  .p-md-0 {
+    padding: 0;
+  }
+}
