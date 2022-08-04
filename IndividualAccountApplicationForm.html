@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet" type="text/css">  
+	<title>DOCIFY</title>
+	<meta name="generator" content="WooCommerce 6.0.0" />
+	<link rel="canonical" href="#" />
+	<link rel='shortlink' href='#' />
+	<link rel="alternate" type="application/json+oembed" href="#" />
+	<link rel="alternate" type="text/xml+oembed" href="#" /> 
+	<link rel="icon" href="#" sizes="32x32" />  
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<style type="text/css">
+
+		.mt-10 {
+			margin-top: 10rem;
+		}
+		.business_form {
+			text-align: left;
+			padding-bottom: 10rem;
+		}
+		.business_form label {
+			color:#fff;
+		}
+		.mb-6 {
+			margin-bottom: 3rem;
+		}
+		.mt-6 {
+			margin-top: 3rem;
+		}
+		.bs-register {
+			display: none;
+		}
+		.checkbox-btn {
+			width: 100px;
+			height: 50px;
+			position: relative;
+		}
+
+		.checkbox {
+			position: relative;
+			z-index: 2;
+			width: 100%;
+			height: 100%;
+			background: #fca905;
+			margin: 0;
+			padding: 0;
+			cursor: pointer;
+			opacity: 0;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		}
+
+		.toggler {
+			background: #fca905;
+			position: absolute;
+			top: 7px;
+			right: 0;
+			bottom: 7px;
+			left: 0;
+			z-index: 1;
+			background-color: #2a6c91;
+			line-height: 1;
+			color: #fff;
+			transition: background-color 0.15s ease-out;
+			border-radius: 35px;
+			text-transform: uppercase;
+			font-size: 12px;
+			font-weight: 700;
+		}
+		.toggler::before {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			top: 4px;
+			left: 6px;
+			bottom: 4px;
+			padding: 0 12px;
+			border-radius: 35px;
+			background-color: #fca905;
+			content: attr(data-label-unchecked);
+			transition: all 0.15s ease-out;
+			min-width: 32px;
+		}
+		.checkbox:active + .toggler::before {
+			padding: 0 20px;
+		}
+		.checkbox:checked + .toggler::before {
+			background-color: #4caf50;
+			content: attr(data-label-checked);
+			left: calc(100% - 4px);
+			transform: translateX(-100%);
+		}
+		.uppercase {
+			text-transform: uppercase;
+		}
+		.fs-24 {
+			font-size: 24px;
+		}
+		.font-italic {
+			font-style: italic;
+			font-weight: 300;
+		}
+		.bg-none {
+			background: none;
+		}
+
+		.inline-bl {
+			display: inline-block;
+			max-width: 200px;
+		}
+
+		input.dc-input.border-bottom {
+			border-radius: 0;
+			height: 30px;
+			margin: 0 10px;
+		}
+		canvas {  
+			background-color: #fff;
+			border-radius: 10px;
+			width: 100%; 
+		}
+
+		#canvas-wrap {
+			position: relative;
+
+		}
+		.datepicker td, .datepicker th {
+			padding: 5px 10px;
+		}
+	</style>
+</head>
+<body>
+	<div class="preloader" id="preloader" style="display: none;">
+		<div class="preloader-inner">
+			<div class="cube-wrapper">
+				<div class="cube-folding">
+					<span class="leaf1"></span>
+					<span class="leaf2"></span>
+					<span class="leaf3"></span>
+					<span class="leaf4"></span>
+				</div>
+				<span class="loading" data-name="Loading">DOCIFY</span>
+			</div>
+		</div>
+	</div>
+	<header class="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 p-0">
+					<nav class="navbar navbar-expand-lg navbar-dark">
+						<a class="navbar-brand" href="index.html">
+							<span class="logo-text">DOCIFY</span>
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse flex-end" id="mainmenu" style="display: none !important;">
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item active">
+									<a class="nav-link btn button-primary" href="#" >Sign In</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Sign Up</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header> 
+	<div class="wrapper">
+		<div class="container">
+			<div class="row justify-content-center mt-0">
+				<div class="col-12 col-sm-12 col-md-12  text-center mt-10 mb-2">
+					<div class=" px-0 pt-4 pb-0 mt-3 mb-3"> 
+						<form class="business_form">
+							<h2 class="text-white mb-6 uppercase fs-24">1. Individual Account Application  </h2>
+							<div class="row">
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>First Name </label>
+										<input type="text" class="dc-input" name="">
+									</div>
+								</div> 
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Middle Name(s) </label>
+										<input type="text" class="dc-input" name="">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Last Name</label>
+										<input type="text" class="dc-input datepicker" name="">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Email </label>
+										<input type="text" class="dc-input" name="">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Phone Number </label>
+										<input type="text" class="dc-input" name="">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Date of Birth (YYYY-MM-DD)  </label>
+										<input type="text" class="dc-input datepicker" name="">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Occupation/Title/Role Industry </label>
+										<input type="text" class="dc-input" name="">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Apartment or Suite Number </label>
+										<input type="text" class="dc-input" name="">
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>City State/Province</label>
+										<input type="text" class="dc-input" name="">
+									</div>
+								</div> 
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Street Address Postal Code/Zip Code Country </label>
+										<input type="text" class="dc-input" name="">
+									</div>
+								</div> 
+								<div class="col-md-6"> 
+									<div class="form-group">
+										<label>Are you involved, related or closely associated with any members of government?</label>
+										<div class="checkbox-btn">
+											<input type="checkbox" class="checkbox">
+											<div class="toggler" data-label-checked="Yes" data-label-unchecked="No"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6"> 
+									<div class="form-group">
+										<label>Have you ever been involved or convicted of a criminal offense? </label>
+										<div class="checkbox-btn">
+											<input type="checkbox" class="checkbox">
+											<div class="toggler" data-label-checked="Yes" data-label-unchecked="No"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Name of Company  </label>
+										<input type="text" class="dc-input" name="">
+									</div>
+								</div> 
+								<div class="col-md-6">
+									<div class="form-group">
+										<label>Industry  </label>
+										<input type="text" class="dc-input" name="">
+									</div>
+								</div> 
+								<div class="col-md-12"> 
+									<div class="form-group">
+										<label>Company Address (Suite Number, Street Address, City, Postal Code, Country)</label>
+										<input type="text" class="dc-input" name="">
+									</div>
+								</div>
+								<div class="col-md-12"> 
+									<div class="form-group">
+										<label>How did you hear about our company? </label>
+										<textarea class="dc-input" rows="4"></textarea>
+									</div>
+								</div>
+							</div>
+							<h2 class="text-white mt-4 mb-6 fs-24">2. ACKNOWLEDGEMENT & CLIENT SIGNATURE</h2>
+							<div class="row">
+								<div class="col-md-12">
+									<div class="form-group">
+										<span  class="text-white">I</span>
+										<input type="text" id="fullname_value" name="fullname" class="dc-input bg-none border-bottom inline-bl"  name="">
+										<span class="text-white">(insert your FULL name), hereby declare that the above particulars of facts and information stated are true, correct and complete to the best of my belief and knowledge. I acknowledge and accept that I have provided my personal or corporate information to Docity to be safely stored under the Privacy Act. I fully understand and agree to the Terms of Service and Privacy Policy as set out on www.docify.app. </span>
+										<p  class="text-white">
+											By signing below, the signee attests that the information given in this form is true, complete and accurate.
+										</p>
+										<p  class="text-white">(CORPORATE SEAL, if required by the company’s by-laws)</p>
+									</div>
+									<div class="form-group mt-6">
+										<div class="row">
+											<div class="col-md-4 col-xs-12">
+												<label>Print Name</label>
+												<input type="text" class="dc-input" id="fullname" name="" readonly>
+											</div>
+											<div class="col-md-4 col-xs-12">
+												<label>Signature </label>
+												<div id="canvas-wrap">
+													<canvas id="sig-canvas" width="" height="160"></canvas>
+												</div>
+											</div>
+											<div class="col-md-4 col-xs-12">
+												<label>Date</label>
+												<input type="text" class="dc-input datepicker" id="datepicker" name="">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+	<script type="text/javascript" src="assets/js/slick.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.datepicker').datepicker();
+			$(".checkbox_2").change(function() {
+				if(this.checked) {
+					$('.is_yes').show();
+				}
+				else
+				{
+					$('.is_yes').hide();
+
+				}
+			});
+			$(".other_check").change(function() {
+				if(this.checked) {
+					$('#other_check').show();
+				}
+				else
+				{
+					$('#other_check').hide();
+
+				}
+			}); 
+
+			
+		}); 
+
+		$('#fullname_value').on('keyup', function() {
+			var fullname = $('#fullname_value').val();
+			$('#fullname').attr('value', fullname); 
+		});
+
+
+		(function() {
+			window.requestAnimFrame = (function(callback) {
+				return window.requestAnimationFrame ||
+				window.webkitRequestAnimationFrame ||
+				window.mozRequestAnimationFrame ||
+				window.oRequestAnimationFrame ||
+				window.msRequestAnimaitonFrame ||
+				function(callback) {
+					window.setTimeout(callback, 1000 / 60);
+				};
+			})();
+
+			var canvas = document.getElementById("sig-canvas");
+			var ctx = canvas.getContext("2d");
+			ctx.strokeStyle = "#222222";
+			ctx.lineWidth = 4;
+
+			var drawing = false;
+			var mousePos = {
+				x: 0,
+				y: 0
+			};
+			var lastPos = mousePos;
+
+			canvas.addEventListener("mousedown", function(e) {
+				drawing = true;
+				lastPos = getMousePos(canvas, e);
+			}, false);
+
+			canvas.addEventListener("mouseup", function(e) {
+				drawing = false;
+			}, false);
+
+			canvas.addEventListener("mousemove", function(e) {
+				mousePos = getMousePos(canvas, e);
+			}, false);
+
+  // Add touch event support for mobile
+  canvas.addEventListener("touchstart", function(e) {
+
+  }, false);
+
+  canvas.addEventListener("touchmove", function(e) {
+  	var touch = e.touches[0];
+  	var me = new MouseEvent("mousemove", {
+  		clientX: touch.clientX,
+  		clientY: touch.clientY
+  	});
+  	canvas.dispatchEvent(me);
+  }, false);
+
+  canvas.addEventListener("touchstart", function(e) {
+  	mousePos = getTouchPos(canvas, e);
+  	var touch = e.touches[0];
+  	var me = new MouseEvent("mousedown", {
+  		clientX: touch.clientX,
+  		clientY: touch.clientY
+  	});
+  	canvas.dispatchEvent(me);
+  }, false);
+
+  canvas.addEventListener("touchend", function(e) {
+  	var me = new MouseEvent("mouseup", {});
+  	canvas.dispatchEvent(me);
+  }, false);
+
+  function getMousePos(canvasDom, mouseEvent) {
+  	var rect = canvasDom.getBoundingClientRect();
+  	return {
+  		x: mouseEvent.clientX - rect.left,
+  		y: mouseEvent.clientY - rect.top
+  	}
+  }
+
+  function getTouchPos(canvasDom, touchEvent) {
+  	var rect = canvasDom.getBoundingClientRect();
+  	return {
+  		x: touchEvent.touches[0].clientX - rect.left,
+  		y: touchEvent.touches[0].clientY - rect.top
+  	}
+  }
+
+  function renderCanvas() {
+  	if (drawing) {
+  		ctx.moveTo(lastPos.x, lastPos.y);
+  		ctx.lineTo(mousePos.x, mousePos.y);
+  		ctx.stroke();
+  		lastPos = mousePos;
+  	}
+  }
+
+  // Prevent scrolling when touching the canvas
+  document.body.addEventListener("touchstart", function(e) {
+  	if (e.target == canvas) {
+  		e.preventDefault();
+  	}
+  }, false);
+  document.body.addEventListener("touchend", function(e) {
+  	if (e.target == canvas) {
+  		e.preventDefault();
+  	}
+  }, false);
+  document.body.addEventListener("touchmove", function(e) {
+  	if (e.target == canvas) {
+  		e.preventDefault();
+  	}
+  }, false);
+
+  (function drawLoop() {
+  	requestAnimFrame(drawLoop);
+  	renderCanvas();
+  })();
+
+  function clearCanvas() {
+  	canvas.width = canvas.width;
+  }
+
+  // Set up the UI
+  var clearBtn = document.getElementById("sig-clearBtn");
+  var submitBtn = document.getElementById("sig-submitBtn");
+  clearBtn.addEventListener("click", function(e) {
+  	clearCanvas();
+  }, false);
+  submitBtn.addEventListener("click", function(e) {
+  	var dataUrl = canvas.toDataURL();
+  }, false);
+
+})();
+</script>
+</body>
+</html>

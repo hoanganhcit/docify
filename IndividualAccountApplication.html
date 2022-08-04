@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet" type="text/css">  
+	<title>DOCIFY</title>
+	<meta name="generator" content="WooCommerce 6.0.0" />
+	<link rel="canonical" href="#" />
+	<link rel='shortlink' href='#' />
+	<link rel="alternate" type="application/json+oembed" href="#" />
+	<link rel="alternate" type="text/xml+oembed" href="#" /> 
+	<link rel="icon" href="#" sizes="32x32" />  
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<style type="text/css">
+
+		.mt-10 {
+			margin-top: 10rem;
+		}
+		
+		/*Background color*/
+		#grad1 {
+			background-color: : #9C27B0;
+			background-image: linear-gradient(120deg, #FF4081, #81D4FA);
+		}
+
+		/*form styles*/
+		#msform {
+			text-align: center;
+			position: relative;
+			margin-top: 20px;
+		}
+
+		#msform fieldset .form-card {
+			position: relative;
+			padding: 2.5rem;
+		}
+
+		#msform fieldset {
+			border: 0 none;
+			box-sizing: border-box;
+			width: 100%;
+			margin: 0;
+			padding-bottom: 20px;
+			position: relative;
+		}
+
+		/*Hide all except first fieldset*/
+		#msform fieldset:not(:first-of-type) {
+			display: none;
+		}
+
+		#msform fieldset .form-card {
+			text-align: left;
+			color: #9E9E9E;
+		}
+
+		.card {
+			background-color: transparent;
+		}
+		.button-default {
+			text-transform: uppercase;
+			color: #000;
+			background: #fff;
+			padding: 0.75rem 1.5rem;
+			font-size: var(--dc-font-size-text);
+			font-weight: 500;
+			outline: none;
+			transition: .5s;
+			border-radius: 4px;
+			height: 48px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+		}
+		/*Previous Buttons*/
+		#msform .btn btn-primary-previous {
+			width: 100px;
+			background: #616161;
+			font-weight: bold;
+			color: white;
+			border: 0 none;
+			border-radius: 0px;
+			cursor: pointer;
+			padding: 10px 5px;
+			margin: 10px 5px;
+		}
+
+		#msform .btn btn-primary-previous:hover, #msform .btn btn-primary-previous:focus {
+			box-shadow: 0 0 0 2px white, 0 0 0 3px #616161;
+		} 
+
+		/*FieldSet headings*/
+		.fs-title {
+			font-size: 25px;
+			color: #2C3E50;
+			margin-bottom: 10px;
+			font-weight: bold;
+			text-align: left;
+		}
+
+		/*progressbar*/
+		#progressbar {
+			margin-bottom: 30px;
+			overflow: hidden;
+			color: lightgrey;
+			display: flex;
+			justify-content: center;
+		}
+
+		#progressbar .active {
+			color: #fca905;
+		}
+
+		#progressbar li {
+			list-style-type: none;
+			font-size: 14px;
+			width: 25%;
+			float: left;
+			position: relative;
+		}
+
+		/*Icons in the ProgressBar*/
+		#progressbar #step1:before {
+			font-family: "Font Awesome 5 Pro";
+			content: "\f2bb";
+		}
+
+		#progressbar #step2:before {
+			font-family: "Font Awesome 5 Pro";
+			content: "\f007";
+		}
+
+		#progressbar #step3:before {
+			font-family: "Font Awesome 5 Pro";
+			content: "\f3c5";
+		}
+
+		#progressbar #step4:before {
+			font-family: "Font Awesome 5 Pro";
+			content: "\f030";
+		}
+
+		/*ProgressBar before any progress*/
+		#progressbar li:before {
+			width: 50px;
+			height: 50px;
+			line-height: 45px;
+			display: block;
+			font-size: 18px;
+			color: #ffffff;
+			background: lightgray;
+			border-radius: 50%;
+			margin: 0 auto 10px auto;
+			padding: 2px;
+		}
+
+		/*ProgressBar connectors*/
+		#progressbar li:after {
+			content: '';
+			width: 100%;
+			height: 2px;
+			background: lightgray;
+			position: absolute;
+			left: 0;
+			top: 25px;
+			z-index: -1;
+		}
+		#progressbar li:first-child::after {
+			width: 50%;
+			right: 0;
+			left: auto;
+		}
+
+		#progressbar li:last-child::after {
+			width: 50%;
+		}
+
+		/*Color number of the step and the connector before it*/
+		#progressbar li.active:before, #progressbar li.active:after {
+			background: #fca905;
+		}
+
+		/*Imaged Radio Buttons*/
+		.radio-group {
+			position: relative;
+			margin-bottom: 25px;
+		}
+
+		.radio {
+			display:inline-block;
+			width: 204;
+			height: 104;
+			border-radius: 0;
+			background: lightblue;
+			box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.2);
+			box-sizing: border-box;
+			cursor:pointer;
+			margin: 8px 2px; 
+		}
+
+		.radio:hover {
+			box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+		}
+
+		.radio.selected {
+			box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.1);
+		}
+
+		/*Fit image in bootstrap div*/
+		.fit-image{
+			width: 100%;
+			object-fit: cover;
+		}
+	</style>
+</head>
+<body>
+	<div class="preloader" id="preloader" style="display: none;">
+		<div class="preloader-inner">
+			<div class="cube-wrapper">
+				<div class="cube-folding">
+					<span class="leaf1"></span>
+					<span class="leaf2"></span>
+					<span class="leaf3"></span>
+					<span class="leaf4"></span>
+				</div>
+				<span class="loading" data-name="Loading">DOCIFY</span>
+			</div>
+		</div>
+	</div>
+	<header class="navigation">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 p-0">
+					<nav class="navbar navbar-expand-lg navbar-dark">
+						<a class="navbar-brand" href="index.html">
+							<span class="logo-text">DOCIFY</span>
+						</a>
+						<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu" aria-controls="mainmenu" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse flex-end" id="mainmenu" style="display: none !important;">
+							<ul class="navbar-nav ml-auto">
+								<li class="nav-item active">
+									<a class="nav-link btn button-primary" href="#" >Sign In</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#">Sign Up</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header> 
+	<div class="wrapper">
+		<div class="container">
+			<div class="row justify-content-center mt-0">
+				<div class="col-12 col-sm-12 col-md-12  text-center mt-10 mb-2">
+					<div class="card card-blur px-0 pt-4 pb-0 mt-3 mb-3">
+						<h2 class="text-white">CORPORATE AND INDIVIDUAL IDENTITY VERIFICATION </h2>
+						<p class="text-white">Required of all authorized signatories of account </p>
+						<p class="text-white">Please submit three (3) forms of identification plus face recognition</p>
+						<div class="row">
+							<div class="col-md-12 mx-0">
+								<form id="msform">
+									<!-- progressbar -->
+									<ul id="progressbar">
+										<li class="active" id="step1">Photo ID</li>
+										<li id="step3">Proof Of Address</li>
+										<li id="step4">Face Recognition Scan</li>
+									</ul>
+									<!-- fieldsets -->
+									<fieldset> 
+										<div class="form-card">
+											<h2 class="fs-title text-white">Photo ID</h2>
+											<p class="text-sm">(i.e. passport or any other government-issued document evidencing nationality or residence)</p>
+											<input class="form-control dc-input" type="file" id="formFile" style="line-height: 46px">
+										</div>
+										<input type="button" name="next" class="next btn button-primary" value="Next Step"/>
+									</fieldset>
+									<fieldset>
+										<div class="form-card">
+											<h2 class="fs-title text-white">Proof of address as represented on this application</h2>
+											<p class="text-sm">(i.e. utility bill, bank statement, within the last 3 months)</p>
+											<input class="form-control dc-input" type="file" id="formFile" style="line-height: 46px">
+										</div>
+										<input type="button" name="previous" class="previous btn button-default" value="Previous"/>
+										<input type="button" name="make_payment" class="next btn button-primary" value="Next Step"/>
+									</fieldset>
+									<fieldset>
+										<div class="form-card">
+											<h2 class="fs-title text-white">Proof of person face recognition scan</h2>
+											<p class="text-sm">(i.e. face must match photo ID) </p>
+											<input class="form-control dc-input" type="file" id="formFile" style="line-height: 46px">
+										</div>
+										<input type="button" name="previous" class="previous btn button-default" value="Previous"/>
+										<a href="IndividualAccountApplicationForm.html"  class="next btn button-primary">Confirm</a>
+									</fieldset>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+	<script type="text/javascript" src="assets/js/slick.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+
+			var current_fs, next_fs, previous_fs; 
+			var opacity;
+
+			$(".next").click(function(){
+
+				current_fs = $(this).parent();
+				next_fs = $(this).parent().next();
+
+				$("#progressbar li").eq($("fieldset").index(next_fs)).addClass("active");
+
+				next_fs.show(); 
+				current_fs.animate({opacity: 0}, {
+					step: function(now) {
+						opacity = 1 - now;
+
+						current_fs.css({
+							'display': 'none',
+							'position': 'relative'
+						});
+						next_fs.css({'opacity': opacity});
+					}, 
+					duration: 600
+				});
+			});
+
+			$(".previous").click(function(){
+
+				current_fs = $(this).parent();
+				previous_fs = $(this).parent().prev();
+
+				$("#progressbar li").eq($("fieldset").index(current_fs)).removeClass("active");
+
+				previous_fs.show();
+
+				current_fs.animate({opacity: 0}, {
+					step: function(now) {
+						opacity = 1 - now;
+
+						current_fs.css({
+							'display': 'none',
+							'position': 'relative'
+						});
+						previous_fs.css({'opacity': opacity});
+					}, 
+					duration: 600
+				});
+			});
+
+			$('.radio-group .radio').click(function(){
+				$(this).parent().find('.radio').removeClass('selected');
+				$(this).addClass('selected');
+			});
+
+			$(".submit").click(function(){
+				return false;
+			})
+
+		});
+	</script>
+</body>
+</html>
