@@ -20,6 +20,48 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+	<style>
+		.br-item a {
+			display: block;
+			text-align: center;
+		}
+
+		.br-item a img {
+			height: 70px;
+			width: auto;
+			display: inline-block;
+		}
+		.hover-in {
+			display: none !important;
+		}
+
+		.py-9 {
+			padding-top: 3.5rem;
+			padding-bottom: 3.5rem;
+		}
+
+		.uni-brands {
+			position: relative;
+		}
+
+		.mt-addons-title-subtile {
+			position: relative;
+			margin-bottom: 2.5rem;
+		}
+
+		.mt-addons-title-section {
+			color: #fff;
+			font-weight: 600;
+		}
+
+		.brand-list {
+			backdrop-filter: blur(30px);
+			background: rgba(255, 255, 255,0.1);
+			padding: 1rem;
+			border-radius: 10px;
+		}
+	</style>
+
 </head>
 <body>
 	<header class="navigation">
@@ -72,6 +114,43 @@
 						<h3 class="title mb-58 wow fadeInUp" data-wow-delay="0.7s">High Quality NFT Collections</h3>
 						<p class="fs-21 mb-33 wow fadeInUp" data-wow-delay="0.9s">We are creating authentication tools that make it easier for anyone to spot the reals from the fakes using the blockchain. </p>
 						<p class="fs-18 line-h17 mb-41 wow fadeInUp" data-wow-delay="1.1s">Fake information, let alone fraud, is becoming more sophisticated by day with the maturing of certain technologies. People as well as companies have to dedicate tremendous resources to authenticate information and often because of time constraints, it is overlooked. We believe that by making an easy to use tool to authenticate documents, the less likely those who cheat will get ahead. </p>
+					</div>
+				</div>
+			</div>
+			<div class="uni-brands py-9">
+				<div id="" class="mt-addons-title-subtile">
+					<h2 class="mt-addons-title-section text-center">Our Trustworthy Partners</h2>
+				</div>
+				<div class="brand-list">
+					<div class="br-item">
+						<a href="https://beaconhouse.ca/" target="_blank">
+							<img src="assets/images/beaconhouse.png" alt="" class="hover-in">
+							<img src="assets/images/beaconhouse-white.png" alt=""  class="hover-out">
+						</a>
+					</div>
+					<div class="br-item">
+						<a href="http://brockacademy.ca/" target="_blank">
+							<img src="assets/images/brockacademy.png" alt="" class="hover-in">
+							<img src="assets/images/brockacademy-white.png" alt=""  class="hover-out">
+						</a>
+					</div>
+					<div class="br-item">
+						<a href="http://allnationsacademy.ca/" target="_blank">
+							<img src="assets/images/allnationsacademy.png" alt="" class="hover-in">
+							<img src="assets/images/allnationsacademy-white.png" alt=""  class="hover-out">
+						</a>
+					</div>
+					<div class="br-item">
+						<a href="https://tccti.net/" target="_blank">
+							<img src="assets/images/tccti.png" alt="" class="hover-in">
+							<img src="assets/images/tccti-white.png" alt=""  class="hover-out">
+						</a>
+					</div>
+					<div class="br-item">
+						<a href="http://www.tiuoc.com/" target="_blank">
+							<img src="assets/images/tiuoc.png" alt="" class="hover-in">
+							<img src="assets/images/tiuoc-white.png" alt=""  class="hover-out">
+						</a>
 					</div>
 				</div>
 			</div>
@@ -150,30 +229,15 @@
 	<script type="text/javascript" src="assets/js/wow.min.js"></script>
 	<script type="text/javascript" src="assets/js/slick.js"></script>
 	<script>
-		$(document).ready(function(){
-			new WOW().init();
-			$(window).on("load", function () {
-				setTimeout(function () {
-					$("#preloader").fadeOut("slow", function () {});
-				}, 1000);
-			});
-
-			$('.sender-images').slick({
-				autoplay: true,
-				autoplaySpeed: 5000,
-				dots: true,
-				arrows:false,
-				infinite: true,
-				fade: true,
-				cssEase: 'linear'
-			});
-			$('.receiver-images').slick({
+		$(document).ready(function() {
+			$('.brand-list').slick({
 				autoplay: false,
 				autoplaySpeed: 5000,
-				dots: true,
+				slidesToShow: 5,
+				slidesToScroll: 1,
+				dots: false,
 				arrows:false,
 				infinite: true,
-				fade: true,
 				cssEase: 'linear'
 			});
 		});
