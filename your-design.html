@@ -29,6 +29,89 @@
 		.swal-modal {
 			width: 530px;
 		}
+        .mb-10 {
+            margin-bottom: 5rem;
+        }
+		.ai-design-info {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+		.ai-item {
+			position: absolute;
+			max-width: 300px;
+			width: 100%;
+			cursor: pointer;
+		}
+
+		.info-form {
+			background: #fff;
+			border-radius: 4px;
+			padding: 1rem;
+			max-width: 300px;
+			width: 100%;
+			display: none;
+			position: relative;
+    		z-index: 1;
+		}
+
+		.i-point {
+			background: #ffb727;
+			border-radius: 50%;
+			height: 14px;
+			position: relative;
+			width: 14px;
+			display: inline-flex;
+		}
+		.i-point:before, .i-point:after {
+			content: "";
+			animation: growAndFade 3s infinite ease-out;
+			background-color: #fca905;
+			border-radius: 50%;
+			height: 26px;
+			opacity: 0;
+			position: absolute;
+			width: 26px;
+			left: -6px;
+			top: -6px;
+		}
+
+		.i-point:before {
+			animation-delay: 1s;
+		}
+		.i-point:after {
+			animation-delay: 2s;
+		}
+		@keyframes growAndFade {
+		0% {
+			opacity: 1;
+			transform: scale(0);
+		}
+		100% {
+			opacity: .25;
+			transform: scale(1);
+		}
+		}
+		.ai-item.active .info-form {
+			display: block;
+		}
+
+		.info-form input {
+			background: #efefef;
+			border-radius: 4px;
+			height: 40px;
+		}
+
+		.info-form label {
+			font-size: 12px;
+			margin-bottom: 0;
+		}
+
+		.info-form .form-group {
+			margin-bottom: 0;
+		}
 	</style>
 </head>
 <body class="body-login">
@@ -106,107 +189,115 @@
 					</div>
 				</div>
 				<div class="container-fluid">
-					<div class="d-sm-flex  mb-4">
-						<h1 class="title--heading text-black-5">Documents</h1>
+					<div class="d-sm-flex ">
+						<h1 class="title--heading text-black-5">Your Design</h1>
 					</div>
-					<div class="card bg-white">
+					<a href="document-list-view.html" class="d-block mb-4 text-black"><i class="fal fa-long-arrow-left"></i> Back</a>
+					<div class="card bg-white mb-10">
 						<div class="card-body">
-							<div class=" header-card "> 
-								<div class="row justify-between align-items-center">
-									<div class="col-md-4 col-xs-12">
-										<div class="search-box">
-											<input type="text" class="form-control" placeholder="Search in Documents" name="">
-											<i class="fal fa-search"></i>
+							<div class="design-iframe">
+                                <div class="img-design">
+                                    <img src="assets/images/kitchen.jpg" alt="">
+                                </div>
+								<div class="ai-design-info">
+									<div class="ai-item" style="left: 30%;top:37%">
+										<span class="i-point"></span>
+										<div class="info-form">
+											<div class="form-group">
+												<label>Name</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Link</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group">
+												<button class="btn btn-warning text-white save-design">Save</button>
+											</div>
 										</div>
 									</div>
-									<div class="col-md-4 col-xs-12">
-										<div class="d-flex flex-start align-items-center view-wrap">
-											<span>View</span>
-											<a href="document-list-view.html" class="active"><i class="fas fa-bars"></i></a>
-											<a href="documents.html"><i class="fas fa-th-large"></i></a>
+									<div class="ai-item" style="left: 53%;top:37%">
+										<span class="i-point"></span>
+										<div class="info-form">
+											<div class="form-group">
+												<label>Name</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Link</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group">
+												<button class="btn btn-warning text-white save-design">Save</button>
+											</div>
 										</div>
 									</div>
-									<div class="col-md-4 col-xs-12">
-										<div class="d-flex flex-end">
-											<button class="add-folder btn button-primary">
-												<i class="fal fa-plus-circle"></i>
-												<span>Add new document</span>
-											</button>
+									<div class="ai-item" style="left: 43%;top: 45%;">
+										<span class="i-point"></span>
+										<div class="info-form">
+											<div class="form-group">
+												<label>Name</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Link</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group">
+												<button class="btn btn-warning text-white save-design">Save</button>
+											</div>
+										</div>
+									</div>
+									<div class="ai-item" style="left: 35%;top: 55%;">
+										<span class="i-point"></span>
+										<div class="info-form">
+											<div class="form-group">
+												<label>Name</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Link</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group">
+												<button class="btn btn-warning text-white save-design">Save</button>
+											</div>
+										</div>
+									</div>
+									<div class="ai-item" style="left: 49%;top: 67%;">
+										<span class="i-point"></span>
+										<div class="info-form">
+											<div class="form-group">
+												<label>Name</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Link</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group">
+												<button class="btn btn-warning text-white save-design">Save</button>
+											</div>
+										</div>
+									</div>
+									<div class="ai-item" style="left: 65%;top: 56%;">
+										<span class="i-point"></span>
+										<div class="info-form">
+											<div class="form-group">
+												<label>Name</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Link</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group">
+												<button class="btn btn-warning text-white save-design">Save</button>
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="folder-wrap document-listview">
-								<table class="table table-document" id="dataTables">
-									<thead>
-										<th>NAME</th>
-										<th>DATE VERIFY</th>
-										<th>STATUS</th>
-										<th>ACTION</th>
-									</thead>
-									<tbody>
-										<tr>
-											<td>
-												<div class="document-name">
-													<i class="fal fa-file-alt"></i>
-													<span>budget estimate 12 - 01 - 2022 </span>
-												</div>
-											</td>
-											<td>
-												<span>14 days</span>
-											</td>
-											<td>
-												<a href="#" class="text-success bold status_verified">Verified</a>
-											</td>
-											<td>
-												<a href="#" class="btn btn-sm btn-danger"><i class="fal fa-trash"></i> Delete</a>
-												<a href="your-design.html" class="btn btn-sm btn-warning text-white"><i class="fal fa-pen-nib"></i> Your Design</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<div class="document-name">
-													<i class="fal fa-file-alt"></i>
-													<span>budget estimate 12 - 01 - 2022 </span>
-												</div>
-											</td>
-											<td>
-												<span>14 days</span>
-											</td>
-											<td>
-												<a href="#" class="text-danger bold status_failed">Failed</a>
-											</td>
-											<td>
-												<a href="#" class="btn btn-sm btn-danger"><i class="fal fa-trash"></i> Delete</a>
-												<a href="your-design.html" class="btn btn-sm btn-warning text-white"><i class="fal fa-pen-nib"></i> Your Design</a>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<div class="document-name">
-													<i class="fal fa-file-alt"></i>
-													<span>budget estimate 12 - 01 - 2022 </span>
-												</div>
-											</td>
-											<td>
-												<span>14 days</span>
-											</td>
-											<td>
-												<a href="#" class="text-danger bold status_verified_2">Failed</a>
-											</td>
-											<td>
-												<a href="#" class="btn btn-sm btn-danger"><i class="fal fa-trash"></i> Delete</a>
-												<a href="your-design.html" class="btn btn-sm btn-warning text-white"><i class="fal fa-pen-nib"></i> Your Design</a>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<div class="content-empty" style="display: none;">
-								<div class="empty-center">
-									<p>Nothing yet. Recently opened documents will appear here once they are opened. Click <a href="#"><i class="fas fa-plus-circle"></i></a> to add document(s)</p>
-								</div>
-							</div>
+                            </div>
 						</div>
 					</div>
 				</div>
@@ -304,7 +395,14 @@
 			});
 		});	
 
-		
+		$(document).on("click", ".i-point", function() {
+			$('.ai-item').removeClass('active');
+			$(this).parent().addClass('active');
+		});
+
+		$(document).on("click", ".save-design", function() {
+			$('.ai-item').removeClass('active');
+		});
 
 	</script>
 
