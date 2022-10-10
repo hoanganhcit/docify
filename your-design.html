@@ -32,6 +32,9 @@
         .mb-10 {
             margin-bottom: 5rem;
         }
+		.design-iframe {
+			position: relative;
+		}
 		.ai-design-info {
 			position: absolute;
 			top: 0;
@@ -111,6 +114,26 @@
 
 		.info-form .form-group {
 			margin-bottom: 0;
+		}
+		.text-sm {
+			font-size: 80%;
+		}
+		.ck.ck-editor__editable_inline {
+			min-height: 500px;
+		}
+		.tab-custom .nav-tabs {
+			border: 0;
+		}
+
+		.tab-custom .nav-tabs button {color: #000;border: 0;}
+
+		.tab-custom .nav-tabs button.active {
+			border-radius: 4px;
+			background: #fca905;
+			color: #fff;
+		}
+		.file-upload-wrapper:after {
+			background: #f3f3f3;
 		}
 	</style>
 </head>
@@ -193,9 +216,21 @@
 						<h1 class="title--heading text-black-5">Your Design</h1>
 					</div>
 					<a href="document-list-view.html" class="d-block mb-4 text-black"><i class="fal fa-long-arrow-left"></i> Back</a>
-					<div class="card bg-white mb-10">
-						<div class="card-body">
-							<div class="design-iframe">
+					<nav class="tab-custom">
+						<div class="nav nav-tabs" id="nav-tab" role="tablist">
+							<button class="nav-link active" id="nav-description-tab" data-bs-toggle="tab" data-bs-target="#nav-description" type="button" role="tab" aria-controls="nav-description" aria-selected="true">Description</button>
+							<button class="nav-link" id="nav-parts-tab" data-bs-toggle="tab" data-bs-target="#nav-parts" type="button" role="tab" aria-controls="nav-parts" aria-selected="false">Parts</button>
+							<button class="nav-link" id="nav-warranty-tab" data-bs-toggle="tab" data-bs-target="#nav-warranty" type="button" role="tab" aria-controls="nav-warranty" aria-selected="false">Warranty</button>
+						</div>
+					</nav>
+					<div class="tab-content" id="nav-tabContent">
+						<div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab" tabindex="0">
+							<div class="my-4">
+								<textarea name="" id="editor" cols="30" rows="10"></textarea>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="nav-parts" role="tabpanel" aria-labelledby="nav-parts-tab" tabindex="0">
+							<div class="design-iframe my-4">
                                 <div class="img-design">
                                     <img src="assets/images/kitchen.jpg" alt="">
                                 </div>
@@ -208,11 +243,15 @@
 												<input type="text" class="form-control">
 											</div>
 											<div class="form-group mb-2">
+												<label>Price</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
 												<label>Link</label>
 												<input type="text" class="form-control">
 											</div>
 											<div class="form-group">
-												<button class="btn btn-warning text-white save-design">Save</button>
+												<button class="btn btn-warning text-white save-design text-sm">Save</button>
 											</div>
 										</div>
 									</div>
@@ -224,11 +263,15 @@
 												<input type="text" class="form-control">
 											</div>
 											<div class="form-group mb-2">
+												<label>Price</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
 												<label>Link</label>
 												<input type="text" class="form-control">
 											</div>
 											<div class="form-group">
-												<button class="btn btn-warning text-white save-design">Save</button>
+												<button class="btn btn-warning text-white save-design text-sm">Save</button>
 											</div>
 										</div>
 									</div>
@@ -240,11 +283,15 @@
 												<input type="text" class="form-control">
 											</div>
 											<div class="form-group mb-2">
+												<label>Price</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
 												<label>Link</label>
 												<input type="text" class="form-control">
 											</div>
 											<div class="form-group">
-												<button class="btn btn-warning text-white save-design">Save</button>
+												<button class="btn btn-warning text-white save-design text-sm">Save</button>
 											</div>
 										</div>
 									</div>
@@ -256,11 +303,15 @@
 												<input type="text" class="form-control">
 											</div>
 											<div class="form-group mb-2">
+												<label>Price</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
 												<label>Link</label>
 												<input type="text" class="form-control">
 											</div>
 											<div class="form-group">
-												<button class="btn btn-warning text-white save-design">Save</button>
+												<button class="btn btn-warning text-white save-design text-sm">Save</button>
 											</div>
 										</div>
 									</div>
@@ -272,11 +323,15 @@
 												<input type="text" class="form-control">
 											</div>
 											<div class="form-group mb-2">
+												<label>Price</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
 												<label>Link</label>
 												<input type="text" class="form-control">
 											</div>
 											<div class="form-group">
-												<button class="btn btn-warning text-white save-design">Save</button>
+												<button class="btn btn-warning text-white save-design text-sm">Save</button>
 											</div>
 										</div>
 									</div>
@@ -288,16 +343,38 @@
 												<input type="text" class="form-control">
 											</div>
 											<div class="form-group mb-2">
+												<label>Price</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
 												<label>Link</label>
 												<input type="text" class="form-control">
 											</div>
 											<div class="form-group">
-												<button class="btn btn-warning text-white save-design">Save</button>
+												<button class="btn btn-warning text-white save-design text-sm">Save</button>
 											</div>
 										</div>
 									</div>
 								</div>
                             </div>
+						</div>
+						<div class="tab-pane fade" id="nav-warranty" role="tabpanel" aria-labelledby="nav-warranty-tab" tabindex="0">
+							<div class="my-4">
+								<div class="card py-4 px-4">
+									<div class="col-md-12">
+										<label class="mb-2">Upload File </label>
+										<div class="file-uploads">
+											<div class="file-upload-wrapper" data-text="Select Your File">
+												<input name="file-upload-field" type="file" class="file-upload-field" value="">
+												<span class="fal fa-upload"></span>
+											</div>
+										</div>
+										<div class="form-group mt-4">
+											<button class=" btn button-primary">Upload</button>
+										</div>
+									</div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -381,7 +458,15 @@
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/dataTables.min.js"></script>
 	<script type="text/javascript" src="assets/js/dataTables.bootstrap.min.js"></script>
+	<script src="https://cdn.ckeditor.com/ckeditor5/35.2.0/classic/ckeditor.js"></script>
 	<script>
+
+		ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+
 		$(document).ready(function(){
 			$('#dataTables').DataTable(); 
 			$('.status_failed').click(function(){
