@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet" type="text/css">
+	<title>DOCIFY</title>
+	<meta name="generator" content="WooCommerce 6.0.0" />
+	<link rel="canonical" href="#" />
+	<link rel='shortlink' href='#' />
+	<link rel="alternate" type="application/json+oembed" href="#" />
+	<link rel="alternate" type="text/xml+oembed" href="#" />
+	<link rel="icon" href="#" sizes="32x32" />
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,500;1,600;1,700&display=swap"
+		rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+	<style>
+		.swal-text {
+			text-align: center;
+		}
+
+		.swal-modal {
+			width: 530px;
+		}
+
+		.mb-10 {
+			margin-bottom: 5rem;
+		}
+
+		.design-iframe {
+			position: relative;
+		}
+
+		.ai-design-info {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+
+		.ai-item {
+			position: absolute;
+			max-width: 300px;
+			width: 100%;
+			cursor: pointer;
+		}
+
+		.info-form {
+			background: #fff;
+			border-radius: 4px;
+			padding: 1rem;
+			max-width: 300px;
+			width: 100%;
+			display: none;
+			position: relative;
+			z-index: 1;
+		}
+
+		.i-point {
+			background: #ffb727;
+			border-radius: 50%;
+			height: 14px;
+			position: relative;
+			width: 14px;
+			display: inline-flex;
+		}
+
+		.i-point:before,
+		.i-point:after {
+			content: "";
+			animation: growAndFade 3s infinite ease-out;
+			background-color: #fca905;
+			border-radius: 50%;
+			height: 26px;
+			opacity: 0;
+			position: absolute;
+			width: 26px;
+			left: -6px;
+			top: -6px;
+		}
+
+		.i-point:before {
+			animation-delay: 1s;
+		}
+
+		.i-point:after {
+			animation-delay: 2s;
+		}
+
+		@keyframes growAndFade {
+			0% {
+				opacity: 1;
+				transform: scale(0);
+			}
+
+			100% {
+				opacity: .25;
+				transform: scale(1);
+			}
+		}
+
+		.ai-item.active .info-form {
+			display: block;
+		}
+
+		.info-form input {
+			background: #efefef;
+			border-radius: 4px;
+			height: 40px;
+		}
+
+		.info-form label {
+			font-size: 12px;
+			margin-bottom: 0;
+		}
+
+		.info-form .form-group {
+			margin-bottom: 0;
+		}
+
+		.text-sm {
+			font-size: 80%;
+		}
+
+		.ck.ck-editor__editable_inline {
+			min-height: 500px;
+		}
+
+		.tab-custom .nav-tabs {
+			border: 0;
+		}
+
+		.tab-custom .nav-tabs button {
+			color: #000;
+			border: 0;
+		}
+
+		.tab-custom .nav-tabs button.active {
+			border-radius: 4px;
+			background: #fca905;
+			color: #fff;
+		}
+
+		.file-upload-wrapper:after {
+			background: #f3f3f3;
+		}
+
+		.fs-18 {
+			font-size: 18px;
+		}
+
+		.pr-box {
+			display: flex;
+			align-items: flex-start;
+			position: relative;
+			justify-content: space-between;
+		}
+
+		.pr-box img {
+			width: 55px;
+		}
+
+		.pr-caption {
+			width: calc(100% - 65px);
+		}
+
+		.pr-caption a {
+			color: #000;
+			font-size: 14px;
+			line-height: 20px;
+			display: block;
+			margin-bottom: 2px;
+		}
+
+		.pr-caption span {
+			font-weight: 600;
+			font-size: 14px;
+			color: #fdad0e;
+		}
+
+		.product-list li {
+			padding: 10px 0;
+			border-bottom: 1px solid #eee;
+			transition: .3s;
+		}
+
+		.product-list li.active {
+			background: rgb(253 171 11 / 20%);
+			border: 1px solid #fdae12;
+			padding: 10px;
+		}
+
+		.product-list li:last-child {
+			border: 0;
+		}
+
+		p {
+			font-size: 14px;
+		}
+	</style>
+</head>
+
+<body class="body-login">
+	<div id="wrapper">
+		<ul class="navbar-nav bg-gradient-primary sidebar accordion">
+			<a class="sidebar-brand d-flex align-items-center justify-between" href="profile-recents.html">
+				<div class="sidebar-brand-text">
+					<img src="assets/images/logo.png" height="30">
+				</div>
+				<div class="sidebar-brand-icon">
+					<i class="fal fa-bars"></i>
+				</div>
+			</a>
+			<li class="my-3" style="padding: 0 25px">
+				<button class="btn button-primary">
+					<i class="fad fa-cloud-upload"></i>
+					<span>Upload File</span>
+				</button>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link" href="profile-recents.html">
+					<i class="fal fa-undo"></i>
+					<span>Recents</span>
+				</a>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link" href="folders.html">
+					<i class="fal fa-folder-open"></i>
+					<span>Folders</span>
+				</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="documents.html">
+					<i class="fal fa-file-alt"></i>
+					<span>Documents</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="invitations.html">
+					<i class="fal fa-paper-plane"></i>
+					<span>Invitations</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="invitations.html">
+					<i class="fal fa-code"></i>
+					<span>Embed Code</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="invitations.html">
+					<i class="fal fa-code"></i>
+					<span>Embed Code</span>
+				</a>
+			</li>
+		</ul>
+		<div id="content-wrapper" class="d-flex flex-column">
+			<div id="content">
+				<div class="navbar-header d-flex align-items-center justify-between">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#">Docify</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Documents</li>
+						</ol>
+					</nav>
+					<div class="personl">
+						<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
+								data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="fad fa-user"></i>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+								<li><a class="dropdown-item" href="#">Logout</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div class="d-sm-flex ">
+						<h1 class="title--heading text-black-5">Your Design</h1>
+					</div>
+					<a href="document-list-view.html" class="d-block mb-4 text-black"><i
+							class="fal fa-long-arrow-left"></i> Back</a>
+					<nav class="tab-custom">
+						<div class="nav nav-tabs" id="nav-tab" role="tablist">
+							<button class="nav-link active" id="nav-description-tab" data-bs-toggle="tab"
+								data-bs-target="#nav-description" type="button" role="tab"
+								aria-controls="nav-description" aria-selected="true">Description</button>
+							<button class="nav-link" id="nav-parts-tab" data-bs-toggle="tab" data-bs-target="#nav-parts"
+								type="button" role="tab" aria-controls="nav-parts" aria-selected="false">Parts</button>
+							<button class="nav-link" id="nav-warranty-tab" data-bs-toggle="tab"
+								data-bs-target="#nav-warranty" type="button" role="tab" aria-controls="nav-warranty"
+								aria-selected="false">Warranty</button>
+						</div>
+					</nav>
+					<div class="tab-content" id="nav-tabContent">
+						<div class="tab-pane fade show active" id="nav-description" role="tabpanel"
+							aria-labelledby="nav-description-tab" tabindex="0">
+							<div class="my-4">
+								<div class="card py-4 px-4">
+									<div class="col-md-12">
+										<div class="content-desc">
+											<p>Archizone is a Toronto-based Kitchen & Bath design and build firm. We
+												specialize in Custom Kitchen Cabinets, Full Kitchen Renovations,
+												Bathroom Remodeling, Custom Closets, Built in Wall-Units, Bathroom
+												Vanities and Millwork Services in Toronto and surrounding areas. Since
+												2002 we have helped many homeowners, custom home builders & interior
+												designers across the GTA to achieve their vision.</p>
+											<p>Your brand new kitchen is another pride of ours team who have been
+												working on it for you in the last 6 months. You deserved to enjoy your
+												beautiful kitchen. </p>
+											<p>Here are our contact in case you need talk to us. </p>
+											<p>
+												Website: <a href="https://archizone.ca/">www.archizone.ca</a><br>
+												Email: <a href="mailto:info@archizone.ca">info@archizone.ca</a><br>
+												Phone: <a href="tel:6473397577"> (647) 339-7577</a>
+											</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="nav-parts" role="tabpanel" aria-labelledby="nav-parts-tab"
+							tabindex="0">
+							<div class="design-iframe my-4 " id="your-design">
+								<div class="img-design">
+									<img src="assets/images/kitchen.jpg" alt="" style="border-radius: 20px;">
+								</div>
+								<div class="ai-design-info">
+									<div class="ai-item" style="left: 30%;top:37%">
+										<a href="#product-1">
+											<span class="i-point"></span>
+										</a>
+									</div>
+									<div class="ai-item" style="left: 53%;top:37%">
+										<a href="#product-2">
+											<span class="i-point"></span>
+										</a>
+									</div>
+									<div class="ai-item" style="left: 43%;top: 45%;">
+										<a href="#product-3">
+											<span class="i-point"></span>
+										</a>
+									</div>
+									<div class="ai-item" style="left: 35%;top: 55%;">
+										<a href="#product-4">
+											<span class="i-point"></span>
+										</a>
+									</div>
+									<div class="ai-item" style="left: 49%;top: 67%;">
+										<a href="#product-5">
+											<span class="i-point"></span>
+										</a>
+									</div>
+									<div class="ai-item" style="left: 65%;top: 56%;">
+										<a href="#product-6">
+											<span class="i-point"></span>
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="card py-4 px-4 mb-4">
+								<div class="col-md-12">
+									<h3 class="fs-18 mb-2">Related Products</h3>
+									<hr>
+									<ul class="product-list">
+										<li>
+											<div class="pr-box" id="product-1">
+												<img src="assets/images/pr-1.jpg" alt="">
+												<div class="pr-caption">
+													<a href="#">Good quality modern high commiercal metal bar stools</a>
+													<span>$62.00</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="pr-box" id="product-2">
+												<img src="assets/images/pr-2.jpg" alt="">
+												<div class="pr-caption">
+													<a href="#">GE 1-cu ft 1050-Watt Countertop Convection Microwave
+														(Stainless Steel)</a>
+													<span>$199.00</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="pr-box" id="product-3">
+												<img src="assets/images/pr-3.png" alt="">
+												<div class="pr-caption">
+													<a href="#">Rendering Modern Black Kitchen Window</a>
+													<span>$312.00</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="pr-box" id="product-4">
+												<img src="assets/images/pr-4.jpg" alt="">
+												<div class="pr-caption">
+													<a href="#">Savannah Farmhouse Indoor Dimmable Light</a>
+													<span>$49.00</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="pr-box" id="product-5">
+												<img src="assets/images/pr-5.png" alt="">
+												<div class="pr-caption">
+													<a href="#">Black Kitchen Sinks - All Kitchen Sinks - Basins
+														Bathshack</a>
+													<span>$259.00</span>
+												</div>
+											</div>
+										</li>
+										<li>
+											<div class="pr-box" id="product-6">
+												<img src="assets/images/pr-6.webp" alt="">
+												<div class="pr-caption">
+													<a href="#">Frigidaire Professional 36'' Electric Cooktop Stainless
+														Steel-FPEC3677RF</a>
+													<span>1.699,00 $</span>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="nav-warranty" role="tabpanel" aria-labelledby="nav-warranty-tab"
+							tabindex="0">
+							<div class="my-4">
+								<div class="card py-4 px-4">
+									<div class="col-md-12">
+										<h3 class="fs-18">What are the General Terms and Conditions of Warranty?</h3>
+										<p>General Terms and Conditions of Warranty are rules that you apply within your
+											company and which you apply to every delivery of services, products or
+											services.
+											Within the law, two requirements have been developed with which a provision
+											must
+											comply in order to be considered as General Terms and Conditions of
+											Warranty.
+											First of all, the General Terms and Conditions of Warranty may not contain
+											the
+											most important information about the product or the service. Think of the
+											price,
+											the colour or the quantity, these are also referred to as core terms and
+											conditions. In addition, the general terms and conditions for repeated use
+											must
+											have been developed. The latter is also referred to as 'standard terms and
+											conditions'.</p>
+
+										<h3 class="fs-18">What is stated in the General Terms and Conditions of Warranty?</h3>
+										<p>As stated above, you may not include core agreements in your guarantee
+											conditions. What you may include in the General Terms and Conditions of
+											Warranty
+											is, for example, for how long a warranty is granted on a certain product or
+											service, how this warranty will lapse and what the customer can do to make
+											the
+											information valid.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade bd-example-modal-lg" id="verify_failed" tabindex="-1" aria-labelledby="exampleModalLabel"
+		aria-hidden="true">
+		<div class="modal-dialog modal-lg" style="max-width: 1024px">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="failed_content">
+						<div class="failed__icons">
+							<i class="fal fa-exclamation-triangle"></i>
+						</div>
+						<div class="failed__txt">
+							<p>Budget Estimate was unsuccessfully verified by Docify. Here are the differences from the
+								original.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-xs-12">
+							<div class="preview__content">
+								<h4>Original content</h4>
+								<iframe src="assets/file.pdf" height="500" style="width: 100%"></iframe>
+							</div>
+						</div>
+						<div class="col-md-6 col-xs-12">
+							<div class="preview__content">
+								<h4>Content from unsuccessful Verified</h4>
+								<iframe src="assets/file.pdf" height="500" style="width: 100%"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="verified" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="failed_content_error">
+						<div class="failed__error">
+							<img src="assets/images/verified.png" style="width: 150px">
+						</div>
+						<h3>Successfully!</h3>
+						<p>Budget Estimate has been verified and certified by Docify. </p>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="verify_failed_2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="failed_content_error">
+						<div class="failed__error">
+							<i class="fal fa-exclamation-circle"></i>
+							<p>ERROR</p>
+						</div>
+						<p>We are unable to verify Budget Estimate due to the fact that we don't have the original to
+							compare with. Please ask the Document Issuer and their user to use Docify to certify their
+							documents first before submitting to you.</p>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/dataTables.min.js"></script>
+	<script type="text/javascript" src="assets/js/dataTables.bootstrap.min.js"></script>
+	<script>
+
+		$(document).ready(function () {
+			$('.ai-item a').bind('click', function (e) {
+				e.preventDefault();
+				var target = $(this).attr("href");
+				$('html, body').stop().animate({
+					scrollTop: $(target).offset().top
+				}, 600, function () {
+					location.hash = target;
+					$('.product-list li').removeClass('active');
+					$(target).parent().addClass('active');
+				});
+				return false;
+			});
+		});
+
+		$(document).ready(function () {
+			$('#dataTables').DataTable();
+			$('.status_failed').click(function () {
+				$('#verify_failed').modal('show');
+			});
+			$('.status_verified').click(function () {
+				$('#verified').modal('show');
+			});
+			$('.status_verified_2').click(function () {
+				$('#verify_failed_2').modal('show');
+			});
+		});
+
+		$(document).on("click", ".i-point", function () {
+			$('.ai-item').removeClass('active');
+			$(this).parent().addClass('active');
+		});
+
+		$(document).on("click", ".save-design", function () {
+			$('.ai-item').removeClass('active');
+		});
+
+	</script>
+
+</body>
+
+</html>

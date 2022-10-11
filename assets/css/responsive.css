@@ -70,4 +70,58 @@
 	.sender-images .slick-list {
 		padding: 0 !important;
 	}
+
+    .sidebar {
+        position:
+        fixed;
+        z-index: 10;
+        left: -275px;
+        transition: .5s;
+    }
+    .container-fluid {
+        padding: 0 15px;
+    }
+    .title--heading {
+        text-align: left;
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    .header-card, .content-empty, .panel-content {
+        padding: 1.5rem;
+    }
+    
+    .add-folder {
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .view-wrap {
+        margin-top: 10px;
+    }
+    
+    div.dataTables_wrapper div.dataTables_filter {
+        text-align: left;
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+    
+    div.dataTables_wrapper div.dataTables_filter input {
+        width: 100%;
+    }
+	.table-document thead th, .table-document td {
+		padding: 15px !important;
+		font-size: 14px;
+	}
+	
+	.document-name {
+		display: flex;
+	}
+	.navbar-header {
+		padding: 25px 15px;
+	}
 }
+
+
+
+
+
