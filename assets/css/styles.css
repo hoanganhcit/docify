@@ -1745,6 +1745,13 @@ span.content_error {
 	border-radius: 2px;
 	line-height: 14px;
 }
+.bagde-pending {
+	background: #fca905;
+	color: #fff;
+	padding: 5px;
+	border-radius: 2px;
+	line-height: 14px;
+}
 .section__pricing {
     position: relative;
     margin-bottom: 100px;
