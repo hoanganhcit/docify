@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet" type="text/css">  
+	<title>DOCIFY</title>
+	<meta name="generator" content="WooCommerce 6.0.0" />
+	<link rel="canonical" href="#" />
+	<link rel='shortlink' href='#' />
+	<link rel="alternate" type="application/json+oembed" href="#" />
+	<link rel="alternate" type="text/xml+oembed" href="#" /> 
+	<link rel="icon" href="#" sizes="32x32" />  
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,500;1,600;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-icons.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/slick.css"> 
+	<link rel="stylesheet" type="text/css" href="assets/css/dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+	<style>
+		.swal-text {
+			text-align: center;
+		}
+
+		.swal-modal {
+			width: 530px;
+		}
+        .mb-10 {
+            margin-bottom: 5rem;
+        }
+		.design-iframe {
+			position: relative;
+		}
+		.ai-design-info {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+		.ai-item {
+			position: absolute;
+			max-width: 300px;
+			width: 100%;
+			cursor: pointer;
+		}
+
+		.info-form {
+			background: #fff;
+			border-radius: 4px;
+			padding: 1rem;
+			max-width: 300px;
+			width: 100%;
+			display: none;
+			position: relative;
+    		z-index: 1;
+		}
+
+		.i-point {
+			background: #ffb727;
+			border-radius: 50%;
+			height: 14px;
+			position: relative;
+			width: 14px;
+			display: inline-flex;
+		}
+		.i-point:before, .i-point:after {
+			content: "";
+			animation: growAndFade 3s infinite ease-out;
+			background-color: #fca905;
+			border-radius: 50%;
+			height: 26px;
+			opacity: 0;
+			position: absolute;
+			width: 26px;
+			left: -6px;
+			top: -6px;
+		}
+
+		.i-point:before {
+			animation-delay: 1s;
+		}
+		.i-point:after {
+			animation-delay: 2s;
+		}
+		@keyframes growAndFade {
+		0% {
+			opacity: 1;
+			transform: scale(0);
+		}
+		100% {
+			opacity: .25;
+			transform: scale(1);
+		}
+		}
+		.ai-item.active .info-form {
+			display: block;
+		}
+
+		.info-form input {
+			background: #efefef;
+			border-radius: 4px;
+			height: 40px;
+		}
+
+		.info-form label {
+			font-size: 12px;
+			margin-bottom: 0;
+		}
+
+		.info-form .form-group {
+			margin-bottom: 0;
+		}
+		.text-sm {
+			font-size: 80%;
+		}
+		.ck.ck-editor__editable_inline {
+			min-height: 500px;
+		}
+		.tab-custom .nav-tabs {
+			border: 0;
+		}
+
+		.tab-custom .nav-tabs button {color: #000;border: 0;}
+
+		.tab-custom .nav-tabs button.active {
+			border-radius: 4px;
+			background: #fca905;
+			color: #fff;
+		}
+		.file-upload-wrapper:after {
+			background: #f3f3f3;
+		}
+	</style>
+</head>
+<body class="body-login">
+	<div id="wrapper">
+		<ul class="navbar-nav bg-gradient-primary sidebar accordion">
+			<a class="sidebar-brand d-flex align-items-center justify-between" href="profile-recents.html">
+				<div class="sidebar-brand-text">
+					<img src="assets/images/logo.png" height="30">
+				</div>
+				<div class="sidebar-brand-icon">
+					<i class="fal fa-bars"></i>
+				</div>
+			</a>
+			<li class="my-3" style="padding: 0 25px">
+				<button class="btn button-primary">
+					<i class="fad fa-cloud-upload"></i>
+					<span>Upload File</span>
+				</button>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link" href="profile-recents.html">
+					<i class="fal fa-undo"></i>
+					<span>Recents</span>
+				</a>
+			</li>
+			<li class="nav-item ">
+				<a class="nav-link" href="folders.html">
+					<i class="fal fa-folder-open"></i>
+					<span>Folders</span>
+				</a>
+			</li>
+			<li class="nav-item active">
+				<a class="nav-link" href="documents.html">
+					<i class="fal fa-file-alt"></i>
+					<span>Documents</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="invitations.html">
+					<i class="fal fa-paper-plane"></i>
+					<span>Invitations</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="invitations.html">
+					<i class="fal fa-code"></i>
+					<span>Embed Code</span>
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="invitations.html">
+					<i class="fal fa-code"></i>
+					<span>Embed Code</span>
+				</a>
+			</li>
+		</ul>
+		<div id="content-wrapper" class="d-flex flex-column">
+			<div id="content">
+				<div class="navbar-header d-flex align-items-center justify-between">
+					<nav aria-label="breadcrumb">
+						<ol class="breadcrumb">
+							<li class="breadcrumb-item"><a href="#">Docify</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Documents</li>
+						</ol>
+					</nav>
+					<div class="personl">
+						<div class="dropdown">
+							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="fad fa-user"></i>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+								<li><a class="dropdown-item" href="#">Logout</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="container-fluid">
+					<div class="d-sm-flex ">
+						<h1 class="title--heading text-black-5">Your Design</h1>
+					</div>
+					<a href="document-list-view.html" class="d-block mb-4 text-black"><i class="fal fa-long-arrow-left"></i> Back</a>
+					<nav class="tab-custom">
+						<div class="nav nav-tabs" id="nav-tab" role="tablist">
+							<button class="nav-link active" id="nav-description-tab" data-bs-toggle="tab" data-bs-target="#nav-description" type="button" role="tab" aria-controls="nav-description" aria-selected="true">Description</button>
+							<button class="nav-link" id="nav-parts-tab" data-bs-toggle="tab" data-bs-target="#nav-parts" type="button" role="tab" aria-controls="nav-parts" aria-selected="false">Parts</button>
+							<button class="nav-link" id="nav-warranty-tab" data-bs-toggle="tab" data-bs-target="#nav-warranty" type="button" role="tab" aria-controls="nav-warranty" aria-selected="false">Warranty</button>
+						</div>
+					</nav>
+					<div class="tab-content" id="nav-tabContent">
+						<div class="tab-pane fade show active" id="nav-description" role="tabpanel" aria-labelledby="nav-description-tab" tabindex="0">
+							<div class="my-4">
+								<textarea name="" id="editor" cols="30" rows="10"></textarea>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="nav-parts" role="tabpanel" aria-labelledby="nav-parts-tab" tabindex="0">
+							<div class="design-iframe my-4">
+                                <div class="img-design">
+                                    <img src="assets/images/kitchen.jpg" alt="">
+                                </div>
+								<div class="ai-design-info">
+									<div class="ai-item" style="left: 30%;top:37%">
+										<span class="i-point"></span>
+										<div class="info-form">
+											<div class="form-group">
+												<label>Name</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Price</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Link</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group">
+												<button class="btn btn-warning text-white save-design text-sm">Save</button>
+											</div>
+										</div>
+									</div>
+									<div class="ai-item" style="left: 53%;top:37%">
+										<span class="i-point"></span>
+										<div class="info-form">
+											<div class="form-group">
+												<label>Name</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Price</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Link</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group">
+												<button class="btn btn-warning text-white save-design text-sm">Save</button>
+											</div>
+										</div>
+									</div>
+									<div class="ai-item" style="left: 43%;top: 45%;">
+										<span class="i-point"></span>
+										<div class="info-form">
+											<div class="form-group">
+												<label>Name</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Price</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Link</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group">
+												<button class="btn btn-warning text-white save-design text-sm">Save</button>
+											</div>
+										</div>
+									</div>
+									<div class="ai-item" style="left: 35%;top: 55%;">
+										<span class="i-point"></span>
+										<div class="info-form">
+											<div class="form-group">
+												<label>Name</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Price</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Link</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group">
+												<button class="btn btn-warning text-white save-design text-sm">Save</button>
+											</div>
+										</div>
+									</div>
+									<div class="ai-item" style="left: 49%;top: 67%;">
+										<span class="i-point"></span>
+										<div class="info-form">
+											<div class="form-group">
+												<label>Name</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Price</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Link</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group">
+												<button class="btn btn-warning text-white save-design text-sm">Save</button>
+											</div>
+										</div>
+									</div>
+									<div class="ai-item" style="left: 65%;top: 56%;">
+										<span class="i-point"></span>
+										<div class="info-form">
+											<div class="form-group">
+												<label>Name</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Price</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group mb-2">
+												<label>Link</label>
+												<input type="text" class="form-control">
+											</div>
+											<div class="form-group">
+												<button class="btn btn-warning text-white save-design text-sm">Save</button>
+											</div>
+										</div>
+									</div>
+								</div>
+                            </div>
+						</div>
+						<div class="tab-pane fade" id="nav-warranty" role="tabpanel" aria-labelledby="nav-warranty-tab" tabindex="0">
+							<div class="my-4">
+								<div class="card py-4 px-4">
+									<div class="col-md-12">
+										<label class="mb-2">Upload File </label>
+										<div class="file-uploads">
+											<div class="file-upload-wrapper" data-text="Select Your File">
+												<input name="file-upload-field" type="file" class="file-upload-field" value="">
+												<span class="fal fa-upload"></span>
+											</div>
+										</div>
+										<div class="form-group mt-4">
+											<button class=" btn button-primary">Upload</button>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade bd-example-modal-lg" id="verify_failed" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg" style="max-width: 1024px">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="failed_content">
+						<div class="failed__icons">
+							<i class="fal fa-exclamation-triangle"></i>
+						</div>
+						<div class="failed__txt">
+							<p>Budget Estimate was unsuccessfully verified by Docify. Here are the differences from the original.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-6 col-xs-12">
+							<div class="preview__content">
+								<h4>Original content</h4>
+								<iframe src="assets/file.pdf" height="500" style="width: 100%"></iframe>
+							</div>
+						</div>
+						<div class="col-md-6 col-xs-12">
+							<div class="preview__content">
+								<h4>Content from unsuccessful Verified</h4>
+								<iframe src="assets/file.pdf" height="500" style="width: 100%"></iframe>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="verified" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="failed_content_error">
+						<div class="failed__error">
+							<img src="assets/images/verified.png" style="width: 150px">
+						</div>
+						<h3>Successfully!</h3>
+						<p>Budget Estimate has been verified and certified by Docify. </p>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="verify_failed_2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-body">
+					<div class="failed_content_error">
+						<div class="failed__error">
+							<i class="fal fa-exclamation-circle"></i>
+							<p>ERROR</p>
+						</div>
+						<p>We are unable to verify Budget Estimate due to the fact that we don't have the original to compare with. Please ask the Document Issuer and their user to use Docify to certify their documents first before submitting to you.</p>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/dataTables.min.js"></script>
+	<script type="text/javascript" src="assets/js/dataTables.bootstrap.min.js"></script>
+	<script src="https://cdn.ckeditor.com/ckeditor5/35.2.0/classic/ckeditor.js"></script>
+	<script>
+
+		ClassicEditor
+        .create( document.querySelector( '#editor' ) )
+        .catch( error => {
+            console.error( error );
+        } );
+
+		$(document).ready(function(){
+			$('#dataTables').DataTable(); 
+			$('.status_failed').click(function(){
+				$('#verify_failed').modal('show');
+			});
+			$('.status_verified').click(function(){
+				$('#verified').modal('show');
+			});
+			$('.status_verified_2').click(function(){
+				$('#verify_failed_2').modal('show');
+			});
+		});	
+
+		$(document).on("click", ".i-point", function() {
+			$('.ai-item').removeClass('active');
+			$(this).parent().addClass('active');
+		});
+
+		$(document).on("click", ".save-design", function() {
+			$('.ai-item').removeClass('active');
+		});
+
+	</script>
+
+</body>
+</html>

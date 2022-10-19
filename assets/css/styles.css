@@ -1846,3 +1846,13 @@ span.content_error {
     padding: 0;
   }
 }
+.dropdown-menu .dropdown-item {
+    padding: 8px 25px;
+    cursor: pointer;
+    font-size:14px;
+    background:#fff;
+    transition:.3s;
+}
+.dropdown-menu .dropdown-item:hover {
+    color:#fca905;
+}
