@@ -106,15 +106,42 @@
 
         .form-control {
             border-radius: 4px;
-            height:48px;
+            height: 48px;
         }
 
         @media screen and (max-width: 1366px) {
             .banner-area .container-fluid {
-                max-width: 1140px;;
+                max-width: 1140px;
+                ;
             }
+
             .banner-content h1 {
                 font-size: 65px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .banner-area {
+                height: auto;
+                padding-top: 135px;
+            }
+
+            .banner-content h1 {
+                font-size: 35px;
+                font-weight: 800;
+                margin-bottom: 17px;
+            }
+
+            .banner-rent-sale-form .rent-sale-form {
+                margin: 0 0 20px;
+            }
+
+            .banner-rent-sale-form .rent-sale-form input.form-control {
+                margin-bottom: 10px;
+            }
+
+            .banner-content p {
+                font-size: 15px;
             }
         }
     </style>
