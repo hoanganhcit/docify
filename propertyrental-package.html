@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="profile" href="https://gmpg.org/xfn/11">
+    <link href="https://kit-pro.fontawesome.com/releases/v5.15.3/css/pro.min.css" rel="stylesheet" type="text/css">
+    <title>DOCIFY</title>
+    <meta name="generator" content="WooCommerce 6.0.0" />
+    <link rel="canonical" href="#" />
+    <link rel='shortlink' href='#' />
+    <link rel="alternate" type="application/json+oembed" href="#" />
+    <link rel="alternate" type="text/xml+oembed" href="#" />
+    <link rel="icon" href="assets/images/favicon.png" sizes="32x32" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <style>
+        nav.navbar.navbar-expand-lg.navbar-dark {
+            backdrop-filter: blur(15px);
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .bg-forrent {
+            height: 100vh;
+            background-size: cover !important;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .align-center {
+            align-items: center;
+        }
+
+        .form-content {
+            position: relative;
+        }
+
+        .forent-wrapper {
+            position: relative;
+        }
+
+        .banner-area {
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            padding-top: 110px;
+        }
+
+        .banner-area .container-fluid {
+            max-width: 1760px;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .banner-img img {
+            border-radius: 401px 400px 15px 15px;
+            box-shadow: 7px 13px 26px -5px rgb(3 169 244 / 40%);
+        }
+
+        .banner-content {
+            position: relative;
+            max-width: 778px;
+            margin-left: auto;
+            margin-top: -7px;
+            color: #fff;
+        }
+
+        .banner-content h1 {
+            font-size: 80px;
+            margin-bottom: 30px;
+            font-weight: 800;
+            color: #34c0ff;
+        }
+
+        .banner-content p {
+            margin-bottom: 40px;
+            font-size: 18px;
+            max-width: 600px;
+        }
+
+        .banner-rent-sale-form .rent-sale-form {
+            background-color: rgb(255 255 255 / 20%);
+            padding: 30px;
+            margin-right: -250px;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        .form-control {
+            border-radius: 4px;
+            height: 48px;
+        }
+
+        .py-7 {
+            padding-top: 3.5rem;
+            padding-bottom: 3.5rem;
+        }
+
+        .px-7 {
+            padding-left: 3.5rem;
+            padding-right: 3.5rem;
+        }
+
+        .prc-box {
+            position: relative;
+            /* border: 1px solid #03a9f4; */
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            color: #54caff;
+            background: rgb(255 255 255 / 5%);
+            backdrop-filter: blur(30px);
+        }
+
+        .prc-box .table__header--title {
+            font-size: 20px;
+            color: #ffffff;
+        }
+
+        .prc-box .table__header--title span {
+            display: block;
+            font-weight: 400;
+            font-size: 15px;
+            margin-top: 10px;
+            text-transform: capitalize;
+        }
+
+        .prc-box .table__header--price {
+            font-size: 20px;
+            font-weight: 600;
+            color: #fca905;
+            padding-bottom: 1rem;
+            margin-bottom: 0;
+        }
+
+        .prc-box .table__content {
+            border-top: 1px dashed #61ceff;
+            border-bottom: 1px dashed #61ceff;
+        }
+
+        .pb-150 {
+            padding-bottom: 150px;
+        }
+
+        .pt-150 {
+            padding-top: 150px;
+        }
+
+        @media screen and (max-width: 1366px) {
+            .banner-area .container-fluid {
+                max-width: 1140px;
+                ;
+            }
+
+            .banner-content h1 {
+                font-size: 65px;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .banner-area {
+                height: auto;
+                padding-top: 135px;
+            }
+
+            .banner-content h1 {
+                font-size: 35px;
+                font-weight: 800;
+                margin-bottom: 17px;
+            }
+
+            .banner-rent-sale-form .rent-sale-form {
+                margin: 0 0 20px;
+            }
+
+            .banner-rent-sale-form .rent-sale-form input.form-control {
+                margin-bottom: 10px;
+            }
+
+            .banner-content p {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="preloader" id="preloader" style="display: none;">
+        <div class="preloader-inner">
+            <div class="cube-wrapper">
+                <div class="cube-folding">
+                    <span class="leaf1"></span>
+                    <span class="leaf2"></span>
+                    <span class="leaf3"></span>
+                    <span class="leaf4"></span>
+                </div>
+                <span class="loading" data-name="Loading">DOCIFY</span>
+            </div>
+        </div>
+    </div>
+    <header class="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 p-0">
+                    <nav class="navbar navbar-expand-lg navbar-dark">
+                        <a class="navbar-brand" href="index-2.html">
+                            <img src="assets/images/logo-2.png" height="35" alt="Logo" class="logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mainmenu"
+                            aria-controls="mainmenu" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse flex-end" id="mainmenu">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link btn button-primary" href="login.html">Sign In</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Sign Up</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="wrapper">
+        <div class="banner-area pt-100 bg-color-f4fafe">
+            <div class="container-fluid">
+                <div class="row align-center">
+                    <div class="col-xl-7">
+                        <div class="banner-content pb-100">
+                            <h1 class="">Thank you for your interest in our solution</h1>
+                            <p class="">Our goal is to empower you
+                                with a more
+                                efficient and seamless way to screen tenants powered by Docify</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-5">
+                        <div class="banner-img">
+                            <img src="assets/images/for_rent.jpg" alt="Image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section-pricing pt-150 pb-150">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="prc-box">
+                            <div class="table__header">
+                                <h2 class="table__header--title">Package A <span>(3 tenants)</span></h2>
+                                <p data-price="49.99" class="table__header--price">
+                                    <span>$</span> 49.99
+                                </p>
+                            </div>
+                            <div class="table__content">
+                                <ul class="table__content--list">
+                                    <li>Identity verifications</li>
+                                    <li>Credit Report</li>
+                                    <li>Income Verification</li>
+                                    <li>Employment Verification</li>
+                                </ul>
+                            </div>
+                            <div class="table__footer">
+                                <a href="#" class="btn button-primary">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="prc-box">
+                            <div class="table__header">
+                                <h2 class="table__header--title">Package A <span>(5 tenants)</span></h2>
+                                <p data-price="49.99" class="table__header--price">
+                                    <span>$</span> 59.99
+                                </p>
+                            </div>
+                            <div class="table__content">
+                                <ul class="table__content--list">
+                                    <li>Identity verifications</li>
+                                    <li>Credit Report</li>
+                                    <li>Income Verification</li>
+                                    <li>Employment Verification</li>
+                                </ul>
+                            </div>
+                            <div class="table__footer">
+                                <a href="#" class="btn button-primary">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="prc-box">
+                            <div class="table__header">
+                                <h2 class="table__header--title">Package A <span>(10 tenants)</span></h2>
+                                <p data-price="49.99" class="table__header--price">
+                                    <span>$</span> 89.99
+                                </p>
+                            </div>
+                            <div class="table__content">
+                                <ul class="table__content--list">
+                                    <li>Identity verifications</li>
+                                    <li>Credit Report</li>
+                                    <li>Income Verification</li>
+                                    <li>Employment Verification</li>
+                                </ul>
+                            </div>
+                            <div class="table__footer">
+                                <a href="#" class="btn button-primary">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="prc-box">
+                            <div class="table__header">
+                                <h2 class="table__header--title">Package A <span>(15 tenants)</span></h2>
+                                <p data-price="49.99" class="table__header--price">
+                                    <span>$</span> 129.99
+                                </p>
+                            </div>
+                            <div class="table__content">
+                                <ul class="table__content--list">
+                                    <li>Identity verifications</li>
+                                    <li>Credit Report</li>
+                                    <li>Income Verification</li>
+                                    <li>Employment Verification</li>
+                                </ul>
+                            </div>
+                            <div class="table__footer">
+                                <a href="#" class="btn button-primary">Get Started</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-main">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-2 col-sm-6">
+                        <div class="widget widget_newsletter">
+                            <h5 class="mb-4">Company</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="">Privacy Policy</a></li>
+                                <li><a href="Terms and Conditions.html">Terms &amp; Conditions</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="widget widget_newsletter">
+                            <h5 class="mb-4">Technology Resources</h5>
+                            <ul class="list-unstyled mb-0">
+                                <li><a href="https://ipfs.io" target="_blank">IPFS</a></li>
+                                <li><a href="https://ethereum.org/en/nft/" target="_blank">NFT</a></li>
+                                <li><a href="https://www.ibm.com/topics/what-is-blockchain"
+                                        target="_blank">Blockchain</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-sm-6">
+                        <div class="widget widget_newsletter">
+                            <h5 class="mb-4">Newsletter</h5>
+                            <form
+                                action="https://themelooks.us13.list-manage.com/subscribe/post?u=79f0b132ec25ee223bb41835f&amp;id=f4e0e93d1d"
+                                class="newslatter-form">
+                                <div class="theme-input-group">
+                                    <input class="form-control" type="email" placeholder="Enter Your Email...">
+                                    <button type="submit" class="btn btn-warning px-3"><i
+                                            class="fas fa-paper-plane"></i>Subscribe</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xl-4 col-sm-6">
+                        <div class="widget text-center text-white widget_about">
+                            <img class="light-logo mb-3" src="assets/images/logo-2.png" alt="" height="35"
+                                style="width:auto;">
+                            <p>Protect Your Documents from Fakes using <span>NFT Technology</span></p>
+                            <p>Email: support@docify.app</p>
+                            <div class="socials d-flex justify-content-center align-items-center mt-3">
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                    data-bs-original-title="Facbook" aria-label="Facbook">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                    data-bs-original-title="Twitter" aria-label="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" data-bs-toggle="tooltip" data-bs-placement="top" title=""
+                                    data-bs-original-title="Instagram" aria-label="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="copyright-content text-center text-white">2022 © All rights reserved by Docify
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="assets/js/slick.js"></script>
+</body>
+
+</html>
