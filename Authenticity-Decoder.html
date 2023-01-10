@@ -79,6 +79,9 @@
                                 </li>
                             </ul>
                         </div>
+						<button class="mb-toggle-mn">
+							<span class="toggle-mn"></span>
+						</button>
                     </nav>
                 </div>
             </div>
@@ -90,7 +93,7 @@
             <div class="title--hero">
                 <h1 class="title-site wow fadeInUp" data-wow-delay=".5s">Authenticity Decoder</h1>
             </div>
-            <div class="row mt-7">
+            <div class="row mt-7 flex-column-reverse-mb">
                 <div class="col-lg-6 d-flex align-self-center">
                     <div class="right-img">
                         <div class="elementor-image wow zoomIn" data-wow-delay="1.5s"><img
@@ -136,7 +139,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mt-7">
+            <div class="row mt-7 flex-column-reverse-mb">
                 <div class="col-lg-6 d-flex align-self-center">
                     <div class="right-img">
                         <div class="elementor-image wow zoomIn" data-wow-delay="1.5s"><img
@@ -395,9 +398,12 @@
             // 	}, 1000);
             // 	$("#quickSignup").modal('show');
             // });
-            $(document).on("click", ".sidenav-pricing", function () {
-                $('body').toggleClass('open-sidenav');
-            });
+            $(document).on("click", ".sidenav-pricing, .panel__close", function() {
+				$('body').toggleClass('open-sidenav');
+			});
+			$(document).on("click", ".mb-toggle-mn", function() {
+				$('.mean-menu').toggleClass('open-sidenav');
+			});
 
             $('.sender-images').slick({
                 autoplay: true,

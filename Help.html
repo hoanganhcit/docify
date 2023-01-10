@@ -79,6 +79,9 @@
 								</li>
 							</ul>
 						</div>
+						<button class="mb-toggle-mn">
+							<span class="toggle-mn"></span>
+						</button>
 					</nav>
 				</div>
 			</div>
@@ -88,7 +91,7 @@
 	<div class="banner-area">
 		<div class="container">
 			<div class="title--hero">
-				<h1 class="title-site fs-6rem wow fadeInUp" data-wow-delay=".5s">Docify Support</h1>
+				<h1 class="title-site fs-6rem">Docify Support</h1>
 				<div class="search-help">
 					<input type="text" class="input-search" placeholder="What can we help you with?">
 					<i class="fal fa-search"></i>
@@ -471,8 +474,11 @@
 			// 	}, 1000);
 			// 	$("#quickSignup").modal('show');
 			// });
-			$(document).on("click", ".sidenav-pricing", function () {
+			$(document).on("click", ".sidenav-pricing, .panel__close", function() {
 				$('body').toggleClass('open-sidenav');
+			});
+			$(document).on("click", ".mb-toggle-mn", function() {
+				$('.mean-menu').toggleClass('open-sidenav');
 			});
 
 			$('.sender-images').slick({

@@ -78,7 +78,10 @@
 									<a href="Login.html" class="nav-link">Login</a>
 								</li>
 							</ul>
-						</div>
+						</div> 
+						<button class="mb-toggle-mn">
+							<span class="toggle-mn"></span>
+						</button>
 					</nav>
 				</div>
 			</div>
@@ -391,8 +394,11 @@
 			// 	$("#quickSignup").modal('show');
 			// });
 
-			$(document).on("click", ".sidenav-pricing", function() {
+			$(document).on("click", ".sidenav-pricing, .panel__close", function() {
 				$('body').toggleClass('open-sidenav');
+			});
+			$(document).on("click", ".mb-toggle-mn", function() {
+				$('.mean-menu').toggleClass('open-sidenav');
 			});
 
 			$('.sender-images').slick({
