@@ -659,6 +659,49 @@
 .mb-toggle-mn {
     display: none;
 }
+.c-sidebar-nav-dropdown-toggle:before {
+    content: "\f107";
+    font-family: "Font Awesome 5 Pro";
+    font-size: 20px;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    transition: .3s;
+}
+.c-sidebar-nav-dropdown-toggle.up:before {
+    transform: rotate(180deg);
+}
+
+.c-sidebar-nav-dropdown-items {
+    position: relative;
+    padding-left: 20px;
+    display: none;
+}
+
+.c-sidebar-nav-dropdown-items .c-sidebar-nav-link {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    padding: 10px 15px 10px 35px;
+    display: block;
+    position: relative;
+    transition: .3s;
+}
+
+.c-sidebar-nav-dropdown-items .c-sidebar-nav-link:before {
+    content: "\f111";
+    font-family: "Font Awesome 5 Pro";
+    font-weight:900;
+    font-size: 4px;
+    position: absolute;
+    left: 15px;
+    top: 18px;
+    color: #ababab;
+}
+
+.c-sidebar-nav-dropdown-items .c-sidebar-nav-link:hover {
+    color: #fca905;
+}
 @media screen and (max-width: 500px) {
     .promoted__list, 
     .categories__list {
