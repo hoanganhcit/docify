@@ -702,6 +702,138 @@
 .c-sidebar-nav-dropdown-items .c-sidebar-nav-link:hover {
     color: #fca905;
 }
+.documentation-content {
+    position: relative;
+}
+
+.documentation-item {
+    position: relative;
+    margin-bottom: 1rem;
+    border: 1px solid #00dcff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.collapse__header {
+    position: relative;
+}
+.collapse__header-h2 {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+.collapse--link {
+    font-size: 16px;
+}
+
+.method-type {
+    padding: 5px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+.link-type {
+    color: #fff;
+}
+.mr-2 {
+    margin-right: 0.5rem;
+}
+.opblock-description-wrapper {
+    margin-top: 1rem;
+    padding: 0;
+    color: #fff;
+    padding-top: 1rem;
+    border-top: 1px solid var(--dc-primary-color);
+}
+
+.opblock-support {
+    position: relative;
+}
+.opblock-row { 
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px dashed #eee;
+}
+.opblock-row:last-child {
+    border-bottom: 0
+}
+.opblock-description-wrapper h3 {
+    font-size: 20px;
+    color: #00dcff;
+    margin-bottom: 10px;
+}
+
+.opblock-support p {
+    color: #fff;
+    margin-bottom: 0;
+}
+.opblock-description-wrapper table th, .opblock-description-wrapper table td {
+    color: #fff;
+    font-size: 14px;
+}
+.opblock-description-wrapper table tr:last-child td {
+    border: 0 !important;
+}
+.opblock-description-wrapper table tbody {
+    border-top: 0 !important;
+}
+.setup-code-wrapper {
+    position: relative;
+    background: #00567c;
+    border-radius: 6px;
+}
+
+.Box-divider--light-bottom- {
+    background: red;
+}
+
+.box-divider--light-bottom-1 {
+    background: #094a66;
+    border-bottom: 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.box-divider--light-bottom-1 .nav-link {
+    background: transparent !important;
+    border-radius: 0;
+    padding: 5px 10px;
+    border: 0 !important;
+    font-size: 13px;
+    color: #eee;
+}
+
+.box-divider--light-bottom-1 .nav-link.active {
+    color: #00dcff;
+    font-weight: bold;
+} 
+
+pre.codeBlock-content {
+    padding: 0 0 0 30px; 
+}
+pre.codeBlock-wrapper {
+    position: relative;
+    padding: 1rem;
+}
+
+code.codeBlock-code {
+    position: relative;
+}
+
+.token {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.keyword {
+    color: white;
+}
+
+.string {
+    color: #6fff6f;
+}
 @media screen and (max-width: 500px) {
     .promoted__list, 
     .categories__list {
