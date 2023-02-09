@@ -834,6 +834,21 @@ code.codeBlock-code {
 .string {
     color: #6fff6f;
 }
+.activating-steps-content .form-control {
+    background: #f1f1f1;
+}
+.activating-steps-content .form-control::placeholder {
+    color: #777
+}
+.activating-steps-content label {
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.activating-steps-content .h4 {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: bold;
+}
 @media screen and (max-width: 500px) {
     .promoted__list, 
     .categories__list {
