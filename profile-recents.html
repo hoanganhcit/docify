@@ -25,6 +25,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/styles-v2.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
+
 </head>
 
 <body class="body-login">
@@ -139,13 +140,119 @@
 			</div>
 		</div>
 	</div>
+	<div class="modal fade in" id="activating_business" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+		  <div class="modal-content">
+			<div class="modal-body">
+			  <div class="activating-business-content py-4 px-4">
+				<h3 class="font-weight-bold">Continue Activating Business</h3>
+				<p class="mb-4">You need to verify their business</p>
+				<a href="javascript:;" class="btn btn-warning continue-activating text-white">Continue Activating <i class="far fa-arrow-right"></i></a>
+			  </div>
+			  <div class="activating-steps-content py-4 px-4" style="display:none">
+				<div class="row">
+					<div class="col-md-12">
+						<div class="h4">Business type:</div>
+						<p class="mb-0">Let’s start with some basics </p>
+						<p>Choose your location and business type to get started. </p>
+						<div class="form-group">
+							<label for="">Business Location</label>
+							<select name="" id="" class="form-control">
+								<option value="United States">United States</option>
+								<option value="England">England</option>
+								<option value="Canada">Canada</option>
+								<option value="France">France</option>
+							</select>
+							<p>If your country isn’t listed, please contact us at support@docify.app</p>
+						</div>
+						<div class="form-group">
+							<label for="">Type of business</label>
+							<select name="" id="" class="form-control">
+								<option value="Corporation">Corporation</option>
+								<option value="Individual or sole proprietorship">Individual or sole proprietorship</option>
+								<option value="Nonprofit Organization">Nonprofit Organization</option>
+								<option value="Partnership">Partnership</option>
+							</select>
+						</div>
+					</div>
+					<hr class="mt-4 mb-4">
+					<div class="col-md-12">
+						<div class="h4">Business details:</div>
+						<p class="mb-0">Tell us more about your business</p>
+						<p>Docify collects this information to better serve your business and help meet your expectations to protect your digital assets. </p>
+						<div class="form-group">
+							<label for="">Legal business name</label>
+							<input type="text" class="form-control">
+							<p>The name you provide must exactly match the name associated with your business number (BN).</p>
+						</div>
+						<div class="form-group">
+							<label for="">Business number (BN) or Québec Enterprise Number (NEQ)</label>
+							<input type="text" class="form-control mb-4">
+						</div>
+						<div class="form-group">
+							<label for="">Registered business address</label>
+							<input type="text" class="form-control mb-4" placeholder="Canada">
+							<input type="text" class="form-control mb-4"  placeholder="Address line 1">
+							<input type="text" class="form-control mb-4"  placeholder="Address line 2">
+							<input type="text" class="form-control mb-4"  placeholder="City">
+							<select name="" id="" class="form-control mb-4">
+								<option value="Province">Province</option>
+								<option value="Vancouver">Vancouver</option>
+								<option value="Montreal">Montreal</option>
+								<option value="Alberta">Alberta</option>
+							</select>
+							<input type="text" class="form-control mb-4"  placeholder="Postal Code">
+						</div>
+						<div class="form-group">
+							<label for="">Industry</label>
+							<select name="" id="" class="form-control">
+								<option value="Education">Education</option>
+								<option value="Government">Government</option>
+								<option value="Banking">Banking</option>
+								<option value="Law Enforcement">Law Enforcement</option>
+							</select>
+						</div>
+						<div class="form-group">
+							<label for="">Business website</label>
+							<input type="text" class="form-control mb-4" placeholder="www.example.com">
+						</div>
+						<div class="form-group">
+							<label for="">Product/Service description</label>
+							<textarea name="" id="" style="min-height:100px" class="form-control"></textarea>
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="mt-4">
+							<button type="submit" class="btn button-primary">Submit</button>
+						</div>
+					</div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/slick.js"></script>
 	<script>
+		window.onload = function () {
+			OpenBootstrapPopup();
+		};
+		function OpenBootstrapPopup() {
+			var myModal = new bootstrap.Modal(document.getElementById('activating_business'), {
+				backdrop: 'static', 
+				keyboard: false
+			});
+			myModal.show()
+		}
 		$(document).ready(function () {
 			$('.toggle-Menu').click(function () {
 				$('.sidebar').toggleClass('open');
+			})
+			$('.continue-activating').click(function() {
+				$('.activating-business-content').hide();
+				$('.activating-steps-content').show();
 			})
 		});
 		$(document).on("click", ".c-sidebar-nav-dropdown-toggle", function() {
