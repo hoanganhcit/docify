@@ -247,7 +247,7 @@
     .navbar-expand-md .navbar-collapse {
         display: flex!important;
         flex-basis: auto;
-    } 
+    }
     .col-md-2 {
         width: 20%;
     }
@@ -383,20 +383,20 @@
     padding: 1rem 0.5rem;
     border-bottom: 1px solid #ccc;
 }
-.PricingFeatureTable__section tbody tr:first-child td:nth-child(3) .table-data, 
+.PricingFeatureTable__section tbody tr:first-child td:nth-child(3) .table-data,
 .PricingFeatureTable__section tbody tr:first-child td:nth-child(4) .table-data {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     padding: 1rem;
 }
-.PricingFeatureTable__section tbody tr:last-child td:nth-child(3) .table-data, 
+.PricingFeatureTable__section tbody tr:last-child td:nth-child(3) .table-data,
 .PricingFeatureTable__section tbody tr:last-child td:nth-child(4) .table-data {
     border-bottom-left-radius: 1rem;
     border-bottom-right-radius: 1rem;
     padding: 1rem;
     text-align:center;
 }
-.PricingFeatureTable__section tbody tr:last-child td .PricingFeatureTable__cell-heigh, 
+.PricingFeatureTable__section tbody tr:last-child td .PricingFeatureTable__cell-heigh,
 .PricingFeatureTable__section tbody tr:last-child td .PricingFeatureTable__cell-height {
     border:0;
 }
@@ -533,7 +533,7 @@
     -webkit-transform: translateY(10px);
     transform: translateY(10px);
 }
-.team-item:hover .team-title, 
+.team-item:hover .team-title,
 .team-item:hover .team-designation {
     opacity: 1;
     visibility: visible;
@@ -752,7 +752,7 @@
 .opblock-support {
     position: relative;
 }
-.opblock-row { 
+.opblock-row {
     margin-bottom: 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px dashed #eee;
@@ -808,10 +808,10 @@
 .box-divider--light-bottom-1 .nav-link.active {
     color: #00dcff;
     font-weight: bold;
-} 
+}
 
 pre.codeBlock-content {
-    padding: 0 0 0 30px; 
+    padding: 0 0 0 30px;
 }
 pre.codeBlock-wrapper {
     position: relative;
@@ -829,10 +829,6 @@ code.codeBlock-code {
 
 .keyword {
     color: white;
-}
-
-.string {
-    color: #6fff6f;
 }
 .activating-steps-content .form-control {
     background: #f1f1f1;
@@ -854,11 +850,11 @@ code.codeBlock-code {
     color: #888;
 }
 @media screen and (max-width: 500px) {
-    .promoted__list, 
+    .promoted__list,
     .categories__list {
         grid-template-columns: repeat(1, minmax(8rem, 1fr));
     }
-    
+
     .navigation {
         top: 0;
         padding: 10px;
@@ -867,7 +863,7 @@ code.codeBlock-code {
     .navbar-area {
         align-items: center;
     }
-    
+
     #navbarSupportedContent {
         position: fixed;
         top: 65px;
@@ -882,7 +878,7 @@ code.codeBlock-code {
     #navbarSupportedContent.open-sidenav {
         right: 0;
     }
-    
+
     #navbarSupportedContent .navbar-nav {
         background: none;
         backdrop-filter: blur(0);
@@ -915,7 +911,7 @@ code.codeBlock-code {
         padding: 0;
         display: block;
     }
-    
+
     .toggle-mn {
         position: relative;
         width: 30px;
@@ -923,7 +919,7 @@ code.codeBlock-code {
         background: #FCA905;
         display: block;
     }
-    
+
     .toggle-mn:before {
         content: "";
         position: absolute;
@@ -949,20 +945,20 @@ code.codeBlock-code {
         height: auto;
         padding-top: 65px;
     }
-    
+
     .left-content {
         padding-top: 50px !important;
     }
-    
+
     .dc-box-icon {
         width: 100%;
         margin-bottom: 1rem;
     }
-    
+
     .uploader--form {
         margin-bottom: 2rem;
     }
-    
+
     .live-box {
         margin-bottom: 1rem;
     }
@@ -971,23 +967,23 @@ code.codeBlock-code {
         z-index: 111;
         max-width: 100%;
     }
-    
+
     .panel__content.pricing-page {
         padding: 1rem;
     }
-    
+
     .pricing-feature-table {
         overflow: auto;
     }
-    
+
     .Table-module__OneUITable {
         width: 1024px;
     }
-    
+
     .Table-module__OneUITable td {
         font-size: 14px;
     }
-    
+
     .PricingFeatureTable__header-row {
         font-size: 16px;
     }
@@ -1008,18 +1004,18 @@ code.codeBlock-code {
     .about-desc .fs-20 {
         font-size: 15px;
     }
-    
+
     .mb-6rem {
         margin-bottom: 3rem;
     }
-    
+
     .team-item {
         margin-bottom: 1.5rem;
     }
     .pl-5, .pr-5 {
         padding: 0;
     }
-    
+
     .right-img {
         padding: 0;
     }
@@ -1029,11 +1025,11 @@ code.codeBlock-code {
     .content .fs-36 {
         font-size: 24px;
     }
-    
+
     .content .fs-20 {
         font-size: 15px;
     }
-    
+
     .footer-text {
         margin-top: 3rem;
     }
