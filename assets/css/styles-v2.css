@@ -585,14 +585,24 @@
 .promoted__list {
     display: grid;
     grid-gap: 0.5rem;
-    grid-template-columns: repeat(3, minmax(8rem, 1fr));
+    grid-template-columns: repeat(1, minmax(8rem, 1fr));
+}
+.promoted__item {
+    padding: 1.85rem;
+    border: 2px solid #00dcff !important;
+    border-radius: 8px;
+}
+
+.help-collapse {
+    position: relative;
+    margin-top: 1rem;
+    padding-top: 1rem;
+    border-top: 1px solid #00dcff;
+    color: #fff;
+    font-size: 15px;
 }
 .promoted__link {
     width: 100%;
-    height: 100%;
-    margin-bottom: 0.25rem;
-    border-radius: 0.25rem;
-    padding: 1.85rem 1rem;
     font-size: 16px;
     display: flex;
     justify-content: space-between;
@@ -601,7 +611,6 @@
     text-decoration: none;
     transition: transform 0.5s;
     margin: 0 auto;
-    border: 2px solid #00dcff;
     font-weight: 600;
     display: flex;
     align-items: center;
