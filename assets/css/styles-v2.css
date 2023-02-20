@@ -616,6 +616,9 @@
     align-items: center;
     color: #00dcff !important;
 }
+.promoted__link p {
+    margin-bottom:0;
+}
 .promoted__link:hover {
     transform: translate(0, 2px);
 }
