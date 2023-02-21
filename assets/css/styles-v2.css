@@ -14,7 +14,7 @@
     padding-left: 0;
     list-style-type: none;
     margin-bottom: 0;
-    background: rgb(255 255 255 / 5%);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 6px;
     backdrop-filter: blur(10px);
     transition: .5s;
@@ -70,7 +70,7 @@
 .dc-box-icon {
     color: #fff;
     position: relative;
-    background: rgb(255 255 255 / 5%);
+    background: rgba(255, 255, 255, 0.05);
     padding: 1rem;
     border-radius: 6px;
 }
@@ -90,7 +90,7 @@
 .uploader--form {
     background: #fff;
     border-radius: 10px;
-    box-shadow: 0 0 12px 0 rgb(255 255 255 / 10%), 0 10px 30px 0 rgb(255 255 255 / 11%);
+    box-shadow: 0 0 12px 0 rgba(255, 255, 255, 0.1), 0 10px 30px 0 rgba(255, 255, 255, 0.11);
     /* min-height: 25.625em; */
     position: relative;
     transition: transform .5s cubic-bezier(.77,0,.175,1);
@@ -155,7 +155,7 @@
     margin-bottom: 1rem;
 }
 .live-box {
-    background: rgb(255 255 255 / 10%);
+    background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(10px);
     color: #fff;
     text-align: center;
@@ -204,7 +204,7 @@
 .panel-sidenav {
     background: #fff;
     bottom: 0;
-    box-shadow: 0 0 12px 0 rgb(0 0 0 / 10%), 0 10px 30px 0 rgb(0 0 0 / 20%);
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.1), 0 10px 30px 0 rgba(0, 0, 0, 0.2);
     overflow: hidden;
     position: fixed;
     right: 0;
@@ -483,11 +483,11 @@
 .team-thumbnail img {
     width: 100%;
     border-radius: 6px;
-    box-shadow: 0 25px 65px rgb(0 0 0 / 10%);
+    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.1);
 }
 
 .team-thumbnail:after {
-    background: linear-gradient(180deg,rgb(0 220 255 / 0%) 0,#00dcff);
+    background: linear-gradient(180deg,rgba(0, 220, 255, 0) 0,#00dcff);
     position: absolute;
     left: 0;
     right: 0;
