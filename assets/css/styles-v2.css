@@ -861,6 +861,9 @@ code.codeBlock-code {
     pointer-events: none;
     color: #888;
 }
+.attackment-fixed {
+    background-attachment: fixed;
+}
 @media screen and (max-width: 500px) {
     .promoted__list,
     .categories__list {
