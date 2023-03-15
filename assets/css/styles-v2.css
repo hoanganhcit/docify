@@ -1049,3 +1049,77 @@ code.codeBlock-code {
         margin-top: 3rem;
     }
 }
+
+
+.v-header {
+    position: relative;
+}
+
+.v-text-title {
+    font-weight: 500;
+}
+
+.v-radio-method {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+}
+
+.v-radio-method .form-check {
+    margin-right: 1rem;
+}
+
+.v-content {
+    position: relative;
+}
+
+.upload-photo-box {
+    position: relative;
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100px;
+}
+
+.upload-photo-box i {
+    font-size: 30px;
+    color: #fca905;
+}
+
+.upload-photo-box .file-hidden {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+.upload-photo-box p {
+    font-size: 14px;
+    color: #ccc;
+    font-weight: 300;
+}
+input.form-control.outlined {
+    border: 1px solid #ccc;
+}
+.preview-photos {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    margin-top: 1rem;
+    padding: 5px;
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+}
+
+.preview-photos img {
+    max-width: 100px;
+    margin: 5px;
+    border-radius: 10px;
+}
