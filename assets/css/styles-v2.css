@@ -73,6 +73,7 @@
     background: rgba(255, 255, 255, 0.05);
     padding: 1rem;
     border-radius: 6px;
+    width: 30%;
 }
 
 .dc-box-icon i {
@@ -80,7 +81,6 @@
     margin-right: 10px;
 }
 .dc-group-flex {
-    max-width: 500px;
     flex-wrap: wrap;
 }
 .transfer__window {
@@ -1122,4 +1122,41 @@ input.form-control.outlined {
     max-width: 100px;
     margin: 5px;
     border-radius: 10px;
+}
+
+.dowload-app__content {
+    position: relative;
+    padding: 30px;
+    padding-left: 50px;
+}
+.cta__content-box {
+    position: relative;
+    background: rgb(255 255 255 / 10%);
+    padding: 50px 25px;
+    border-radius: 6px;
+    backdrop-filter: blur(15px);
+    color: #fff;
+}
+
+.cta__content-box h3.title {
+    font-size: 28px;
+    font-family: var(--dc-font-family-secondary);
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.download-box {
+    display: block;
+    position: relative;
+    color: #fff;
+    font-weight: 500;
+}
+
+.download-box .list {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.download-box .list .item {
+    margin-right: 1rem;
 }
