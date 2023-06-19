@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Asset Access Authentication Report By Docerfy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+    }
+    body {
+        font-family: "Montserrat";
+        font-size: 14px;
+        color: #414141;
+    }
+    .wrapper {
+        position: relative;
+        background: #f5f5f5;
+        box-sizing: border-box;
+        padding: 3rem;
+    }
+
+    .content-report {
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+        background: #fff;
+        position: relative;
+    }
+
+    .report-container {
+        width: 100%;
+        position: relative;
+    }
+
+    .rp-heading {
+        background: #00404A;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .logo-heading {
+        display: inline-block;
+    }
+
+    .logo-heading img {
+        height: 50px;
+        width: auto;
+    }
+
+    .rp-body {
+        position: relative;
+        padding: 50px;
+    }
+
+    .h2-title h2 {
+        font-size: 28px;
+        text-align: center;
+        display: block;
+    }
+
+    .rp-document-info {
+        position: relative;
+        margin: 30px 0;
+    }
+
+    .rp-document-name {
+        display: block;
+        margin-bottom: 15px;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    .rp-document-viewed {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        font-size: 15px;
+    }
+
+    .rp-col-3 {
+        margin-right: 20px;
+        margin-bottom: 10px;
+    }
+
+    .color-success {
+        color: #4CAF50;
+    }
+
+    span.color-danger {
+        color: red;
+    }
+
+    .re-table-report {
+        position: relative;
+    }
+
+    .re-table-report table {
+        width: 100%;
+        border-spacing: 0;
+    }
+
+    .re-table-report table th, .re-table-report table td {
+        border: 1px solid #ccc;
+    }
+
+    .re-table-report th {
+        border-bottom: 0 !important;
+        padding: 5px;
+        background: #eaeaea;
+    }
+
+    .avatar-facial {
+        max-width: 100px;
+    }
+
+    .re-table-report table td {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .re-table-report table td:first-child {
+        text-align: center;
+        width: 100px;
+    }
+
+    .re-table-report table td p {
+        margin-bottom: 15px;
+    }
+    @media print {
+        .wrapper {
+            padding: 0;
+        }
+        .content-report {
+            width: 1024px; 
+        }
+        table {
+            break-inside: auto;
+        }
+
+        tr {
+            break-inside: avoid;
+            break-after: auto;
+        }
+
+        thead {
+            display: table-header-group;
+        } 
+        
+        .color-success, 
+        .rp-heading,
+        .re-table-report th {
+            -webkit-print-color-adjust: exact;
+            color-adjust: exact;
+        }
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <div class="content-report">
+            <div class="report-container">
+                <div class="rp-heading">
+                    <div class="logo-heading">
+                        <img src="logo-docerfy.png" alt="">
+                    </div>
+                </div>
+                <div class="rp-body">
+                    <div class="h2-title">
+                        <h2>Digital Asset Access Authentication Report By Docerfy</h2>
+                    </div>
+                    <div class="rp-document-info">
+                        <div class="rp-document-name">
+                            <span>Document Name</span>
+                        </div>
+                        <div class="rp-document-viewed">
+                            <div class="rp-col-3">
+                                <span>Total Number of Hits: 1024</span>
+                            </div>
+                            <div class="rp-col-3">
+                                <span>Total number of successful hits: <span  class="color-success">900</span></span>
+                            </div>
+                            <div class="rp-col-3">
+                                <span>Total Number of failed hits: <span  class="color-danger">124</span></span>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="re-table-report">
+                        <table>
+                            <thead>
+                                <th>Facial</th>
+                                <th>Successful Access</th>
+                                <th>Denied Access</th>
+                                <th>Location</th>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <img src="men.jpg" alt="" class="avatar-facial">
+                                    </td>
+                                    <td>
+                                        <span>2</span>
+                                    </td>
+                                    <td>
+                                        <span>0</span>
+                                    </td>
+                                    <td>
+                                        <p>43.704723782673 - 79.59234982098</p>
+                                        <p>Toronto, Ontario, Canada</p>
+                                    </td> 
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="men.jpg" alt="" class="avatar-facial">
+                                    </td>
+                                    <td>
+                                        <span>0</span>
+                                    </td>
+                                    <td>
+                                        <span>6</span>
+                                    </td>
+                                    <td>
+                                        <p>43.704723782673 - 79.59234982098</p>
+                                        <p>Toronto, Ontario, Canada</p>
+                                    </td> 
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <img src="user.jpg" alt="" class="avatar-facial">
+                                    </td>
+                                    <td>
+                                        <span>2</span>
+                                    </td>
+                                    <td>
+                                        <span>0</span>
+                                    </td>
+                                    <td>
+                                        <p>43.704723782673 - 79.59234982098</p>
+                                        <p>Toronto, Ontario, Canada</p>
+                                    </td> 
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

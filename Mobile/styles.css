@@ -1,0 +1,151 @@
+body {
+    font-family: "Montserrat";
+}
+a {
+    text-decoration: none;
+    color: #052131;
+}
+.wrapper {
+    position: relative;
+    background: #eee;
+}
+.mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(180deg, #052131 35.6%, #083A56 76.11%);
+    display: none;
+}
+
+.mobile-overlay img {
+    height: 100px;
+}
+.overlay-login {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.overlay-login img {
+    height: 170px;
+}
+
+.mobile-container {
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 50px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-content {
+    position: relative;
+    width: 100%;
+}
+
+.mobile-header {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.mobile-logo {
+    text-align: center;
+    position: relative;
+}
+
+.mobile-logo img {
+    height: 80px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.header-subtitle {
+    color: #888;
+}
+
+.header-subtitle h1 {
+    font-size: 30px;
+    color: #171717;
+    font-weight: bold;
+}
+
+.mobile-form {
+    position: relative;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-control {
+    height: 50px;
+    border-radius: 10px !important;
+    border-color: #eee;
+    padding: 0 1.5rem;
+    padding-left: 3rem;
+}
+
+.input-group i {
+    position: absolute;
+    z-index: 4;
+    top: 17px;
+    left: 17px;
+    color: #ccc;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+}
+.form-control:focus {
+    border: 0;
+    box-shadow: 0 1px 35px rgb(0 0 0 / 15%);
+}
+.btn {
+    height: 50px;
+    border-radius: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+}
+.btn-primary {
+    color: #fff;
+    background-color: #fcb019;
+    border-color: #fcb019;
+}
+.btn-primary:hover, .btn-primary:focus {
+    color: #fff;
+    background-color: #ff9d00;
+    border-color: #ff9d00;
+    box-shadow: 5px 8px 16px rgb(255 157 0 / 80%);
+}
+.mobile-nav-back {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 20px;
+}
+@media screen and (max-width: 500px) {
+    .wrapper {
+        padding: 0
+    }
+    .overlay-login {
+        display:block;
+    }
+    .mobile-container {
+        border-radius: 0;
+        box-shadow: none;
+        min-height: 100vh;
+        align-items: center;
+    }
+}
