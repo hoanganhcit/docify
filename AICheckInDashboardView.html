@@ -239,7 +239,7 @@
 									<div class="hero-rw--list-users mt-8">
 										<div class="hero--users-box">
 											<div class="hero--title-3">List of Registered</div>
-											<div class="hr-list-users">
+											<div class="hr-list-users" id="listOfRegistered">
 												<div class="users-item">
 													<div class="us--img">
 														<img src="assets/images/user.jpg" alt="" class="rounded-circle">
@@ -297,7 +297,7 @@
 									<div class="hero-rw--list-users mt-8">
 										<div class="hero--users-box">
 											<div class="hero--title-3">List of Unregistered</div>
-											<div class="hr-list-users">
+											<div class="hr-list-users" id="listOfUnregistered">
 												<div class="users-item">
 													<div class="us--img">
 														<img src="assets/images/user.jpg" alt="" class="rounded-circle">
@@ -398,7 +398,7 @@
 			</div>
 			<div class="modal-footer">
 			  <button type="button" class="btn btn-default" data-bs-dismiss="modal">Cancel</button>
-			  <button type="button" class="btn btn-info">Add New User</button>
+			  <button type="button" class="btn btn-info add--new-user">Add New User</button>
 			</div>
 		  </div>
 		</div>
@@ -421,6 +421,11 @@
 			});
 			$(document).on("click", ".btn-del-row", function(e) {
 				$(this).parent().remove();
+			});
+			$(document).on("click", ".add--new-user", function(e) {
+				$(this).parent().parent().remove();
+				$('#listOfRegistered').append('<div class="users-item mt-2"><div class="us--img"><img src="assets/images/user.jpg" alt="" class="rounded-circle"></div><div class="us-i4"><div class="us-name">Henry Quach</div><div class="us-phone">0987 567 8899</div></div></div>');
+				$('#addUserModal').modal('hide');
 			});
 		});
 
