@@ -61,6 +61,79 @@
 			justify-content: center;
 			font-size: 13px;
 		}
+		.hero--users-box {
+			background: #ffffff;
+			padding: 30px;
+			position: relative;
+		}
+
+		.hero--title-3 {
+			font-size: 20px;
+			font-weight: 600;
+			margin-bottom: 2rem;
+			padding-bottom: 1rem;
+			border-bottom: 1px dotted #ccc;
+		}
+
+		.hr-list-users {
+			position: relative;
+		}
+
+		.users-item {
+			border-bottom: 1px dashed #eee;
+			padding-bottom: 1rem;
+			position: relative;
+			display: flex;
+			margin-bottom: 1rem;
+			flex-wrap: wrap;
+			align-items: center;
+		}
+
+		.us--img {
+			width: 50px;
+			margin-right: 1rem;
+		}
+
+		.us--img img {
+			width: 50px;
+			height: 50px;
+			object-fit: contain;
+		}
+		.form-addUser {
+			position: relative;
+		}
+		.form-addUser .form-control {
+			background: #f8f8f8;
+		}
+		.form-addUser img {
+			width: 100px;
+			display: block;
+			border-radius: 100%;
+			height: 100px;
+			object-fit: contain;
+		}
+		.mr-4 {
+			margin-right: 2rem;
+		}
+		.uploadAvatar {
+			position: relative;
+		}
+		.uploadFile {
+			position: relative;
+		}
+
+		.uploadFile button {
+			font-size: 14px;
+		}
+		.uploadAvatar .file-hidden {
+			opacity: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			cursor: pointer;
+		}
 	</style>
 </head>
 <body class="body-login">
@@ -140,7 +213,8 @@
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="#">Docify</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Events</li>
+							<li class="breadcrumb-item" aria-current="page"><a href="AICheckInDashboard.html">Events</a></li>
+							<li class="breadcrumb-item active" aria-current="page">Programmer's Workshop in Ontario</li>
 						</ol>
 					</nav>
 					<div class="personl">
@@ -155,56 +229,72 @@
 					</div>
 				</div>
 				<div class="container-fluid">
-					<div class="d-sm-flex  mb-4">
-						<h1 class="title--heading text-black-5">Events</h1>
+					<div class="mb-4 row d-flex flex-end align-items-end">
+						<div class="col-md-9">
+							<label class="title--heading text-black-5">Title Event</label>
+							<input type="text" class="form-control" value="Programmer's Workshop in Ontario"> 
+						</div>
+						<div class="col-md-3 text-right">
+							<button class="add-folder btn button-primary">
+								<span>Save</span>
+							</button>
+						</div>
 					</div>
-					<div class="card bg-white">
-						<div class="card-body">
-							<div class=" header-card ">
-								<div class="row justify-between align-items-center">
-									<div class="col-md-4 col-xs-12">
-										<div class="search-box">
-											<input type="text" class="form-control" placeholder="Search" name="">
-											<i class="fal fa-search"></i>
-										</div>
-									</div>
-									<div class="col-md-4 col-xs-12">
-										<div class="d-flex flex-end">
-											<a href="AICheckInDashboardCreate.html" class="add-folder btn button-primary">
-												<i class="fal fa-plus-circle"></i>
-												<span>Add New Event</span>
-											</a>
+					<div class="row mb-4">
+						<div class="col-md-7"> 
+							<div class="card bg-white">
+								<div class="card-body">
+									<div class="hero-rw--list-users mt-8">
+										<div class="hero--users-box">
+											<div class="hero--title-3">List of Registered</div>
+											<div class="hr-list-users">
+												<div class="users-item">
+													<div class="us--img">
+														<img src="assets/images/user.jpg" alt="" class="rounded-circle">
+													</div>
+													<div class="us-i4">
+														<div class="us-name">Henry Quach</div>
+														<div class="us-phone">0987 567 8899</div>
+													</div>
+												</div>
+											</div>
+											<div class="add-users--icon">
+												<button class="btn btn-info add-user-modal" data-bs-toggle="modal" data-bs-target="#addUserModal"><i class="fal fa-plus"></i> Add User</button>
+											</div>
 										</div>
 									</div>
 								</div>
 							</div>
-							<div class="folder-wrap document-listview">
-								<table class="table table-document" id="dataTables">
-									<thead>
-										<th>Title</th>
-										<th>Action</th>
-									</thead>
-									<tbody>
-										<tr>
-											<td>
-												<div class="document-name">
-													<span>Programmer's Workshop in Ontario</span>
+						</div>
+						<div class="col-md-5"> 
+							<div class="card bg-white  mb-4">
+								<div class="card-body">
+									<div class="hero-rw--list-users mt-8">
+										<div class="hero--users-box">
+											<div class="hero--title-3">List of Banned</div>
+											<div class="hr-list-users">
+												<div class="users-item">
+													<div class="us--img">
+														<img src="assets/images/DavidAhola.png" alt="" class="rounded-circle">
+													</div>
 												</div>
-											</td>
-											<td>
-												<div class="ms-auto">
-													<a href="AICheckInDashboardCreate.html" class="btn btn-info " data><i class="fal fa-cog"></i> </a>
-													<a href="AICheckInDashboardView.html" class="btn btn-success" data><i class="fal fa-eye"></i> </a>
-													<a href="#" class="btn btn-danger" data><i class="fal fa-trash"></i> </a>
+
+												<div class="users-item">
+													<div class="us--img">
+														<img src="assets/images/LeanneBinsell.png" alt="" class="rounded-circle">
+													</div>
 												</div>
-											</td>
-										</tr>
-									</tbody>
-								</table>
-							</div>
-							<div class="content-empty" style="display: none;">
-								<div class="empty-center">
-									<p>Nothing yet. Recently opened documents will appear here once they are opened. Click <a href="#"><i class="fas fa-plus-circle"></i></a> to add document(s)</p>
+												<div class="users-item">
+													<div class="us--img">
+														<img src="assets/images/HenryQuach.png" alt="" class="rounded-circle">
+													</div>
+												</div>
+											</div>
+											<div class="add-users--icon">
+												<button class="btn btn-danger add-user-banned-modal" data-bs-toggle="modal" data-bs-target="#addUserBannedModal"><i class="fal fa-plus"></i> Add User</button>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -215,87 +305,78 @@
 	</div>
 
 	<!-- Modal -->
-	<div class="modal fade bd-example-modal-lg" id="verify_failed" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog modal-lg" style="max-width: 1024px">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h6>Add New Event</h6>
+	<div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title">Add New User</h5>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+			  <div class="form-addUser px-4 py-4">
+				<div class="form-group d-flex align-items-center">
+					<label for="" class="mr-4">Avatar</label>
+					<div class="uploadAvatar d-flex  align-items-center">
+						<img src="assets/images/default-user.png" alt="" class="mr-4">
+						<div class="uploadFile">
+							<button class="btn btn-danger"> <i class="fal fa-upload"></i> Upload File</button>
+							<input type="file" class="file-hidden">
+						</div>
+					</div>
 				</div>
-				<div class="modal-body">
-					<div class="formAddEvent px-4 py-4">
-						<div class="row">
-							<div class="col-md-12">
-								<div class="form-group">
-									<label class="form-label">Title Event</label>
-									<input type="text" class="form-control ">
-								</div>
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Name">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Email">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Phone Number">
+				</div>
+				<div class="form-group">
+					<input type="text" class="form-control" placeholder="Messeges" >
+				</div>
+			  </div>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-default" data-bs-dismiss="modal">Cancel</button>
+			  <button type="button" class="btn btn-info">Add New User</button>
+			</div>
+		  </div>
+		</div>
+	</div>
+	<div class="modal fade" id="addUserBannedModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog " style="max-width: 600px;">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h5 class="modal-title">Add members to the banned list</h5>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="col-md-12">
+					<div class=" formAddBannedUser">
+						<div class="form-group upload-photo-content ">
+							<div class="upload-photo-box">
+								<i class="fas fa-cloud-upload"></i>
+								<p class="mt-2">Upload all intended user face photo </p>
+								<input type="file" class="file-hidden" multiple="">
 							</div>
-							<h6 class="col-md-12 my-4" style="text-transform: capitalize;">Add members to the attendance list</h6>
-							<div class="col-md-12 formAddContent">
-								<div class="px-4 py-4 formAddContainer">
-									<div class="row">
-										<div class="col-md-6">
-											<div class="form-group">
-												<label class="form-label">Name</label>
-												<input type="text" class="form-control ">
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="form-group">
-												<label class="form-label">Avatar</label>
-												<input type="file" class="form-control ">
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="form-group">
-												<label class="form-label">Email</label>
-												<input type="text" class="form-control ">
-											</div>
-										</div>
-										<div class="col-md-6">
-											<div class="form-group">
-												<label class="form-label">Phone</label>
-												<input type="text" class="form-control ">
-											</div>
-										</div>
-										<div class="col-md-12">
-											<div class="form-group">
-												<label class="form-label">Messeger</label>
-												<input type="text" class="form-control ">
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-12 form-group text-right mt-4">
-								<button class="btn btn-info add--row-user">Add User</button>
-							</div>
-							<h6 class="col-md-12 my-4" style="text-transform: capitalize;">Add members to the banned list</h6>
-							<div class="col-md-12">
-								<div class=" formAddBannedUser">
-									<div class="form-group upload-photo-content ">
-										<div class="upload-photo-box">
-											<i class="fas fa-cloud-upload"></i>
-											<p class="mt-2">Upload all intended user face photo </p>
-											<input type="file" class="file-hidden" multiple="">
-										</div>
-										<div class="preview-photos">
-											<img src="assets/images/DavidAhola.png" alt="">
-											<img src="assets/images/LeanneBinsell.png" alt="">
-											<img src="assets/images/HenryQuach.png" alt="">
-										</div>
-									</div>
-								</div>
+							<div class="preview-photos">
+								<img src="assets/images/DavidAhola.png" alt="">
+								<img src="assets/images/LeanneBinsell.png" alt="">
+								<img src="assets/images/HenryQuach.png" alt="">
 							</div>
 						</div>
 					</div>
 				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
-				</div>
 			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-default" data-bs-dismiss="modal">Cancel</button>
+			  <button type="button" class="btn btn-danger">Add New User</button>
+			</div>
+		  </div>
 		</div>
-	</div> 
+	</div>
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/dataTables.min.js"></script>
