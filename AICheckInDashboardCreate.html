@@ -134,6 +134,16 @@
 			bottom: 0;
 			cursor: pointer;
 		}
+		.h4-title {
+			font-size: 18px;
+			text-transform: capitalize;
+			font-weight: 500;
+			border-bottom: 1px dotted #ccc;
+		}
+		input[type=file]::file-selector-button {
+			padding: 10px 15px;
+			height: 50px;
+		}
 	</style>
 </head>
 <body class="body-login">
@@ -297,7 +307,7 @@
 
 	<!-- Modal -->
 	<div class="modal fade" id="addUserModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
+		<div class="modal-dialog modal-xl">
 		  <div class="modal-content">
 			<div class="modal-header">
 			  <h5 class="modal-title">Add New User</h5>
@@ -305,27 +315,70 @@
 			</div>
 			<div class="modal-body">
 			  <div class="form-addUser px-4 py-4">
-				<div class="form-group d-flex align-items-center">
-					<label for="" class="mr-4">Avatar</label>
-					<div class="uploadAvatar d-flex  align-items-center">
-						<img src="assets/images/default-user.png" alt="" class="mr-4">
-						<div class="uploadFile">
-							<button class="btn btn-danger"> <i class="fal fa-upload"></i> Upload File</button>
-							<input type="file" class="file-hidden">
+				<div class="h4-title mb-4 pb-3">User Information</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group d-flex align-items-center">
+							<label for="" class="mr-4">Avatar</label>
+							<div class="uploadAvatar d-flex  align-items-center">
+								<img src="assets/images/default-user.png" alt="" class="mr-4">
+								<div class="uploadFile">
+									<button class="btn btn-danger"> <i class="fal fa-upload"></i> Upload File</button>
+									<input type="file" class="file-hidden">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Name">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Email">
+						</div>
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Cellular Phone">
 						</div>
 					</div>
 				</div>
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Name">
+				<div class="h4-title mt-4 mb-4 pb-3">Seat Manager</div>
+				<div class="row">
+					<div class="col-md-4">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Gate">
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Row">
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Seat">
+						</div>
+					</div>
 				</div>
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Email">
-				</div>
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Phone Number">
-				</div>
-				<div class="form-group">
-					<input type="text" class="form-control" placeholder="Messeges" >
+				<div class="h4-title mt-4 mb-4 pb-3">Manager Notification</div>
+				<div class="row">
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="">Link</label>
+							<input type="text" class="form-control" placeholder="Link">
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label for="">Attackments</label>
+							<input type="file" class="form-control">
+						</div>
+					</div>
+					<div class="col-md-12">
+						<div class="form-group">
+							<label for="">Messeges</label>
+							<textarea class="form-control" style="min-height: 165px;resize: none;padding: 15px;" placeholder="Messeges" ></textarea>
+						</div>
+					</div>
 				</div>
 			  </div>
 			</div>
