@@ -144,6 +144,9 @@
 			padding: 10px 15px;
 			height: 50px;
 		}
+		.fs-30 {
+			font-size: 30px;
+		}
 	</style>
 </head>
 <body class="body-login">
@@ -238,10 +241,11 @@
 						</div>
 					</div>
 				</div>
-				<div class="container-fluid">
+				<div class="container-fluid"> 
+					<label class="title--heading  fs-30 text-black-5 mb-4">Event Information</label>
 					<div class="mb-4 row d-flex flex-end align-items-end">
 						<div class="col-md-9">
-							<label class="title--heading text-black-5">Title Event</label>
+							<label class="label-title">Title Event</label>
 							<input type="text" class="form-control" value="Programmer's Workshop in Ontario"> 
 						</div>
 						<div class="col-md-3 text-right">
@@ -250,6 +254,27 @@
 							</button>
 						</div>
 					</div>
+					<div class="row">
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="label-title">Link</label>
+								<input type="text" class="form-control" placeholder="Link">
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="form-group">
+								<label class="label-title">Attackments</label>
+								<input type="file" class="form-control">
+							</div>
+						</div>
+						<div class="col-md-12">
+							<div class="form-group">
+								<label class="label-title">Messeges</label>
+								<textarea class="form-control" style="min-height: 165px;resize: none;padding: 15px;" placeholder="Messeges" ></textarea>
+							</div>
+						</div>
+					</div>
+					<label class="title--heading fs-30 text-black-5 mb-4">Manage Users</label>
 					<div class="row mb-4">
 						<div class="col-md-7"> 
 							<div class="card bg-white">
@@ -356,27 +381,6 @@
 					<div class="col-md-4">
 						<div class="form-group">
 							<input type="text" class="form-control" placeholder="Seat">
-						</div>
-					</div>
-				</div>
-				<div class="h4-title mt-4 mb-4 pb-3">Manager Notification</div>
-				<div class="row">
-					<div class="col-md-6">
-						<div class="form-group">
-							<label for="">Link</label>
-							<input type="text" class="form-control" placeholder="Link">
-						</div>
-					</div>
-					<div class="col-md-6">
-						<div class="form-group">
-							<label for="">Attackments</label>
-							<input type="file" class="form-control">
-						</div>
-					</div>
-					<div class="col-md-12">
-						<div class="form-group">
-							<label for="">Messeges</label>
-							<textarea class="form-control" style="min-height: 165px;resize: none;padding: 15px;" placeholder="Messeges" ></textarea>
 						</div>
 					</div>
 				</div>
