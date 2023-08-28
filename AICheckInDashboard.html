@@ -31,6 +31,36 @@
 		.swal-modal {
 			width: 530px;
 		}
+		.formAddEvent .form-control {
+			border: 1px solid #ccc;
+		}
+
+		.formAddEvent input[type="file"]::file-selector-button {
+			border: 0px;
+			border-right: 1px solid #e5e5e5;
+			padding: 12px 15px;
+			margin-right: 20px;
+			transition: .5s;
+		}
+
+		.formAddContainer {
+			border: 1px dashed #ccc;
+			border-radius: 10px;
+			position: relative;
+		}
+		.btn-del-row {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			border-radius: 5px;
+			width: 35px;
+			height: 35px;
+			display: inline-flex;
+			padding: 0;
+			align-items: center;
+			justify-content: center;
+			font-size: 13px;
+		}
 	</style>
 </head>
 <body class="body-login">
@@ -67,8 +97,8 @@
 					</li>
 				</ul>
 			</li>
-			<li class="nav-item ">
-				<a class="nav-link" href="AICheckInDashboard.html">
+			<li class="nav-item active">
+				<a class="nav-link " href="AICheckInDashboard.html">
 					<i class="fal fa-camera"></i>
 					<span>AI Checkin</span>
 				</a>
@@ -79,7 +109,7 @@
 					<span>Folders</span>
 				</a>
 			</li>
-			<li class="nav-item active">
+			<li class="nav-item ">
 				<a class="nav-link" href="documents.html">
 					<i class="fal fa-file-alt"></i>
 					<span>Documents</span>
@@ -110,7 +140,7 @@
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb">
 							<li class="breadcrumb-item"><a href="#">Docify</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Documents</li>
+							<li class="breadcrumb-item active" aria-current="page">Events</li>
 						</ol>
 					</nav>
 					<div class="personl">
@@ -126,7 +156,7 @@
 				</div>
 				<div class="container-fluid">
 					<div class="d-sm-flex  mb-4">
-						<h1 class="title--heading text-black-5">Documents</h1>
+						<h1 class="title--heading text-black-5">Events</h1>
 					</div>
 					<div class="card bg-white">
 						<div class="card-body">
@@ -134,23 +164,16 @@
 								<div class="row justify-between align-items-center">
 									<div class="col-md-4 col-xs-12">
 										<div class="search-box">
-											<input type="text" class="form-control" placeholder="Search in Documents" name="">
+											<input type="text" class="form-control" placeholder="Search" name="">
 											<i class="fal fa-search"></i>
 										</div>
 									</div>
 									<div class="col-md-4 col-xs-12">
-										<div class="d-flex flex-start align-items-center view-wrap">
-											<span>View</span>
-											<a href="document-list-view.html" class="active"><i class="fas fa-bars"></i></a>
-											<a href="documents.html"><i class="fas fa-th-large"></i></a>
-										</div>
-									</div>
-									<div class="col-md-4 col-xs-12">
 										<div class="d-flex flex-end">
-											<button class="add-folder btn button-primary">
+											<a href="AICheckInDashboardCreate.html" class="add-folder btn button-primary">
 												<i class="fal fa-plus-circle"></i>
-												<span>Add new document</span>
-											</button>
+												<span>Add New Event</span>
+											</a>
 										</div>
 									</div>
 								</div>
@@ -158,81 +181,21 @@
 							<div class="folder-wrap document-listview">
 								<table class="table table-document" id="dataTables">
 									<thead>
-										<th>NAME</th>
-										<th>DATE VERIFY</th>
-										<th>STATUS</th>
-										<th>ACTION</th>
+										<th>Title</th>
+										<th>Action</th>
 									</thead>
 									<tbody>
 										<tr>
 											<td>
 												<div class="document-name">
-													<i class="fal fa-file-alt"></i>
-													<span>budget estimate 12 - 01 - 2022 </span>
+													<span>Programmer's Workshop in Ontario</span>
 												</div>
 											</td>
 											<td>
-												<span>14 days</span>
-											</td>
-											<td>
-												<a href="#" class="text-success bold status_verified">Verified</a>
-											</td>
-											<td>
-												<div class="dropdown ms-auto">
-													<a href="#" data-bs-toggle="dropdown" class="btn btn-floating" aria-haspopup="true" aria-expanded="false"> <i class="bi bi-three-dots"></i> </a>
-													<div class="dropdown-menu dropdown-menu-end" style="margin: 0px;">
-														<a href="your-design.html" class="dropdown-item">Your Design</a>
-														<a href="your-design-mobile.html" class="dropdown-item">User View</a>
-														<a href="#" class="dropdown-item delete-item">Delete</a>
-													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<div class="document-name">
-													<i class="fal fa-file-alt"></i>
-													<span>budget estimate 12 - 01 - 2022 </span>
-												</div>
-											</td>
-											<td>
-												<span>14 days</span>
-											</td>
-											<td>
-												<a href="#" class="text-danger bold status_failed">Failed</a>
-											</td>
-											<td>
-												<div class="dropdown ms-auto">
-													<a href="#" data-bs-toggle="dropdown" class="btn btn-floating" aria-haspopup="true" aria-expanded="false"> <i class="bi bi-three-dots"></i> </a>
-													<div class="dropdown-menu dropdown-menu-end" style="margin: 0px;">
-														<a href="your-design.html" class="dropdown-item">Your Design</a>
-														<a href="your-design-mobile.html" class="dropdown-item">User View</a>
-														<a href="#" class="dropdown-item delete-item">Delete</a>
-													</div>
-												</div>
-											</td>
-										</tr>
-										<tr>
-											<td>
-												<div class="document-name">
-													<i class="fal fa-file-alt"></i>
-													<span>budget estimate 12 - 01 - 2022 </span>
-												</div>
-											</td>
-											<td>
-												<span>14 days</span>
-											</td>
-											<td>
-												<a href="#" class="text-danger bold status_verified_2">Failed</a>
-											</td>
-											<td>
-												<div class="dropdown ms-auto">
-													<a href="#" data-bs-toggle="dropdown" class="btn btn-floating" aria-haspopup="true" aria-expanded="false"> <i class="bi bi-three-dots"></i> </a>
-													<div class="dropdown-menu dropdown-menu-end" style="margin: 0px;">
-														<a href="your-design.html" class="dropdown-item">Your Design</a>
-														<a href="your-design-mobile.html" class="dropdown-item">User View</a>
-														<a href="#" class="dropdown-item delete-item">Delete</a>
-													</div>
+												<div class="ms-auto">
+													<a href="AICheckInDashboardCreate.html" class="btn btn-info " data><i class="fal fa-cog"></i> </a>
+													<a href="AICheckInDashboardView.html" class="btn btn-success" data><i class="fal fa-eye"></i> </a>
+													<a href="#" class="btn btn-danger" data><i class="fal fa-trash"></i> </a>
 												</div>
 											</td>
 										</tr>
@@ -255,28 +218,76 @@
 	<div class="modal fade bd-example-modal-lg" id="verify_failed" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 		<div class="modal-dialog modal-lg" style="max-width: 1024px">
 			<div class="modal-content">
+				<div class="modal-header">
+					<h6>Add New Event</h6>
+				</div>
 				<div class="modal-body">
-					<div class="failed_content">
-						<div class="failed__icons">
-							<i class="fal fa-exclamation-triangle"></i>
-						</div>
-						<div class="failed__txt">
-							<p>Budget Estimate was unsuccessfully verified by Docify. Here are the differences from the original.</p>
-						</div>
-					</div>
-					<div class="row">
-						<div class="col-md-6 col-xs-12">
-							<div class="preview__content">
-								<h4>Original content</h4>
-								<iframe src="assets/file.pdf" height="500" style="width: 100%"></iframe>
+					<div class="formAddEvent px-4 py-4">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="form-group">
+									<label class="form-label">Title Event</label>
+									<input type="text" class="form-control ">
+								</div>
+							</div>
+							<h6 class="col-md-12 my-4" style="text-transform: capitalize;">Add members to the attendance list</h6>
+							<div class="col-md-12 formAddContent">
+								<div class="px-4 py-4 formAddContainer">
+									<div class="row">
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="form-label">Name</label>
+												<input type="text" class="form-control ">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="form-label">Avatar</label>
+												<input type="file" class="form-control ">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="form-label">Email</label>
+												<input type="text" class="form-control ">
+											</div>
+										</div>
+										<div class="col-md-6">
+											<div class="form-group">
+												<label class="form-label">Phone</label>
+												<input type="text" class="form-control ">
+											</div>
+										</div>
+										<div class="col-md-12">
+											<div class="form-group">
+												<label class="form-label">Messeger</label>
+												<input type="text" class="form-control ">
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-12 form-group text-right mt-4">
+								<button class="btn btn-info add--row-user">Add User</button>
+							</div>
+							<h6 class="col-md-12 my-4" style="text-transform: capitalize;">Add members to the banned list</h6>
+							<div class="col-md-12">
+								<div class=" formAddBannedUser">
+									<div class="form-group upload-photo-content ">
+										<div class="upload-photo-box">
+											<i class="fas fa-cloud-upload"></i>
+											<p class="mt-2">Upload all intended user face photo </p>
+											<input type="file" class="file-hidden" multiple="">
+										</div>
+										<div class="preview-photos">
+											<img src="assets/images/DavidAhola.png" alt="">
+											<img src="assets/images/LeanneBinsell.png" alt="">
+											<img src="assets/images/HenryQuach.png" alt="">
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<div class="col-md-6 col-xs-12">
-							<div class="preview__content">
-								<h4>Content from unsuccessful Verified</h4>
-								<iframe src="assets/file.pdf" height="500" style="width: 100%"></iframe>
-							</div>
-						</div>
 					</div>
 				</div>
 				<div class="modal-footer">
@@ -284,45 +295,7 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	<!-- Modal -->
-	<div class="modal fade" id="verified" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-body">
-					<div class="failed_content_error">
-						<div class="failed__error">
-							<img src="assets/images/verified.png" style="width: 150px">
-						</div>
-						<h3>Successfully!</h3>
-						<p>Budget Estimate has been verified and certified by Docify. </p>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
-	<!-- Modal -->
-	<div class="modal fade" id="verify_failed_2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-		<div class="modal-dialog">
-			<div class="modal-content">
-				<div class="modal-body">
-					<div class="failed_content_error">
-						<div class="failed__error">
-							<i class="fal fa-exclamation-circle"></i>
-							<p>ERROR</p>
-						</div>
-						<p>We are unable to verify Budget Estimate due to the fact that we don't have the original to compare with. Please ask the Document Issuer and their user to use Docify to certify their documents first before submitting to you.</p>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-default" data-bs-dismiss="modal">Close</button>
-				</div>
-			</div>
-		</div>
-	</div>
+	</div> 
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="assets/js/dataTables.min.js"></script>
@@ -330,14 +303,17 @@
 	<script>
 		$(document).ready(function(){
 			$('#dataTables').DataTable();
-			$('.status_failed').click(function(){
+			$('.add-folder').click(function(){
 				$('#verify_failed').modal('show');
 			});
-			$('.status_verified').click(function(){
-				$('#verified').modal('show');
+			$('.edit__event').click(function(){
+				$('#verify_failed').modal('show');
 			});
-			$('.status_verified_2').click(function(){
-				$('#verify_failed_2').modal('show');
+			$('.add--row-user').click(function() {
+				$('.formAddContent').append('<div class="px-4 py-4 formAddContainer mt-4"><button class="btn btn-danger btn-del-row"><i class="fal fa-trash"></i></button><div class="row"><div class="col-md-6"><div class="form-group"><label class="form-label">Name</label><input type="text" class="form-control"></div></div><div class="col-md-6"><div class="form-group"><label class="form-label">Avatar</label><input type="file" class="form-control"></div></div><div class="col-md-6"><div class="form-group"><label class="form-label">Email</label><input type="text" class="form-control"></div></div><div class="col-md-6"><div class="form-group"><label class="form-label">Phone</label><input type="text" class="form-control"></div></div><div class="col-md-12"><div class="form-group"><label class="form-label">Messeger</label><input type="text" class="form-control"></div></div></div></div>');
+			});
+			$(document).on("click", ".btn-del-row", function(e) {
+				$(this).parent().remove();
 			});
 		});
 
