@@ -1160,3 +1160,22 @@ input.form-control.outlined {
 .download-box .list .item {
     margin-right: 1rem;
 }
+.link-footer {
+    position: relative;
+    text-align: right;
+    padding: 10px 35px;
+}
+
+.link-footer ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.link-footer ul a {
+    color: #fff;
+    font-size: 13px;
+    display: inline-flex;
+    margin-left: 1rem;
+    cursor: pointer;
+}
