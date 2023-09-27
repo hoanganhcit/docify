@@ -412,7 +412,7 @@
 }
 
 .title-site {
-    font-size: 8rem;
+    font-size: 6rem;
     letter-spacing: -.02em;
     line-height: 9rem;
     font-family: var(--dc-font-family-secondary);
@@ -1178,4 +1178,7 @@ input.form-control.outlined {
     display: inline-flex;
     margin-left: 1rem;
     cursor: pointer;
+}
+.text-primary {
+    color: #00dcff !important;
 }
