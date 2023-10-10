@@ -35,9 +35,15 @@
 		.ml-2 {
 			margin-left: 1rem;
 		}
+		.ml-1 {
+			margin-left: 0.5rem;
+		}
 		input::file-selector-button {
 			height:50px;
 			background: #eeeeee !important;
+		}
+		.btn-floating {
+			border: 1px solid #eee;
 		}
 	</style>
 </head>
@@ -184,7 +190,10 @@
 											</td>
 											<td>
 												<div class="dropdown ms-auto">
-													<a href="#" data-bs-toggle="dropdown" class="btn btn-floating" aria-haspopup="true" aria-expanded="false"> <i class="bi bi-three-dots"></i> </a>
+													<a href="#" data-bs-toggle="dropdown" class="btn btn-floating " aria-haspopup="true" aria-expanded="false"> 
+														<i class="bi bi-three-dots"></i>
+														<span class="badge bg-danger ml-1">1</span> 
+													</a>
 													<div class="dropdown-menu dropdown-menu-end" style="margin: 0px;">
 														<a href="your-design.html" class="dropdown-item">Your Design</a>
 														<a href="your-design-mobile.html" class="dropdown-item">User View</a>
@@ -232,7 +241,9 @@
 											</td>
 											<td>
 												<div class="dropdown ms-auto">
-													<a href="#" data-bs-toggle="dropdown" class="btn btn-floating" aria-haspopup="true" aria-expanded="false"> <i class="bi bi-three-dots"></i> </a>
+													<a href="#" data-bs-toggle="dropdown" class="btn btn-floating" aria-haspopup="true" aria-expanded="false"> 
+														<i class="bi bi-three-dots"></i>
+													</a>
 													<div class="dropdown-menu dropdown-menu-end" style="margin: 0px;">
 														<a href="your-design.html" class="dropdown-item">Your Design</a>
 														<a href="your-design-mobile.html" class="dropdown-item">User View</a>
