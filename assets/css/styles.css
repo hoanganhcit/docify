@@ -4,15 +4,17 @@
 	--dc-third-color: #052131;
 	--bs-primary-rgb: #052131;
 	--dc-text-body-color: #000;
-	--dc-font-family-primary: 'Montserrat', sans-serif;
-	--dc-font-size-text: 15px;
+	--dc-font-family-primary:
+	'Montserrat', sans-serif;
+	--dc-font-size-text: 16px;
 	--dc-font-size-title-large: 55px;
 	--dc-font-size-title-md: 36px;
 	--dc-font-size-title-sm: 24px;
 	--dc-font-weight-title: bold;
 	--dc-font-weight-button: 500;
 	--dc-font-weight-body: 400;
-	--dc-font-family-secondary: 'Playfair Display', sans-serif;
+	--dc-font-family-secondary:
+	'Playfair Display', sans-serif;
 }
 
 body {
@@ -263,12 +265,12 @@ nav.navbar.navbar-expand-lg.navbar-dark {
 }
 
 .button-primary {
-	text-transform: uppercase;
+	text-transform: capitalize;
 	color: #fff;
 	background: var(--dc-primary-color);
 	padding: 0.75rem 1.5rem;
 	font-size: var(--dc-font-size-text);
-	font-weight: 500;
+	font-weight: 400;
 	outline: none;
 	transition: .5s;
 	border-radius: 4px;
@@ -999,7 +1001,7 @@ textarea.dc-input {
 	bottom: 0;
 	left: 0;
 	z-index: 99;
-	height: 50px;
+	/* height: 50px; */
 	margin: 0;
 	padding: 0;
 	display: block;
@@ -1019,7 +1021,7 @@ textarea.dc-input {
 	width: 100%;
 	pointer-events: none;
 	z-index: 20;
-	height: 50px;
+	height: 45px;
 	line-height: 50px;
 	color: #212529;
 	border-radius: 10px;
