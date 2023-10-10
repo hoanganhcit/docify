@@ -38,7 +38,7 @@
 		border-radius: 4px;
 	}
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 	.section-2, .section-receiver, .section-sender {
 		padding: 30px 15px;
 	}
