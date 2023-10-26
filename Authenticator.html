@@ -40,6 +40,22 @@
         .text-italic {
             font-style: italic;
         }
+        @media screen and (max-width: 500px) {
+            .collapse__header-h2 {
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: flex-start;
+            }
+            .doc-flex-column {
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: flex-start;
+            }
+            .doc-flex-column span {
+                word-break: break-all;
+                margin: 0 0 10px 0 !important;
+            }
+        }
     </style>
 </head>
 
@@ -128,7 +144,7 @@
                 <div class="documentation-item">
                     <div class="collapse__header">
                         <div class="collapse__header-h2">
-                            <div class="mr-2 d-flex align-center">
+                            <div class="mr-2 d-flex align-center doc-flex-column">
                                 <span class="badge bg-success" style="font-weight: 400;text-transform: uppercase;line-height: 1.5;">completed</span>
                                 <span class="text-white mx-2" style="font-size: 15px;">Disclaimer__Consent_for_Facial_Recognition.docx</span>
                                 <span class="text-13 mx-4 text-italic text-cyan">Oct 26, 2023</span>
@@ -140,7 +156,7 @@
                 <div class="documentation-item">
                     <div class="collapse__header">
                         <div class="collapse__header-h2">
-                            <div class="mr-2 d-flex align-center">
+                            <div class="mr-2 d-flex align-center doc-flex-column">
                                 <span class="badge bg-success" style="font-weight: 400;text-transform: uppercase;line-height: 1.5;">completed</span>
                                 <span class="text-white mx-2" style="font-size: 15px;">Disclaimer__Consent_for_Facial_Recognition.docx</span>
                                 <span class="text-13 mx-4 text-italic text-cyan">Oct 26, 2023</span>
