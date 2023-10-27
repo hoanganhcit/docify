@@ -199,7 +199,8 @@
 }
 .pricing-2 .table__footer .btn {
     color: #fff;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    font-weight: 600;
 }
 .panel-sidenav {
     background: #fff;
@@ -1003,7 +1004,7 @@ code.codeBlock-code {
         font-size: 16px;
     }
     .title-site {
-        font-size: 44px;
+        font-size: 56px;
         line-height: 1.3;
         /* text-align: left; */
     }
@@ -1131,7 +1132,7 @@ input.form-control.outlined {
 }
 .cta__content-box {
     position: relative;
-    background: rgb(255 255 255 / 10%);
+    background: rgba(255, 255, 255, 0.1);
     padding: 50px 25px;
     border-radius: 6px;
     backdrop-filter: blur(15px);

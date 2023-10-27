@@ -43,9 +43,9 @@
 		padding: 30px 15px;
 	}
 	.sender-images:before,
-	.sender-image-item.slick-active:before, 
+	.sender-image-item.slick-active:before,
 	.about-image-item:before,
-	.sender-image-item.slick-active:after, 
+	.sender-image-item.slick-active:after,
 	.about-image-item:after{
 		display: none;
 	}
@@ -89,22 +89,22 @@
     .header-card, .content-empty, .panel-content {
         padding: 1.5rem;
     }
-    
+
     .add-folder {
         width: 100%;
         margin-top: 10px;
     }
-    
+
     .view-wrap {
         margin-top: 10px;
     }
-    
+
     div.dataTables_wrapper div.dataTables_filter {
         text-align: left;
         margin-bottom: 10px;
         margin-top: 10px;
     }
-    
+
     div.dataTables_wrapper div.dataTables_filter input {
         width: 100%;
     }
@@ -112,7 +112,7 @@
 		padding: 15px !important;
 		font-size: 14px;
 	}
-	
+
 	.document-name {
 		display: flex;
 	}
@@ -120,8 +120,3 @@
 		padding: 25px 15px;
 	}
 }
-
-
-
-
-
