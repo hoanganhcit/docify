@@ -31,6 +31,106 @@
 		.swal-modal {
 			width: 530px;
 		}
+		.navbar-nav-top {
+			width: 100%;
+			border-radius: 0.375rem;
+			padding: 0 1.5rem;
+			box-shadow: 0 0.125rem 0.25rem rgba(165,163,174,.3);
+			position: relative;	
+			color: #6f6b7d;
+		}
+		.avatar {
+			position: relative;
+			width: 2.375rem;
+			height: 2.375rem;
+			cursor: pointer;
+		}
+		.avatar.avatar-online:after, 
+		.avatar.avatar-offline:after, 
+		.avatar.avatar-away:after, 
+		.avatar.avatar-busy:after {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			right: 3px;
+			width: 8px;
+			height: 8px;
+			border-radius: 100%;
+			box-shadow: 0 0 0 2px #fff;
+		}
+
+		.avatar.avatar-online:after {
+			background-color: #28c76f;
+		}
+		.avatar.avatar-offline:after {
+			background-color: #ff4444;
+		}
+		.avatar.avatar-away:after {
+			background-color: #b7b7b7;
+		}
+		.avatar.avatar-busy:after {
+			background-color: #FFC107;
+		}
+
+		.hide-arrow:after {
+			display: none;
+		}
+
+		.menu-icon {
+			flex-grow: 0;
+			flex-shrink: 0;
+			margin-right: 0.5rem;
+			font-size: 17px;
+		}
+		.navbar-nav {
+			font-size: 15px;
+		}
+
+		.layout-navbar .navbar-dropdown.dropdown-user .dropdown-menu {
+			min-width: 14rem;
+		}
+		.dropdown-user .dropdown-menu .dropdown-item {
+			line-height: 1.375;
+			width: calc(100% - 1rem);
+			margin: 0.25rem 0.5rem;
+			border-radius: 0.375rem;
+			font-weight: 500;
+			color: #5d596c;
+		}
+
+		.dropdown-user .dropdown-menu .dropdown-item:hover {
+			background: rgba(115, 103, 240, 0.08);
+		}
+		.card {
+			border: 0;
+			box-shadow: 0 0.25rem 1.125rem rgba(75,70,92,.1);
+			border-radius: 0.375rem;
+		}
+		.card-header {
+			padding: 1.25rem;
+			background: #fff;
+			border-bottom: 0;
+			font-size: 1.125rem;
+			color: #5d596c;
+			font-weight: 600;
+		}
+		.header-card, .content-empty, .panel-content {
+			padding: 1rem;
+		}
+		.table-document thead th {
+			font-size: 15px;
+			font-weight: 600;
+			color: #5d596c; 
+			text-transform: uppercase;
+			font-size: .8125rem;
+			letter-spacing: 1px;
+			padding: 0.88rem 1.25rem !important;
+		}
+		.table-document td {
+			font-size: 15px;
+			padding: 0.55rem 1.25rem;
+			vertical-align: middle;
+		}
 	</style>
 </head>
 <body class="body-login">
@@ -106,29 +206,85 @@
 		</ul>
 		<div id="content-wrapper" class="d-flex flex-column">
 			<div id="content">
-				<div class="navbar-header d-flex align-items-center justify-between">
-					<nav aria-label="breadcrumb">
-						<ol class="breadcrumb">
-							<li class="breadcrumb-item"><a href="#">Docify</a></li>
-							<li class="breadcrumb-item active" aria-current="page">Documents</li>
-						</ol>
-					</nav>
-					<div class="personl">
-						<div class="dropdown">
-							<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-								<i class="fad fa-user"></i>
-							</button>
-							<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-								<li><a class="dropdown-item" href="#">Logout</a></li>
-							</ul>
-						</div>
-					</div>
-				</div>
+				<nav class="layout-navbar navbar-header d-flex align-items-center justify-between" id="layout-navbar">
+                    <div class="navbar-nav-top bg-white d-flex align-items-center" id="navbar-collapse">
+                        <div class="navbar-nav align-items-center">
+                            <div class="nav-item navbar-search-wrapper mb-0">
+                                <div class="py-3">
+                                    <span class="text-muted fw-light">Docerfy /</span> Documents List View
+                                </div>
+                            </div>
+                        </div>
+                        <ul class="navbar-nav flex-row align-items-center ms-auto">
+                            <li class="menu-item "></li>
+                                <a href="#" class="menu-link text-danger" data-bs-toggle="modal" data-bs-target="#openVideoYoutube">
+                                    <i class="menu-icon tf-icons fab fa-youtube" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="Tutorial"></i>
+                                </a>
+                            
+                            <!-- User -->
+                            <li class="nav-item navbar-dropdown dropdown-user dropdown">
+                                <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
+                                    <div class="avatar avatar-online">
+                                        <img src="assets/images/DavidAhola.png" alt="" class="h-auto rounded-circle">
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end">
+                                    <li>
+                                        <a class="dropdown-item " href="profile.html">
+                                            <div class="d-flex">
+                                                <div class="flex-shrink-0 me-3">
+                                                    <div class="avatar avatar-online">
+                                                        <img src="assets/images/DavidAhola.png" alt="" class="h-auto rounded-circle">
+                                                    </div>
+                                                </div>
+                                                <div class="flex-grow-1">
+                                                    <span class="fw-medium d-block">David Ahola</span>
+                                                    <small class="text-muted">Admin</small>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-user-check mr-2"></i>
+                                            <span class="align-middle">My Profile</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <i class="fal fa-users mr-2"></i>
+                                            <span class="align-middle">Teams</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#">
+                                            <span class="d-flex align-items-center align-middle">
+                                                <i class="flex-shrink-0 fal fa-credit-card mr-2"></i>
+                                                <span class="flex-grow-1 align-middle">Upgrade Package</span>
+                                            </span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <div class="dropdown-divider"></div>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#" target="_blank">
+                                            <i class="fal fa-sign-out mr-2"></i>
+                                            <span class="align-middle">Log Out</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <!--/ User -->
+                        </ul>
+                    </div>
+                </nav>
 				<div class="container-fluid">
-					<div class="d-sm-flex  mb-4">
-						<h1 class="title--heading text-black-5">Documents</h1>
-					</div>
-					<div class="card bg-white">
+					<div class="card bg-white"> 
+						<h5 class="card-header">Documents</h5>
 						<div class="card-body">
 							<div class=" header-card ">
 								<div class="row justify-between align-items-center">
