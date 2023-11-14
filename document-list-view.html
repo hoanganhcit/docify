@@ -222,19 +222,17 @@
 			font-size: 16px;
 			right: 13px;
 		}
-		.d-none {
-			display: none !important;
-		}
 		@media (min-width: 576px) {
 			.d-sm-inline-block {
 				display: inline-block !important;
 			}
 		}
 		#wrapper #content-wrapper {
-			padding-left: 275px;
+			padding-left: 230px;
 			padding-top: 106px;
 			position: relative;
 			min-height: 100vh;
+			transition: .3s;
 		}
 		.sidebar-fixed {
 			position: fixed;
@@ -242,91 +240,271 @@
 			left: 0;
 			bottom: 0;
 			z-index: 99;
+			transition: .3s;
 		}
 		.navbar-fixed-top {
 			position: fixed;
 			top: 0;
-			left: 275px;
+			left: 230px;
 			right: 0;
 			z-index: 99;
+			transition: .3s;
+		}
+		.sidebar {
+			width: 230px;
+		}
+		.menu-vertical .menu-inner {
+			flex-direction: column;
+			flex: 1 1 auto;
+		}
+		.menu-inner {
+			display: flex;
+			align-items: flex-start;
+			justify-content: flex-start;
+			margin: 0;
+			padding: 0;
+			height: 100%;
+		}
+		.py-1 {
+			padding-top: 0.25rem !important;
+			padding-bottom: 0.25rem !important;
+		}
+
+		.app-brand {
+			display: flex;
+			flex-grow: 0;
+			flex-shrink: 0;
+			overflow: hidden;
+			line-height: 1;
+			min-height: 1px;
+			align-items: center;
+		}
+		.menu-vertical .app-brand {
+			margin: 0 0.875rem 0 1rem;
+			padding: 1.5rem 0.5rem;
+		}
+		.app-brand-link {
+			display: flex;
+			align-items: center;
+		}
+		.app-brand-logo {
+			flex-grow: 0;
+			flex-shrink: 0;
+			overflow: hidden;
+			min-height: 1px;
+			-ms-flex-align: center;
+			align-items: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+			display: -ms-flexbox;
+			display: flex;
+		}
+		.app-brand-logo img, .app-brand-logo svg {
+			display: block;
+			object-fit: contain;
+		}
+		.app-brand-text {
+			flex-shrink: 0;
+			opacity: 1;
+			transition: opacity .3s ease-in-out;
+		}
+		.app-brand-text {
+			font-family: 'Playfair Display SC', serif;
+			text-transform: uppercase;
+			font-size: 1.375rem;
+			margin-left: 0.625rem !important;
+			
+		}
+		.menu-text {
+			color: #ffffff;
+		}
+
+		.layout-menu-toggle {
+			font-size: 14px;
+			color: #d1d1d1 !important;
+		}
+		.sidebar .nav-item {
+			width: 100%;
+		}
+		.sidebar .nav-item .nav-link {
+			color: #fff;
+			font-weight: 300;
+			position: relative;
+			margin: 0 0.875rem;
+			border-radius: 0.375rem;
+			padding: 0.5rem 1rem;
+			background: #143345;
+			display: flex;
+			align-items: center;
+    		flex: 0 1 auto;
+
+		}
+		.c-sidebar-nav-dropdown-toggle:before {
+			line-height: 40px;
+			top: 0;
+		}
+		.sidebar .nav-item .nav-link i {
+			font-size: 16px;
+		}
+		.c-sidebar-nav-dropdown-items .c-sidebar-nav-link {
+			font-size: 14px;
+		}
+		.document-listview {
+			overflow: auto;
+		}
+		.heading-card {
+			border-bottom: 0;
+			font-size: 1.125rem;
+			color: #5d596c;
+			font-weight: 600;
+			margin-bottom: 0;
+		}
+		@media (min-width: 1200px) {
+			.layout-menu-collapsed:not(.layout-menu-hover) aside.sidebar {
+				width: 82px;
+			}
+			.layout-menu-toggle.collapsed .menu-toggle-icon:before {
+				content: "\f111";
+			}
+			.layout-menu-collapsed:not(.layout-menu-hover) .c-sidebar-nav-dropdown-toggle:before {
+				display:none;
+			}
+			.layout-menu-collapsed:not(.layout-menu-hover) .layout-menu .menu-inner .nav-link span:not(.menu-block) {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				opacity: 0;
+			}
+
+			.menu:not(.menu-no-animation) .nav-link>:not(.menu-icon) {
+				transition: opacity .3s ease-in-out;
+			}
+			.layout-menu-collapsed:not(.layout-menu-hover) .layout-menu .menu-inner .c-sidebar-nav-dropdown-items {
+				display: none !important;
+			}
+			.layout-menu-collapsed:not(.layout-menu-hover) .layout-menu-toggle .menu-toggle-icon {
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				opacity: 0;
+			}
+			.layout-menu-collapsed:not(.layout-menu-hover) .app-brand-logo {
+				display:none;
+			}
+			.layout-menu-collapsed:not(.layout-menu-hover) .app-brand-favicon {
+				opacity: 1;
+				display: block !important;
+			}
+			.layout-menu-collapsed:not(.layout-menu-hover) #wrapper #content-wrapper {
+				padding-left: 82px;
+			}
+			.layout-menu-collapsed:not(.layout-menu-hover) .navbar-fixed-top {
+				left: 82px;
+			}
+		}
+		@media (max-width:1199.98px) {
+			.layout-menu {
+				position: fixed !important;
+				top: 0 !important;
+				height: 100% !important;
+				left: 0 !important;
+				margin-right: 0 !important;
+				margin-left: 0 !important;
+				transform: translate3d(-100%, 0, 0);
+				will-change: transform,-webkit-transform;
+				z-index: 1050;
+			}
+			#wrapper #content-wrapper {
+				padding-left: 0;
+			}
+
+			.navbar-fixed-top {
+				left: 0;
+			}
+			.layout-menu-collapsed .layout-menu {
+				transform: none;
+			}
+			.layout-menu-collapsed .layout-menu .menu-toggle-icon {
+				display:block !important;
+			}
+			
+			.layout-menu-toggle .nav-link {
+				color: #143345;
+			}
+		}
+		@media (max-width: 768px) {
+			.col-xs-12 {
+				width: 100%;
+			}
+			.search-box {
+				margin: 0.25rem 0 0.75rem;
+			}
+			.flex-start-xs {
+				align-items: flex-start;
+				justify-content: flex-start;
+			}
+			.space-between-xs {
+				justify-content: space-between;
+			}
+			.view-wrap a {
+				margin-left: 0;
+				font-size: 15px;
+			}
 		}
 	</style>
 </head>
 <body class="body-login">
-	<div id="wrapper">
-		<ul class="navbar-nav bg-gradient-primary sidebar accordion sidebar-fixed">
-			<a class="sidebar-brand d-flex align-items-center justify-between" href="profile-recents.html">
-				<div class="sidebar-brand-text">
-					<img src="assets/images/logo.png" height="30">
-				</div>
-				<div class="sidebar-brand-icon">
-					<i class="fal fa-bars"></i>
-				</div>
+	<div id="wrapper"> 
+		<aside class=" sidebar accordion sidebar-fixed bg-gradient-primary layout-menu menu-vertical">
+		<div class="app-brand demo ">
+			<a href="#" class="app-brand-link">
+				<span class="app-brand-logo ">
+					<img src="https://docerfy.com/assets/logo-2-2b9b432a580a69a331a98c4cd7f3d166d5f3d15fbe31d77d0aec9c99dafd3fb3.png" alt="" style="height: 30px;">
+				</span>
+				<span class="app-brand-logo app-brand-favicon d-none">
+					<img src="assets/images/favicon.png" alt="" style="height: 30px;">
+				</span>
 			</a>
-			<li class="my-3" style="padding: 0 25px">
-				<button class="btn button-primary">
-					<i class="fad fa-cloud-upload"></i>
-					<span>Upload File</span>
-				</button>
-			</li>
-			<li class="nav-item c-sidebar-nav-dropdown c-show  ">
-				<a class="nav-link c-sidebar-nav-dropdown-toggle disable" href="#">
-					<i class="fal fa-code"></i>
-					<span>Encoded</span>
-				</a>
-				<ul class="c-sidebar-nav-dropdown-items">
-					<li class="nav-item">
-						<a href="profile-recents.html" class="c-sidebar-nav-link">Recents</a>
-					</li>
-					<li class="nav-item">
-						<a href="folders.html" class="c-sidebar-nav-link">Folders</a>
-					</li>
-					<li class="nav-item">
-						<a href="documents.html" class="c-sidebar-nav-link">Documents</a>
-					</li>
-				</ul>
-			</li>
-			<li class="nav-item ">
-				<a class="nav-link" href="AICheckInDashboard.html">
-					<i class="fal fa-camera"></i>
-					<span>AI Checkin</span>
-				</a>
-			</li>
-			<li class="nav-item ">
-				<a class="nav-link" href="folders.html">
-					<i class="fal fa-folder-open"></i>
-					<span>Folders</span>
-				</a>
-			</li>
-			<li class="nav-item active">
-				<a class="nav-link" href="documents.html">
-					<i class="fal fa-file-alt"></i>
-					<span>Documents</span>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="invitations.html">
-					<i class="fal fa-paper-plane"></i>
-					<span>Invitations</span>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="invitations.html">
-					<i class="fal fa-code"></i>
-					<span>Embed Code</span>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="invitations.html">
-					<i class="fal fa-code"></i>
-					<span>Embed Code</span>
-				</a>
+			<a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">
+				<i class="fal fa-scrubber menu-toggle-icon d-none d-xl-block align-middle"></i>
+			</a>
+		</div>
+		<ul class="navbar-nav menu-inner py-1">
+			<!--  -->
+			<li class="nav-item c-sidebar-nav-dropdown">
+			  <a class="nav-link c-sidebar-nav-dropdown-toggle up" href="#">
+				<i class="menu-icon tf-icons fal fa-user-unlock"></i>
+				<span>Authenticator</span>
+			  </a>
+			  <ul class="c-sidebar-nav-dropdown-items" style="display: block;">
+				<li class="nav-item active">
+				  <a class="c-sidebar-nav-link" href="#">Recents</a>
+				</li>
+				<li class="nav-item ">
+				  <a class="c-sidebar-nav-link" href="#">Folders</a>
+				</li>
+				<li class="nav-item ">
+				  <a class="c-sidebar-nav-link" href="#">Digital assets</a>
+				</li>
+				<li class="nav-item ">
+				  <a class="c-sidebar-nav-link" href="https://www.docerfy.com/authenticator/google_drive/googleauth">Google Drive</a>
+				</li>
+				<li class="nav-item ">
+				  <a class="c-sidebar-nav-link" href="#">Dropbox</a>
+				</li>
+			  </ul>
 			</li>
 		</ul>
+		</aside>
 		<div id="content-wrapper" class="d-flex flex-column">
 			<div id="content">
 				<nav class="layout-navbar navbar-header d-flex align-items-center justify-between navbar-fixed-top" id="layout-navbar">
-                    <div class="navbar-nav-top bg-white d-flex align-items-center" id="navbar-collapse">
+					<div class="navbar-nav-top bg-white d-flex align-items-center" id="navbar-collapse">
+						<div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0   d-xl-none ">
+							<a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
+								<i class="fal fa-bars"></i>
+							</a>
+						</div>
                         <div class="navbar-nav align-items-center">
                             <div class="nav-item navbar-search-wrapper mb-0">
                                 <div class="py-3">
@@ -403,10 +581,10 @@
                 </nav>
 				<div class="container-fluid">
 					<div class="card bg-white"> 
-						<div class="row d-flex justify-between align-center pr-3 mb-4"> 
+						<div class="row d-flex justify-between align-center  px-3 py-3"> 
 							<div class="col col-4 col-xs-12">
-								<div class="d-flex flex-start align-items-center">
-								<h5 class="card-header">Documents</h5> 
+								<div class="d-flex flex-start align-items-center space-between-xs">
+								<h5 class="heading-card">Documents</h5> 
 									<div class="view-wrap">
 										<a href="document-list-view.html" class="active"><i class="fas fa-bars"></i></a>
 										<a href="documents.html"><i class="fas fa-th-large"></i></a>
@@ -422,7 +600,7 @@
 								</div>
 							</div>
 							<div class="col col-4 col-xs-12">
-								<div class="d-flex flex-end align-center">
+								<div class="d-flex flex-end align-center flex-start-xs">
 									<button class="btn add-folder btn-primary ms-2 ms-sm-0">
 										<i class="fal fa-plus"></i>
 										<span class="d-none d-sm-inline-block">Add new document</span>
@@ -617,6 +795,14 @@
 			});
 			$('.status_verified_2').click(function(){
 				$('#verify_failed_2').modal('show');
+			});
+
+			$('.layout-menu-toggle').click(function(){
+				$('body').toggleClass('layout-menu-collapsed');
+				$(this).toggleClass('collapsed');
+			}); 
+			$('.layout-menu').hover(function(){
+				$('body').toggleClass('layout-menu-hover');
 			});
 		});
 

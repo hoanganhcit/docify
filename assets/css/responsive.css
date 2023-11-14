@@ -120,3 +120,11 @@
 		padding: 25px 15px;
 	}
 }
+@media screen and (max-width: 576px) {
+    .col-xs-12 {
+        width: 100%;
+    }
+	.col-xs-6 {
+		width: 100%;
+	}
+}
