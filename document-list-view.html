@@ -451,6 +451,26 @@
 				font-size: 15px;
 			}
 		}
+		.view-wrap {
+			margin-left: 2rem;
+		}
+		.view-wrap a {
+			color: #9d9d9d;
+			margin-left: 10px;
+			font-size: 13px;
+			width: 40px;
+			height: 30px;
+			display: inline-flex;
+			align-items: center;
+			justify-content: center;
+			border-radius: 5px;
+			background: #f5f6fb;
+		}
+		.view-wrap span {
+			margin-right: 0;
+			font-size: 14px;
+			color: #7b7b7b;
+		}
 	</style>
 </head>
 <body class="body-login">
@@ -584,10 +604,15 @@
 						<div class="row d-flex justify-between align-center  px-3 py-3"> 
 							<div class="col col-4 col-xs-12">
 								<div class="d-flex flex-start align-items-center space-between-xs">
-								<h5 class="heading-card">Documents</h5> 
+									<h5 class="heading-card">Documents</h5> 
 									<div class="view-wrap">
-										<a href="document-list-view.html" class="active"><i class="fas fa-bars"></i></a>
-										<a href="documents.html"><i class="fas fa-th-large"></i></a>
+										<span>View:</span>
+										<a href="javascript:;" data-format="table" class="button_format_view active">
+											<i class="fas fa-bars"></i>
+										</a>
+										<a href="javascript:;" data-format="box" class="button_format_view ">
+											<i class="fas fa-th-large"></i>
+										</a>
 									</div>
 								</div>
 							</div>
