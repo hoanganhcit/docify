@@ -451,6 +451,11 @@
 				font-size: 15px;
 			}
 		}
+		@media (max-width: 576px) {
+			.navbar-nav .breadcrumb {
+				display: none;
+			}
+		}
 		.view-wrap {
 			margin-left: 2rem;
 		}
@@ -470,6 +475,26 @@
 			margin-right: 0;
 			font-size: 14px;
 			color: #7b7b7b;
+		}
+		
+		.sidebar .nav-item.active .nav-link {
+			color: #FCA905;
+			background: #143345;
+		}
+		@media (max-width: 576px) {
+			.navbar-fixed-top {
+				padding: 0;
+			} 
+				#wrapper #content-wrapper {
+					padding-top: 70px;
+				}
+			.space-between-xs {
+				margin-bottom:0.5rem;
+			}
+			.view-wrap {
+				margin-top: 0;
+				margin-bottom: 0;
+			}
 		}
 	</style>
 </head>
@@ -528,7 +553,13 @@
                         <div class="navbar-nav align-items-center">
                             <div class="nav-item navbar-search-wrapper mb-0">
                                 <div class="py-3">
-                                    <span class="text-muted fw-light">Docerfy /</span> Documents List View
+                                    <ol class="breadcrumb">
+										<li class="breadcrumb-item">
+										  <a href="#">Docerfy</a>
+										</li>
+										<li class="breadcrumb-item active" aria-current="page">Access Authenticator Processor</li>
+										<li class="breadcrumb-item active" aria-current="page">Recents</li>
+									</ol>
                                 </div>
                             </div>
                         </div>
