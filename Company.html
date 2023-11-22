@@ -77,6 +77,151 @@
 			height: 40px;
 			width: auto;
 		}
+
+		.team-content {
+			position: relative;
+			text-align: center;
+			padding-top: 20px;
+		}
+		.team-content-leader {
+			position: relative;
+			background: #04293f;
+			top: -30px;
+			padding-top: 3.5rem;
+			z-index: 0;
+			min-height: 410px;
+			border-radius: 0 0 30px 30px;
+			text-align: left;
+		}
+
+		.team-title, .team-designation, .desc-sm {
+			opacity: 1;
+			visibility: visible;
+			transform: none;
+		}
+		.desc-sm {
+			
+		}
+
+		.team-thumbnail {
+			text-align: center;
+			padding: 1.5rem;
+			border-radius: 0 0 30px 30px;
+		}
+
+		.team-thumbnail img {
+			max-width: 250px;
+			max-height: 250px;
+			width: 100%;
+			object-fit: cover;
+			border-radius: 100%;
+			padding: 5px;
+			border: 2px solid #00dcff;
+		}
+
+
+		.team-thumbnail.team-leader {
+			background: linear-gradient(180deg, rgba(0,220,255,0) 0, #00dcff);
+		}
+		.team-thumbnail:after {
+			display: none;
+		}
+	@media (max-width: 1024px) {
+		.col-tl-6 {
+			flex: 0 0 auto;
+			width: 50%;
+		}
+		.title-site {
+			font-size: 4rem;
+			line-height: 1.3;
+		}
+	}
+	@media (max-width: 768px) {
+		.col-tl-6 {
+			flex: 0 0 auto;
+			width: 100%;
+		}
+		.title-site {
+			font-size: 3rem;
+			line-height: 1.3;
+		}
+		.team-thumbnail.team-leader {
+			background: none;
+		} 
+		
+
+		.team-content {
+			padding: 0 1.5rem;
+		}
+		.team-title {
+			font-size: 18px;
+		}
+		.team-designation {
+			font-size: 14px;
+			color: #fca905;
+		}
+		.team-content-leader {
+			top: 0;
+			padding: 1.5rem;
+			border-radius: 10px;
+			background: none;
+			border: 1px solid #00d3f6;
+			min-height: auto;
+		}
+		
+		.title--hero {
+			margin-bottom: 3rem;
+		}
+	}
+
+
+	@media (max-width: 576px) {
+		.title-site {
+			font-size: 2.5rem;
+		}
+		.partner-item {
+			margin-bottom: 1rem;
+		}
+		.container-about {
+			margin-bottom: 3rem;
+		}
+
+		.team-content {
+			position: relative;
+			border: 1px solid #206e9b;
+			padding: 1rem;
+			border-radius: 10px;
+			z-index: 0;
+			margin-top: 1rem;
+		}
+		.team-item {
+			margin-bottom: 2.5rem;
+		}
+		.team-content .team-title, .team-content .team-designation, .team-content .desc-sm {
+			opacity: 1;
+			visibility: visible;
+			transform: none;
+		}
+
+		.team-thumbnail img {
+			width: 200px !important;
+			display: block;
+			margin: 0 auto;
+			border-radius: 100%;
+			padding: 5px;
+			border: 2px solid #00dcff;
+		}
+		.team-content .team-title {
+			font-size: 20px;
+		}
+		.team-designation {
+			color: #fca905;
+		}
+		.team-thumbnail:after {display:none}
+		.title--hero {
+			margin-bottom: 1rem;
+		}
+	}
 	</style>
 </head>
 
@@ -169,7 +314,7 @@
 			  <p class="fs-20 text-white">On top of protecting unauthorized access to your Digital Assets, our solutions also extend to verify a) The signor in real-time before he/she can sign on an important piece of legally binding document, and b) Online account holder before he/she can login to your specialty web or mobile application.
 			  </p>
 			  <p class="fs-20 text-white">We make Passwords, Passcodes, and MFA a thing of the past but the highest security you ever experienced!
-			  </p>
+			  </p> 
 			</div>
 		  </div>
 		  <div class="team-Leadership mb-3rem">
@@ -179,9 +324,9 @@
 				  <h1 class="title-site fs-6rem wow fadeInUp" data-wow-delay=".5s">Leadership Team</h1>
 				</div>
 			  </div>
-			  <div class="col col-4">
+			  <div class="col col-4 col-xs-12 col-tl-6">
 				<div class="team-item wow fadeInUp" data-wow-delay="1s">
-				  <div class="team-thumbnail">
+				  <div class="team-thumbnail team-leader">
 					<img class="w-100" src="https://docerfy.com/assets/new_ui/LeanneBinsell-67a94e6864e5e54989c9695037e9bf481502db43e0185e7303347bcc3e468fcf.png" alt="Leanne Binsell - COO">
 				  </div>
 				  <div class="team-content team-content-leader">
@@ -194,9 +339,9 @@
 				  </div>
 				</div>
 			  </div>
-			  <div class="col col-4">
+			  <div class="col col-4 col-xs-12 col-tl-6">
 				<div class="team-item wow fadeInUp" data-wow-delay="1.5s">
-				  <div class="team-thumbnail">
+				  <div class="team-thumbnail team-leader">
 					<img class="w-100" src="https://docerfy.com/assets/new_ui/HenryQuach-a9d9c9ef32818f4fc20e4396b669a7d66fe0bb93cb809edc9e6ef8489823110f.png" alt="Henry Quach - CTO">
 				  </div>
 				  <div class="team-content team-content-leader">
@@ -217,7 +362,7 @@
 				  <h1 class="title-site fs-6rem wow fadeInUp" data-wow-delay=".5s">Advisors</h1>
 				</div>
 			  </div>
-			  <div class="col col-4">
+			  <div class="col col-4 col-xs-12">
 				<div class="team-item wow fadeInUp" data-wow-delay="1s">
 				  <div class="team-thumbnail">
 					<img class="w-100" src="https://docerfy.com/assets/new_ui/LeanneBinsell-67a94e6864e5e54989c9695037e9bf481502db43e0185e7303347bcc3e468fcf.png" alt="Leanne Binsell - COO">
@@ -228,7 +373,7 @@
 				  </div>
 				</div>
 			  </div>
-			  <div class="col col-4">
+			  <div class="col col-4 col-xs-12">
 				<div class="team-item wow fadeInUp" data-wow-delay="1.5s">
 				  <div class="team-thumbnail">
 					<img class="w-100" src="https://docerfy.com/assets/new_ui/HenryQuach-a9d9c9ef32818f4fc20e4396b669a7d66fe0bb93cb809edc9e6ef8489823110f.png" alt="Henry Quach - CTO">
@@ -239,7 +384,7 @@
 				  </div>
 				</div>
 			  </div>
-			  <div class="col col-4">
+			  <div class="col col-4 col-xs-12">
 				<div class="team-item wow fadeInUp" data-wow-delay="1.5s">
 				  <div class="team-thumbnail">
 					<img class="w-100" src="https://docerfy.com/assets/new_ui/HenryQuach-a9d9c9ef32818f4fc20e4396b669a7d66fe0bb93cb809edc9e6ef8489823110f.png" alt="Henry Quach - CTO">
@@ -256,15 +401,15 @@
 			<div class="row justify-center">
 			  <div class="col col-12">
 				<div class="title--hero mb-6rem">
-				  <h1 class="title-site fs-6rem wow fadeInUp" data-wow-delay=".5s">Partners:</h1>
+				  <h1 class="title-site fs-6rem wow fadeInUp" data-wow-delay=".5s">Partners</h1>
 				</div>
 			  </div>
-			  <div class="col col-4">
+			  <div class="col col-4 col-xs-12">
 				<div class="partner-item wow fadeInUp" data-wow-delay="1s">
 					<img class="" src="https://www.theworldlawgroup.com/writable/images/firm-logos/GWLG_RGB.PNG" alt="Gowlings WLG" />
 				</div>
 			  </div>
-			  <div class="col col-4">
+			  <div class="col col-4 col-xs-12">
 				<div class="partner-item wow fadeInUp" data-wow-delay="1s">
 					<img class="" src="https://dashboard.epicater.ca/assets/epicater-logo-e1ea0d9dcc913b0d68dc9600ec94c97e2c85381633abcb26f750a579a49dfd0f.png" alt="Epicater">
 				</div>
