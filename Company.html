@@ -28,104 +28,123 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/styles-v2.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 	<style>
-		.team-content-leader {
-			top: 0;
-			transition: .3s;
-			padding: 1.5rem;
-		}
-		.desc-sm {
-			position: relative;
-			color: #fff;
-			font-size: 13px;
-			opacity: 0;
-			visibility: hidden;
-			transition-delay: .25s;
-			-webkit-transform: translateY(10px);
-			transform: translateY(10px);
-			transition: all .45s cubic-bezier(.23,.88,.34,.99);
-		}
+	.team-content-leader {
+		top: 0;
+		transition: .5s;
+		padding: 1.5rem;
+	}
+	.desc-sm {
+		position: relative;
+		color: #fff;
+		font-size: 13px;
+		opacity: 0;
+		visibility: hidden;
+		transition-delay: .25s;
+		-webkit-transform: translateY(10px);
+		transform: translateY(10px);
+		transition: all .45s cubic-bezier(.23,.88,.34,.99);
+	}
 
-		.team-item:hover .desc-sm {
-			transition-delay: .50s;
-		}
+	.team-item:hover .desc-sm {
+		transition-delay: .50s;
+	}
 
-		.team-item:hover .team-content-leader {
-			background: #04293f;;
-		}
-		.team-item:hover .desc-sm {
-			opacity: 1;
-			visibility: visible;
-			-webkit-transform: translateY(0);
-			transform: translateY(0);
-		}
+	.team-item:hover .team-content-leader {
+		background: #04293f;
+		opacity: 1;
+		visibility: visible;
+		position: relative;
+		height: auto;
+		padding-top: 1.5rem;
+		padding-bottom: 1.5rem;
+	}
+	.team-item:hover .desc-sm {
+		opacity: 1;
+		visibility: visible;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
 
-		.justify-center {
-			justify-content: center;
-		}
-		.team-designation {
-			margin-bottom: 0;
-		}
-		.partner-item {
-			position: relative;
-			text-align: center;
-			padding: 80px 20px;
-			border: 1px solid rgba(255, 255, 255, 0.1);
-			border-radius: 10px;
-			background: rgb(195 236 255);
-		}
-		.partner-item img {
-			height: 40px;
-			width: auto;
-		}
+	.justify-center {
+		justify-content: center;
+	}
+	.team-designation {
+		margin-bottom: 0;
+	}
+	.partner-item {
+		position: relative;
+		text-align: center;
+		padding: 80px 20px;
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		border-radius: 10px;
+		background: rgb(195 236 255);
+	}
+	.partner-item img {
+		height: 40px;
+		width: auto;
+	}
 
-		.team-content {
-			position: relative;
-			text-align: center;
-			padding-top: 20px;
-		}
-		.team-content-leader {
-			position: relative;
-			background: #04293f;
-			top: -30px;
-			padding-top: 3.5rem;
-			z-index: 0;
-			min-height: 410px;
-			border-radius: 0 0 30px 30px;
-			text-align: left;
-		}
+	.team-content {
+		position: relative;
+		text-align: center;
+		padding-top: 20px;
+	}
+	.team-content-leader {
+		position: relative;
+		background: #04293f;
+		top: 0;
+		height: 0;
+		border-radius: 0 0 30px 30px;
+		text-align: left;
+		opacity: 0;
+		visibility: hidden;
+		padding: 0 1.5rem;
+		transition: .5s;
+	}
 
-		.team-title, .team-designation, .desc-sm {
-			opacity: 1;
-			visibility: visible;
-			transform: none;
-		}
-		.desc-sm {
-			
-		}
+	.team-title, .team-designation, .desc-sm {
+		opacity: 1;
+		visibility: visible;
+		transform: none;
+	}
+	.desc-sm {
+		
+	}
 
-		.team-thumbnail {
-			text-align: center;
-			padding: 1.5rem;
-			border-radius: 0 0 30px 30px;
-		}
+	.team-thumbnail {
+		text-align: center;
+		padding: 1.5rem;
+		border-radius: 0 0 30px 30px;
+	}
 
-		.team-thumbnail img {
-			max-width: 250px;
-			max-height: 250px;
-			width: 100%;
-			object-fit: cover;
-			border-radius: 100%;
-			padding: 5px;
-			border: 2px solid #00dcff;
-		}
+	.team-thumbnail img {
+		max-width: 250px;
+		max-height: 250px;
+		width: 100%;
+		object-fit: cover;
+		border-radius: 100%;
+		padding: 5px;
+		border: 2px solid #00dcff;
+	}
 
 
-		.team-thumbnail.team-leader {
-			background: linear-gradient(180deg, rgba(0,220,255,0) 0, #00dcff);
-		}
-		.team-thumbnail:after {
-			display: none;
-		}
+	.team-thumbnail.team-leader {
+		background: linear-gradient(180deg, rgba(0,220,255,0) 0, #00dcff);
+	}
+	.team-thumbnail:after {
+		display: none;
+	}
+
+	
+	.hover-hide-info {
+		display: block;
+		padding: 1.5rem 0 0;
+		transition: .1s;
+	}
+
+
+
+	.team-item:hover .hover-hide-info {opacity: 0;padding: 0;height: 0;visibility: hidden;}
 	@media (max-width: 1024px) {
 		.col-tl-6 {
 			flex: 0 0 auto;
@@ -167,11 +186,19 @@
 			background: none;
 			border: 1px solid #00d3f6;
 			min-height: auto;
+			opacity: 1;
+    		visibility: visible;
+			height: auto;
 		}
 		
 		.title--hero {
 			margin-bottom: 3rem;
 		}
+		
+		.hover-hide-info {
+			display: none;
+		}
+		
 	}
 
 
@@ -221,6 +248,7 @@
 		.title--hero {
 			margin-bottom: 1rem;
 		}
+
 	}
 	</style>
 </head>
@@ -328,7 +356,11 @@
 				<div class="team-item wow fadeInUp" data-wow-delay="1s">
 				  <div class="team-thumbnail team-leader">
 					<img class="w-100" src="https://docerfy.com/assets/new_ui/LeanneBinsell-67a94e6864e5e54989c9695037e9bf481502db43e0185e7303347bcc3e468fcf.png" alt="Leanne Binsell - COO">
-				  </div>
+					<div class="hover-hide-info">
+						<h4 class="team-title">Leanne Binsell <a href="www.linkedin.com/in/leanne-binsell-b3938463" target="_blank" style="color: #FCA905;margin-left:.5rem"><i class="fab fa-linkedin"></i></a></h4>
+						<p class="team-designation">CEO</p>
+					</div>
+				</div>
 				  <div class="team-content team-content-leader">
 					<h4 class="team-title">Leanne Binsell <a href="www.linkedin.com/in/leanne-binsell-b3938463" target="_blank" style="color: #FCA905;margin-left:.5rem"><i class="fab fa-linkedin"></i></a></h4>
 					<p class="team-designation">CEO</p>
@@ -343,7 +375,11 @@
 				<div class="team-item wow fadeInUp" data-wow-delay="1.5s">
 				  <div class="team-thumbnail team-leader">
 					<img class="w-100" src="https://docerfy.com/assets/new_ui/HenryQuach-a9d9c9ef32818f4fc20e4396b669a7d66fe0bb93cb809edc9e6ef8489823110f.png" alt="Henry Quach - CTO">
-				  </div>
+					<div class="hover-hide-info">
+						<h4 class="team-title">Henry Quach <a href="www.linkedin.com/in/henry-quach-6819a73b" target="_blank"  style="color: #FCA905;margin-left:.5rem"><i class="fab fa-linkedin"></i></a></h4>
+						<p class="team-designation">CTO</p>
+					</div>
+				</div>
 				  <div class="team-content team-content-leader">
 					<h4 class="team-title">Henry Quach <a href="www.linkedin.com/in/henry-quach-6819a73b" target="_blank"  style="color: #FCA905;margin-left:.5rem"><i class="fab fa-linkedin"></i></a></h4>
 					<p class="team-designation">CTO</p>
