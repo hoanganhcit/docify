@@ -28,30 +28,180 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/styles-v2.css">
 	<link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 	<style>
-		.left-content {
-    		padding-left: 0;
+		.full-width {
+			width: 100%;
 		}
-		.dowload-app__content {
-			padding-right: 0;
+
+		.input-tags {
+			width: 100%;
+			padding: 15px;
+			display: block;
+			margin: 0 auto;
 		}
-		@media screen and (max-width: 820px) {
-			.left-content {
-				padding: 50px 0 0 0 !important;
-			}
-			.dowload-app__content {
-				padding: 0 0 30px;
-			}
-			.dc-box-icon {
-				width: 30%;
-			}
-			.live-box span {
-				font-size: 14px;
-			}
+
+		.label-warning {
+			background-color: #FDC00C;
+			padding: 3px;
 		}
-		@media screen and (max-width: 600px) {
-			.dc-box-icon {
-				width: 100%;
-			}
+
+		.bootstrap-tagsinput {
+			vertical-align: middle;
+			max-width: 100%;
+			cursor: text;
+			display: block;
+			width: 100%;
+			padding: 0.375rem 0.75rem;
+			min-height: 50px;
+			font-size: 1rem;
+			font-weight: 400;
+			line-height: 1.5;
+			color: #212529;
+			background: rgb(255 255 255 / 10%);
+			border-radius: 5px;
+			backdrop-filter: blur(15px);
+			background-clip: padding-box;
+			-webkit-appearance: none;
+			-moz-appearance: none;
+			appearance: none;
+			border-radius: 0.25rem;
+			transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+		}
+
+		.bootstrap-tagsinput input {
+			border: none;
+			box-shadow: none;
+			outline: none;
+			background-color: transparent;
+			padding: 0 6px;
+			margin: 0;
+			width: auto;
+			max-width: inherit;
+			height: 36px;
+			color: #fff;
+			font-size: 14px;
+		}
+
+		.bootstrap-tagsinput input::placeholder {
+			color: #fff;
+			opacity: 1;
+		}
+		.bootstrap-tagsinput.form-control input::-moz-placeholder {
+			color: #fff;
+			opacity: 1;
+		}
+
+		.bootstrap-tagsinput.form-control input:-ms-input-placeholder {
+			color: #fff;
+		}
+
+		.bootstrap-tagsinput.form-control input::-webkit-input-placeholder {
+			color: #fff;
+		}
+
+		.bootstrap-tagsinput input:focus {
+			border: none;
+			box-shadow: none;
+		}
+
+		.bootstrap-tagsinput .tag {
+			color: white;
+			margin-bottom: 5px;
+			display: inline-block;
+			border-radius: 4px;
+			font-size: 14px;
+		}
+
+		.bootstrap-tagsinput .tag [data-role="remove"] {
+			margin-left: 8px;
+			cursor: pointer;
+		}
+
+		.bootstrap-tagsinput .tag [data-role="remove"]:after {
+			content: "x";
+			padding: 0px 2px;
+		}
+
+		.f-upload-send-mail {
+			position: relative;
+			background: rgb(255 255 255 / 10%);
+			border-radius: 6px;
+			backdrop-filter: blur(15px);
+			color: #fff;
+			margin-bottom: 15px;
+		}
+
+		.grid {
+			display: grid;
+			position: relative;
+		}
+
+		.grid-gap-2 {
+			grid-gap: 1rem;
+		}
+
+		.grid-colume-2 {
+			grid-template-columns: repeat(2, minmax(100px, 1fr));
+		}
+
+		.title-heading-form {
+			font-size: 18px;
+			font-family: var(--dc-font-family-secondary);
+			margin-top: 0;
+		}
+		.f-upload-send-mail .form-control {
+			background: rgb(255 255 255 / 10%);
+			border-radius: 5px;
+			backdrop-filter: blur(15px);
+			color: #fff;
+			font-size: 14px;
+		}
+		.f-upload-send-mail .form-control::placeholder {
+			color: #fff;
+		}
+
+		.input-files {
+			position: relative;
+			border: 1px dashed #f1f1f1;
+			background: rgb(255 255 255 / 10%);
+			border-radius: 5px;
+			backdrop-filter: blur(15px);
+			text-align: center;
+			font-size: 14px;
+			border-radius: 4px;
+			height: 65px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			flex-wrap: wrap;
+		}
+
+		.file-upload-hidden {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 1;
+			opacity: 0;
+			cursor: pointer;
+		}
+
+		.f-upload-send-mail .button-primary {
+			width: 100%;
+		}
+
+		.hint {
+			font-size: 14px;
+		}
+		.flex-colume {
+			flex-direction: column;
+		}
+		.no-background {
+			background: none;
+		}
+		.mb-6 {
+			margin-bottom: 3rem;
 		}
 	</style>
 </head>
@@ -62,7 +212,7 @@
 			<div class="row">
 				<div class="col-lg-12 p-0">
 					<nav class="navbar-area main-navbar navbar-expand-md">
-						<a class="navbar-brand" href="index-4.html">
+						<a class="navbar-brand" href="index-3.html">
 							<img src="assets/images/favicon.png" height="35" alt="Logo" class="logo">
 						</a>
 						<div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent"
@@ -80,9 +230,9 @@
 									<ul class="dropdown-menu bg-main">
 										<li class="nav-item">
 											<a href="AccessAuthenticator.html" class="nav-link ">Access Authenticator
-                                            </a>
+											</a>
 										</li>
-                                        <li class="nav-item">
+										<li class="nav-item">
 											<a href="Tamper-proof-Encoder.html" class="nav-link ">Tamper-proof
 												Encoder</a>
 										</li>
@@ -116,9 +266,6 @@
 									<a href="Developer.html" class="nav-link">Developer</a>
 								</li>
 								<li class="nav-item">
-									<a href="AICheckCamera.html" class="nav-link">AI Camera</a>
-								</li>
-								<li class="nav-item">
 									<a href="Help.html" class="nav-link">Help</a>
 								</li>
 								<li class="nav-item">
@@ -138,23 +285,77 @@
 		<div class="overlay-background"></div>
 		<div class="container">
 			<div class="row ">
-				<div class="col-lg-6 d-flex align-self-center">
-					<div class="left-content">
+				<div class="col-lg-5 d-flex align-self-center">
+					<div class="py-4 full-width">
 						<div class="content">
-							<h1 class="fs-38 fs-lt-30 mb-2 text-white lp-2  font-family-secondary wow fadeInUp" data-wow-delay=".5s">
-								Protect and Regain Total Control of Your Sensitive Document Without a Password.</span>
-							</h1>
-							<p class="fs-18 text-white wow fadeInUp" data-wow-delay="1s">Authenticate and traceable who can access to your sensitive document, <a href="#" class="text-warning">Sign Up now</a></p>
-							<div class="d-flex justify-between dc-group-flex">
-								<div class="dc-box-icon wow fadeIn" data-wow-delay="1s">
+							<div class="f-upload-send-mail px-4 py-4">
+								<div class="title-heading-form  mb-3">Your sending guarantees 100% landed in the right
+									person</div>
+								<div class="grid grid-colume-2 grid-gap-2 mb-3">
+									<input type="text" class="form-control" placeholder="Your Name" />
+									<input type="text" class="form-control" placeholder="Your Email" />
+								</div>
+								<div class="mb-3">
+									<div class="input-files">
+										<input type="file" class="file-upload-hidden">
+										<span><i class="fal fa-upload mx-2"></i> Browse or Drag/Drop Anything</span>
+									</div>
+								</div>
+								<div class="mb-3">
+									<input type="text" placeholder="Receiver’s email" class="input-tags form-control"
+										data-role="tagsinput" />
+								</div>
+								<div class="mb-3">
+									<div class="input-files">
+										<input type="file" class="file-upload-hidden" accept="image/*">
+										<span><i class="fal fa-id-card mx-2"></i> Browse or Drag/Drop Receiver’s facial</span>
+									</div>
+								</div>
+								<div class="mb-3">
+									<button type="submit" class="btn button-primary">Send</button>
+								</div>
+								<div class="mb-3">
+									<div class="hint">
+										<a href="#" style="color: #FDC00C;">Sign Up</a> today to unlock more features
+										and protect your business from unauthorized access/login.
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-lg-7 d-flex justify-content-center align-self-center flex-colume">
+					<div class="dowload-app__content ">
+						<div class="cta__content-box no-background">
+							<h3 class="title">Download Access Authenticator</h3>
+							<p>Conveniently authenticate who can acess to your
+								sensitive document on Mobile devices.</p>
+							<div class="download-box mb-6">
+								<span>Download Now On :</span>
+								<ul class="list">
+									<li class="item">
+										<a href="#">
+											<img src="assets/images/store-1.png" alt="">
+										</a>
+									</li>
+									<li class="item">
+										<a href="#">
+											<img src="assets/images/store-2.png" alt="">
+										</a>
+									</li>
+								</ul>
+							</div>
+							
+							<div class="d-flex justify-between dc-group-flex full-width mb-4">
+								<div class="dc-box-icon">
 									<i class="fal fa-file-alt"></i>
 									<span>Traceable</span>
 								</div>
-								<div class="dc-box-icon wow fadeIn" data-wow-delay="1.5s">
+								<div class="dc-box-icon">
 									<i class="fal fa-shield-check"></i>
 									<span>Secure</span>
 								</div>
-								<div class="dc-box-icon wow fadeIn" data-wow-delay="2s">
+								<div class="dc-box-icon">
 									<i class="fal fa-clock"></i>
 									<span>Real-time</span>
 								</div>
@@ -162,49 +363,27 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-lg-6 d-flex justify-content-center align-self-center">
-					<div class="dowload-app__content">
-                        <div class="cta__content-box">
-                            <h3 class="title">Download Access Authenticator</h3>
-                            <p>Conveniently authenticate who can acess  to your
-                                sensitive document on Mobile devices.</p>
-                            <div class="download-box">
-                                <span>Download Now On :</span>
-                                <ul class="list">
-                                    <li class="item">
-                                        <a href="#">
-                                            <img src="assets/images/store-1.png" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="item">
-                                        <a href="#">
-                                            <img src="assets/images/store-2.png" alt="">
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-				</div>
 			</div>
+			
 			<div class="row">
 				<div class="col-md-12">
-					<div class="text-white mb-4 fs-24 font-family-secondary  wow fadeInUp" data-wow-delay="2s">Live Numbers</div>
+					<div class="text-white mb-4 fs-24 font-family-secondary ">Live
+						Numbers</div>
 				</div>
 				<div class="col-md-4">
-					<div class="live-box wow zoomIn" data-wow-delay="2.5s">
+					<div class="live-box ">
 						<span class="live-count">1,345</span>
 						<span class="live-field">Customers</span>
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="live-box wow zoomIn" data-wow-delay="2.7s">
+					<div class="live-box">
 						<span class="live-count">45,542</span>
 						<span class="live-field">Fault Access Detection</span>
 					</div>
 				</div>
 				<div class="col-md-4">
-					<div class="live-box wow zoomIn" data-wow-delay="2.9s">
+					<div class="live-box">
 						<span class="live-count">1,450,745</span>
 						<span class="live-field">Successful Authenticated</span>
 					</div>
@@ -329,7 +508,8 @@
 										</tr>
 										<tr>
 											<td class="PricingFeatureTable__sticky-col">
-												<div class="PricingFeatureTable__custom-cell">Endcode Dropbox/Google Drive</div>
+												<div class="PricingFeatureTable__custom-cell">Endcode Dropbox/Google
+													Drive</div>
 											</td>
 											<td>
 												<div class="PricingFeatureTable__cell-height table-data"><i
@@ -476,6 +656,7 @@
 	</div>
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
 	<script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/bootstrap-tagsinput.js"></script>
 	<script type="text/javascript" src="assets/js/wow.min.js"></script>
 	<script type="text/javascript" src="assets/js/slick.js"></script>
 	<script>
@@ -488,10 +669,10 @@
 			// 	$("#quickSignup").modal('show');
 			// });
 
-			$(document).on("click", ".sidenav-pricing, .panel__close", function() {
+			$(document).on("click", ".sidenav-pricing, .panel__close", function () {
 				$('body').toggleClass('open-sidenav');
 			});
-			$(document).on("click", ".mb-toggle-mn", function() {
+			$(document).on("click", ".mb-toggle-mn", function () {
 				$('.mean-menu').toggleClass('open-sidenav');
 			});
 
