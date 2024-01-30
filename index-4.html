@@ -40,7 +40,7 @@
 		}
 
 		.label-warning {
-			background-color: #FDC00C;
+			background-color: #FCA905;
 			padding: 3px;
 		}
 
@@ -204,6 +204,141 @@
 		.mb-6 {
 			margin-bottom: 3rem;
 		}
+		.preview-files {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			font-size: 12px;
+			border: 1px dashed #ccc;
+			margin-top: 5px;
+			padding: 5px 10px;
+			border-radius: 4px;
+			background: #001f31;
+		}
+
+		.preview-files a {
+			color: #fca905;
+		}
+		.files-content {
+		position: relative;
+		}
+
+		.file-item-preview {
+			position: relative;
+		}
+		.files-content {
+			position: relative;
+		}
+
+		.files-content ul {
+			display: grid;
+			grid-gap: 15px;
+			grid-template-columns: repeat(5,minmax(100px,1fr));
+			position: relative;
+		}
+
+		.file-item-preview.pv-file .pv-image {
+			position: relative;
+			background: linear-gradient(to bottom, #eee, #ddd);
+		}
+
+		.file-item-preview .pv-image {
+			width: 140px;
+			height: 140px;
+			border-radius: 20px;
+			overflow: hidden;
+			display: block;
+		}
+
+		.pv-details {
+			z-index: 1;
+			position: absolute;
+			top: 0;
+			left: 0;
+			opacity: 0;
+			font-size: 13px;
+			min-width: 100%;
+			max-width: 100%;
+			padding: 2em 1em;
+			text-align: center;
+			color: rgba(0,0,0,.9);
+			line-height: 150%;
+		}
+
+		.file-item-preview.dz-image-preview:hover .pv-details {
+			opacity: 1;
+		}
+
+		.file-item-preview.pv-file .pv-details {
+			opacity: 1;
+		}
+
+		.file-item-preview .pv-image img {
+			width: 140px;
+			height: 140px;
+			object-fit: cover;
+			display: block;
+		}
+
+		.file-item-preview:hover .pv-image img {
+			-webkit-transform: scale(1.05, 1.05);
+			-moz-transform: scale(1.05, 1.05);
+			-ms-transform: scale(1.05, 1.05);
+			-o-transform: scale(1.05, 1.05);
+			transform: scale(1.05, 1.05);
+			-webkit-filter: blur(8px);
+			filter: blur(8px);
+		}
+
+		.pv-filename {
+			white-space: nowrap;
+		}
+		.pv-filename:not(:hover) {
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+
+		.pv-size {
+			display: block;
+			margin-bottom: 15px;
+		}
+		.pv-details span {
+			background-color: rgba(255,255,255,.4);
+			padding: 5px;
+			border-radius: 3px;
+			display: inline-block;
+		}
+		.del-file {
+			position: absolute;
+			right: 0;
+			top: 0;
+			width: 30px;
+			height: 30px;
+			cursor: pointer;
+			z-index: 2;
+			padding-top: 10px;
+			padding-left: 5px;
+			color: #e93737;
+		}
+		@media screen and (max-width: 991px) {
+			.files-content ul {
+				grid-template-columns: repeat(3,minmax(100px,1fr));
+			}
+		}
+		@media screen and (max-width: 600px) {
+			.files-content ul {
+				grid-template-columns: repeat(3,minmax(100px,1fr));
+				grid-gap: 10px;
+			}
+			.file-item-preview{
+				width: 100%;
+			}
+			.file-item-preview .pv-image,
+			.file-item-preview .pv-image img{
+				height: 120px;
+				width: 120px;
+			}
+		}
 	</style>
 </head>
 
@@ -301,15 +436,26 @@
 										<input type="file" class="file-upload-hidden">
 										<span><i class="fal fa-upload mx-2"></i> Browse or Drag/Drop Anything</span>
 									</div>
+									<div class="preview-files">
+										<div class="number-file">2 files selected.</div>
+										<a href="#" data-bs-toggle="modal" data-bs-target="#previewFiles">Preview</a>
+									</div>
 								</div>
 								<div class="mb-3">
-									<input type="text" placeholder="Receiver’s email" class="input-tags form-control"
+									<input type="text" placeholder="Receiver’s Email" class="input-tags form-control"
 										data-role="tagsinput" />
+									<div class="hint text-sm">
+										Receiver’s email (send multiple emails separate them by ;)
+									</div>
 								</div>
 								<div class="mb-3">
 									<div class="input-files">
 										<input type="file" class="file-upload-hidden" accept="image/*">
 										<span><i class="fal fa-id-card mx-2"></i> Browse or Drag/Drop Receiver’s facial</span>
+									</div>
+									<div class="preview-files">
+										<div class="number-file">12 files selected.</div>
+										<a href="#" data-bs-toggle="modal" data-bs-target="#previewFacial">Preview</a>
 									</div>
 								</div>
 								<div class="mb-3">
@@ -653,6 +799,291 @@
 					</div>
 				</div>
 			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="previewFiles" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1 class="modal-title fs-5" id="exampleModalLabel">Preview Files</h1>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="files-content">
+					<ul>
+						<li>
+							<div class="file-item-preview pv-file">
+								<div class="pv-image">
+									
+								</div>
+								<div class="pv-details"> 
+									<div class="pv-size">
+										<span><strong>4.3</strong> MB</span>
+									</div> 
+									<div class="pv-filename">
+										<span>MOBILE-BLOG.pdf</span>
+									</div> 
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="file-item-preview pv-file">
+								<div class="pv-image">
+									
+								</div>
+								<div class="pv-details"> 
+									<div class="pv-size">
+										<span><strong>2.3</strong> MB</span>
+									</div> 
+									<div class="pv-filename">
+										<span>MOBILE-BLOG.pdf</span>
+									</div> 
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			</div>
+		  </div>
+		</div>
+	</div>
+	<div class="modal fade" id="previewFacial" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <h1 class="modal-title fs-5" id="exampleModalLabel">Preview Files</h1>
+			  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<div class="files-content">
+					<ul>
+						<li>
+							<div class="file-item-preview dz-image-preview">
+								<div class="pv-image">
+									<img src="assets/images/DavidAhola.png" alt="">
+									<div class="del-file">
+										<span class="fas fa-trash"></span>
+									</div>
+								</div>
+								<div class="pv-details"> 
+									<div class="pv-size">
+										<span><strong>4.3</strong> MB</span>
+									</div> 
+									<div class="pv-filename">
+										<span>DavidAhola.png</span>
+									</div> 
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="file-item-preview dz-image-preview">
+								<div class="pv-image">
+									<img src="assets/images/HenryQuach.png" alt="">
+									<div class="del-file">
+										<span class="fas fa-trash"></span>
+									</div>
+								</div>
+								<div class="pv-details"> 
+									<div class="pv-size">
+										<span><strong>2.3</strong> MB</span>
+									</div> 
+									<div class="pv-filename">
+										<span>HenryQuach.png</span>
+									</div> 
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="file-item-preview dz-image-preview">
+								<div class="pv-image">
+									<img src="assets/images/LeanneBinsell.png" alt="">
+									<div class="del-file">
+										<span class="fas fa-trash"></span>
+									</div>
+								</div>
+								<div class="pv-details"> 
+									<div class="pv-size">
+										<span><strong>2.3</strong> MB</span>
+									</div> 
+									<div class="pv-filename">
+										<span>LeanneBinsell.png</span>
+									</div> 
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="file-item-preview dz-image-preview">
+								<div class="pv-image">
+									<img src="assets/images/DavidAhola.png" alt="">
+									<div class="del-file">
+										<span class="fas fa-trash"></span>
+									</div>
+								</div>
+								<div class="pv-details"> 
+									<div class="pv-size">
+										<span><strong>4.3</strong> MB</span>
+									</div> 
+									<div class="pv-filename">
+										<span>DavidAhola.png</span>
+									</div> 
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="file-item-preview dz-image-preview">
+								<div class="pv-image">
+									<img src="assets/images/HenryQuach.png" alt="">
+									<div class="del-file">
+										<span class="fas fa-trash"></span>
+									</div>
+								</div>
+								<div class="pv-details"> 
+									<div class="pv-size">
+										<span><strong>2.3</strong> MB</span>
+									</div> 
+									<div class="pv-filename">
+										<span>HenryQuach.png</span>
+									</div> 
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="file-item-preview dz-image-preview">
+								<div class="pv-image">
+									<img src="assets/images/LeanneBinsell.png" alt="">
+									<div class="del-file">
+										<span class="fas fa-trash"></span>
+									</div>
+								</div>
+								<div class="pv-details"> 
+									<div class="pv-size">
+										<span><strong>2.3</strong> MB</span>
+									</div> 
+									<div class="pv-filename">
+										<span>LeanneBinsell.png</span>
+									</div> 
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="file-item-preview dz-image-preview">
+								<div class="pv-image">
+									<img src="assets/images/DavidAhola.png" alt="">
+									<div class="del-file">
+										<span class="fas fa-trash"></span>
+									</div>
+								</div>
+								<div class="pv-details"> 
+									<div class="pv-size">
+										<span><strong>4.3</strong> MB</span>
+									</div> 
+									<div class="pv-filename">
+										<span>DavidAhola.png</span>
+									</div> 
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="file-item-preview dz-image-preview">
+								<div class="pv-image">
+									<img src="assets/images/HenryQuach.png" alt="">
+									<div class="del-file">
+										<span class="fas fa-trash"></span>
+									</div>
+								</div>
+								<div class="pv-details"> 
+									<div class="pv-size">
+										<span><strong>2.3</strong> MB</span>
+									</div> 
+									<div class="pv-filename">
+										<span>HenryQuach.png</span>
+									</div> 
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="file-item-preview dz-image-preview">
+								<div class="pv-image">
+									<img src="assets/images/LeanneBinsell.png" alt="">
+									<div class="del-file">
+										<span class="fas fa-trash"></span>
+									</div>
+								</div>
+								<div class="pv-details"> 
+									<div class="pv-size">
+										<span><strong>2.3</strong> MB</span>
+									</div> 
+									<div class="pv-filename">
+										<span>LeanneBinsell.png</span>
+									</div> 
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="file-item-preview dz-image-preview">
+								<div class="pv-image">
+									<img src="assets/images/DavidAhola.png" alt="">
+									<div class="del-file">
+										<span class="fas fa-trash"></span>
+									</div>
+								</div>
+								<div class="pv-details"> 
+									<div class="pv-size">
+										<span><strong>4.3</strong> MB</span>
+									</div> 
+									<div class="pv-filename">
+										<span>DavidAhola.png</span>
+									</div> 
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="file-item-preview dz-image-preview">
+								<div class="pv-image">
+									<img src="assets/images/HenryQuach.png" alt="">
+									<div class="del-file">
+										<span class="fas fa-trash"></span>
+									</div>
+								</div>
+								<div class="pv-details"> 
+									<div class="pv-size">
+										<span><strong>2.3</strong> MB</span>
+									</div> 
+									<div class="pv-filename">
+										<span>HenryQuach.png</span>
+									</div> 
+								</div>
+							</div>
+						</li>
+						<li>
+							<div class="file-item-preview dz-image-preview">
+								<div class="pv-image">
+									<img src="assets/images/LeanneBinsell.png" alt="">
+									<div class="del-file">
+										<span class="fas fa-trash"></span>
+									</div>
+								</div>
+								<div class="pv-details"> 
+									<div class="pv-size">
+										<span><strong>2.3</strong> MB</span>
+									</div> 
+									<div class="pv-filename">
+										<span>LeanneBinsell.png</span>
+									</div> 
+								</div>
+							</div>
+						</li>
+						
+					</ul>
+				</div>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+			</div>
+		  </div>
 		</div>
 	</div>
 	<script type="text/javascript" src="assets/js/jquery.min.js"></script>
