@@ -328,6 +328,10 @@
 		.font-weight-bold {
 			font-weight: bold;
 		}
+		.input-files p {
+			margin-bottom: 0;
+			font-size: 12px;
+		}
 		@media screen and (max-width: 991px) {
 			.files-content ul {
 				grid-template-columns: repeat(3,minmax(100px,1fr));
@@ -443,6 +447,7 @@
 									<div class="input-files">
 										<input type="file" class="file-upload-hidden">
 										<span><i class="fal fa-upload mx-2"></i> Browse or Drag/Drop Anything</span>
+										<p class="text-sm">(Maximum 10 files)</p>
 									</div>
 									<div class="preview-files">
 										<div class="number-file">2 files selected.</div>
@@ -460,6 +465,7 @@
 									<div class="input-files">
 										<input type="file" class="file-upload-hidden" accept="image/*">
 										<span><i class="fal fa-id-card mx-2"></i> Browse or Drag/Drop Receiver’s facial</span>
+										<p class="text-sm">(Maximum 20 files)</p>
 									</div>
 									<div class="preview-files">
 										<div class="number-file">12 files selected.</div>
