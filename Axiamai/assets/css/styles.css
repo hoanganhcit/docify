@@ -1,0 +1,47 @@
+:root {
+	--dc-primary-color: #FCA905;
+	--dc-secondary-color: #1B4D6A;
+	--dc-third-color: #052131;
+	--bs-primary-rgb: #052131;
+	--dc-text-body-color: #000;
+	--dc-font-family-primary:
+	'Montserrat', sans-serif;
+	--dc-font-size-text: 16px;
+	--dc-font-size-title-large: 55px;
+	--dc-font-size-title-md: 36px;
+	--dc-font-size-title-sm: 24px;
+	--dc-font-weight-title: bold;
+	--dc-font-weight-button: 500;
+	--dc-font-weight-body: 400;
+	--dc-font-family-secondary:
+	'Playfair Display', sans-serif;
+}
+
+body {
+	margin: 0;
+	font-family: var(--dc-font-family-primary);
+	color: var(--dc-text-body-color);
+	line-height: 1.6;
+	font-weight: var(--dc-font-weight-body);
+	-webkit-text-size-adjust: 100%;
+	-webkit-tap-highlight-color: transparent;
+	background-repeat: no-repeat;
+	position: relative;
+	min-height: 100vh;
+}
+
+img {
+	width: 100%;
+}
+
+a,
+a:hover,
+a:focus {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
